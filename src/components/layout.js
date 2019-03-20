@@ -36,14 +36,16 @@ const Layout = ({ children }) => (
         <Navigation/>
         <main className={styles.content} >
           {children} 
-        </main>      
-         <footer>
-           <Container fluid footer >
-           <p>Rock On The l’Oule est soutenu par la Communauté des Communes du Diois, le Conseil Général de la Drôme (cantons de la Motte et de Rémuzat), des communes de la Motte Chalancon, de Cornillon sur l’Oule et des alentours.</p>
+        </main>
+          <Container text  > 
+            <p>Rock On The l’Oule est soutenu par la Communauté des Communes du Diois, le Conseil Général de la Drôme (cantons de la Motte et de Rémuzat), des communes de la Motte Chalancon, de Cornillon sur l’Oule et des alentours.</p>
+          </Container>     
+          <footer>
+            <Container fluid footer >
               <span><Link to="/credits">Crédits</Link></span>
               <span>Tous droits réservés - Association Rock On The L'Oule - 2019</span>
             </Container>
-          </footer>
+           </footer>
       </div>
     )}
   />

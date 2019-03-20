@@ -6,7 +6,7 @@ import Container from '../components/Container/Container'
 import { StaticQuery, graphql } from 'gatsby'
 import SEO from '../components/seo'
 import Grid1 from '../components/Grid/Grid1'
-import TimelineProg from '../components/timeline'
+/*import TimelineProg from '../components/timeline'*/
 
 const ImageHomepageSection1 = () => (
   <StaticQuery
@@ -37,10 +37,11 @@ const IndexPage = () => {
           <Grid1 
             image = { <ImageHomepageSection1 /> } 
             heroText = {{text:'Rock on the l\'Oule'}} 
-            text1= {{text:'Mercredi 7 août 2019'}} 
-            text3= {{text:"C'est au Pas des Ondes que ça se passe ! Entre montagnes et plans d'eau, Rock on the l'Oule fêtera sa 25ème édition. Au programme : concerts, cirque, détente, jeux en bois, produits locaux et buvette, démarche éco-responsable. On compte sur vous !"}} 
+           text1= {{text:'Festival'}} 
+           /*text3= {{text:"C'est au Pas des Ondes que ça se passe ! Entre montagnes et plans d'eau, Rock on the l'Oule fêtera sa 25ème édition. Au programme : concerts, cirque, détente, jeux en bois, produits locaux et buvette, démarche éco-responsable. On compte sur vous !"}} */
           />
-          <TimelineProg/>
+
+          {/*<TimelineProg/>*/}
           <Container text first> 
           
           <h2>Un lieu magique : le site du Pas des Ondes.</h2>
@@ -68,7 +69,7 @@ Fait rare pour un festival qui dure depuis plus de vingt ans, son organisation e
           <Container text>
             <h2>Grand Bureau</h2>
             <p>Rock On The l’Oule fait parti du Grand Bureau. Grand Bureau est un réseau né de la fusion de la FEPPRA, du GRADA, du GRAL et de Tagada Tsoin Tsoin. Lancé officiellement fin janvier 2017, il coordonne une nouvelle dynamique de coopération entre les acteurs de la filière musiques actuelles. Grand Bureau est le réseau des acteurs musiques actuelles en Auvergne-Rhône-Alpes. Il regroupe à ce jour plus de 160 structures membres de l’ensemble de la filière des musiques actuelles, et leur donne un cadre de coopération.</p>
-            <p><a href="http://grandbureau.fr/">http://grandbureau.fr/</a></p>
+            <p><a target="_blank" rel="noopener noreferrer" href="http://grandbureau.fr/">http://grandbureau.fr/</a></p>
            
 
           </Container>

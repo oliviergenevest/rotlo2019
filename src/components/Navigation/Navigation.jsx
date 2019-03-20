@@ -64,14 +64,14 @@ export default class Navigation extends Component {
             customBurgerIcon={ false }
             >
 
-              
+            {/*   
                <Link to="/programmation" activeClassName="active" onClick={() => this.closeMenu()}>
                 Prog
               </Link>
-             <Link to="/infos-pratiques" activeClassName="active" onClick={() => this.closeMenu()}>
+            <Link to="/infos-pratiques" activeClassName="active" onClick={() => this.closeMenu()}>
                 Infos pratiques
               </Link>
-            
+           */} 
               <Link to="/asso" activeClassName="active" onClick={() => this.closeMenu()}>
                 L'association
               </Link>

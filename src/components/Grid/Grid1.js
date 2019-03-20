@@ -15,10 +15,10 @@ const Grid1 = ({image, text1, heroText, text3}) => (
 	        
 	       <div className= {styles.hero}>
 	         <Fade up  delay={300} distance="10px">
-	          <span className= {styles.title}>{ heroText.text }</span>
+	          <span className= {styles.title}>{ text1.text }<br/>{ heroText.text }</span>
 	         </Fade>
 	       </div>
-
+{/*
 	       <div className= {styles.subTitle} >
 	          <Fade up  delay={400} distance="10px">
 	         <h2>{ text1.text }</h2>
@@ -31,7 +31,7 @@ const Grid1 = ({image, text1, heroText, text3}) => (
 	       		 	<p>{ text3.text }</p>
 	           	</Fade>
 	           
-	       </div>
+	       </div>*/}
 
 	       <div className= {styles.image} > 
 	      {image} 
