@@ -3,7 +3,7 @@ module.exports = {
     title: `Rock on the l'Oule - 2019`,
     description: `Festival Rock on the l'Oule - 2019.`,
     author: `Olivier Genevest`,
-  },
+  }, 
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,

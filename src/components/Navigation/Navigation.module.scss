@@ -64,13 +64,13 @@
 
 
   a {
-
+    text-decoration: none;
     &:hover,
     &:focus {
       color: $body-color;
-      text-decoration: none;
-    
+      text-decoration: none!important;
     }
+    &:after {display:none;}
   }
 }
 
@@ -181,6 +181,7 @@
   display:flex;
   flex-direction:column;
   justify-content:center;
+  align-items: flex-end;
 }
 
 /* Individual item */
@@ -194,6 +195,6 @@
 
 /* Styling of overlay */
  .bmOverlay {
-  background: rgba(0, 0, 0, 0.9);
+ background-color:rgba(0, 0, 0, 0.6)!important;
   z-index:1000!important;
 }

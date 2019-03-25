@@ -31,20 +31,33 @@ header {
 main {
   flex:1;
 }
-/*
-.content {
-  flex-grow:1;
-}
-*/
-
-
-
-
 
 
 a {
-  color:inherit;
+  position: relative;
+   color:inherit;
+   &:hover{
+    text-decoration:none;
+   }
 }
+a:after {  
+    content: "";
+    display: block;
+    position: absolute;
+    left: 4px;
+    bottom: 1px;
+    background-color:$brand-cta;
+    width: 100%;
+    height: 8px;
+    z-index: -1;
+    opacity: 0;
+}
+a:hover:after {
+    opacity: .8;
+    transition: all 0.5s ease;
+  
+}
+
 
 footer {
   background-color:white;

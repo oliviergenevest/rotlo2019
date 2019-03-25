@@ -20,17 +20,49 @@
 }
 
 .footer {
-   padding-top: .5rem;
-   padding-bottom: .5rem;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
   color:$brand-primary;
   display:flex;
     span:first-child {
       margin-right: auto;
     }
-    font-size:12px;
+  font-size:12px;
 }
 
-.biography {
 
-  background-color:#2e2e2e;
+.wrapSponsor {
+ display:flex;
+  margin-top:2rem;
+  margin-bottom:2rem;
+  align-items:flex-start;
+  align-content: center;
+  @include for-tablet-landscape-down {
+    flex-direction: column;
+  }
+}
+
+.sponsor {
+  margin-top:2rem;
+  margin-left:2rem;
+  background-color:white;
+   background-color:#2e2e2e;
+   font-size:15px;
+ /* max-width:450px;*/
+    padding:2rem;
+
+}
+
+
+.grandBureau {
+ background-color:$brand-cta;
+ padding:2rem;
+ padding-bottom:1rem;
+ color:white;
+ max-width:600px;
+ font-size:15px;
+
+ display:flex;
+ flex-direction: column;
+ justify-content: center; /*alignement vertical centré*/
 }

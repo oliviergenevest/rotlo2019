@@ -13,7 +13,7 @@ module.exports = {
    publisher:'Rock on the l\'Oule',
     shareImage: '/images/gatsby-icon.png', // Open Graph Default Share Image. 1200x1200 is recommended
   //siteFBAppID: '123456789', // Facebook App ID
-  facebookPageUrl:'',
+  facebookPageUrl:'https://www.facebook.com/Rock-on-the-lOule-230926355415/',
   //userTwitter: '@emma', // Twitter Username
   // og: Meta Tags
   ogSiteName: 'Rock on the l\'Oule', // Facebook Site Name

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Link from 'gatsby-link'
+import Img from 'gatsby-image'
 import Headroom from 'react-headroom'
 import HamburgerMenu from 'react-hamburger-menu'
 import { slide as Menu } from 'react-burger-menu'
@@ -64,14 +65,15 @@ export default class Navigation extends Component {
             customBurgerIcon={ false }
             >
 
-            {/*   
+             
                <Link to="/programmation" activeClassName="active" onClick={() => this.closeMenu()}>
-                Prog
+                Edition 2019
               </Link>
             <Link to="/infos-pratiques" activeClassName="active" onClick={() => this.closeMenu()}>
                 Infos pratiques
               </Link>
-           */} 
+            
+              
               <Link to="/asso" activeClassName="active" onClick={() => this.closeMenu()}>
                 L'association
               </Link>
@@ -79,16 +81,16 @@ export default class Navigation extends Component {
              
               
              
-              <Link to="/" activeClassName="active" onClick={() => this.closeMenu()}>
-                Contact
+              <Link to="/contacts" activeClassName="active" onClick={() => this.closeMenu()}>
+                Contacts
               </Link>
            
              <div className={styles.mobileNavSocialMedia}>
-                <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.youtube.com/" aria-label="Youtube" target="_blank" rel="noopener noreferrer">
                   <FaYoutube />
                 </a>
               
-                <a href="{config.facebookPageUrl}" target="_blank" rel="noopener noreferrer">
+                <a href={config.facebookPageUrl} aria-label="Facebook" target="_blank" rel="noopener noreferrer">
                   <FaFacebook />
                 </a>
               </div>

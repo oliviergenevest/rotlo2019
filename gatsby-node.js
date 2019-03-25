@@ -3,7 +3,7 @@
  *
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
-
+ 
 // You can delete this file if you're not using it
 /*exports.onCreateWebpackConfig = ({ getConfig, stage }) => {
   const config = getConfig()
@@ -13,4 +13,4 @@
       'react-dom': '@hot-loader/react-dom'
     }
   }
-}*/
+}*/ 

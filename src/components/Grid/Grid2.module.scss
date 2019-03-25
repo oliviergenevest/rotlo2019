@@ -1,38 +1,61 @@
 @import "../../config/variables";
 
-.gridContainer {
-  	display:inline-grid;
-    height:100vh;
-    grid-template-rows: repeat(5, minmax(50px, auto));
-    grid-template-columns: repeat(5,minmax(50px, auto));
-    margin-bottom: 5em;
+.gridContainer {  	
+    padding-top: 0.5rem;
     width:100%;
+  margin-top:3rem;
+  z-index:1000;
+}
+
+.content {
+  display:flex;
+  background-color:$brand-secondary;
+   background-color:#291d1d;
+  @include for-tablet-landscape-down {
+      flex-direction:column;
+    /*  background-color:inherit;*/
+    }
 }
 
 .image {
-	grid-column: 1 / 5;
-	grid-row: 1/6;
 	overflow: hidden;	
+  flex:40%;
+  @include for-tablet-landscape-up {
+   clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%);
+  }
+  
 }
 
-.image > div {height:100%;}
+.image > div {
+  height:100%;
+}
 
 
 .text {
-	grid-column: 4 / 6;
-		grid-row: 2/5;
-	
-	z-index:1;  
-	display:flex;
-	align-items: flex-start;
+  /*positionnement du conteneur text*/
+  flex:60%;
+  padding:3rem;
+  /*alignement des éléments dans le conteneur flex text*/
   justify-content: center;
-  max-width:500px;
-  background-color:$brand-secondary;
-  padding:1.6em;
-      justify-self: center;
- 
-p {
-	align-self: center;
+  align-content: center;
+  display: flex;
+  flex-direction: column;
+   @include for-tablet-landscape-down {
+    padding:1rem;
+   }
 }
 
+/*on alterne droite gauche pour l'image*/
+.reverse {
+  flex-direction:row-reverse;
+   @include for-tablet-landscape-up {
+    .image { clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);}
+  }
+  
+ @include for-tablet-landscape-down {
+      flex-direction:column;
+      /*background-color:inherit;*/
+    }
+
+    
 }

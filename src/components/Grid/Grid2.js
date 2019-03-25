@@ -1,30 +1,31 @@
 import React from 'react'
 /*import { Link } from 'gatsby'
 import Img from 'gatsby-image'*/
-import { Slug, Fade } from 'mauerwerk'
+import { Fade } from "react-reveal"
 import styles from './Grid2.module.scss'
+import cx from 'classnames'
 
-/* 
-A faire :
-Faire fonctionner le composant gatsby-image en mode cover au lieu d'utiliser l'image de fond dans le css
+const Grid2 = ({image, text, title, reverse = false}) => {
 
-*/
-
-const Grid2 = ({image, text, link}) => (
-   	
-      <div className= {styles.gridContainer} >
-   
-
+   	const classes = cx(styles.content, { [styles.reverse]: reverse })
+    const direction = {reverse} ? "left":"right"
+      return (
+      	<Fade up distance="50px">
+      	<div className= {styles.gridContainer} >
+		<div className={classes}>
 	       <div className= {styles.text} >
-	       <Slug >  <p>{ text.text } {link}</p></Slug>
+	       <h2>{title}</h2>
+	        <p>{ text.text }</p>
 	       </div>
-
-	       <div className= {styles.image} > 
-	      {image}
-	       </div>
-
+			
+		       <div className= {styles.image} > 
+		      	{image}
+		       </div>
+		     
+	    </div>
       </div>
-  
-)
+      </Fade>
+      )
+}
 
 export default Grid2
