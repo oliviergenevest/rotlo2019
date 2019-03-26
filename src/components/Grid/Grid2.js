@@ -8,7 +8,7 @@ import cx from 'classnames'
 const Grid2 = ({image, text, title, reverse = false}) => {
 
    	const classes = cx(styles.content, { [styles.reverse]: reverse })
-    const direction = {reverse} ? "left":"right"
+   
       return (
       	<Fade up distance="50px">
       	<div className= {styles.gridContainer} >

@@ -5,13 +5,13 @@ module.exports = {
   siteUrl: 'https://rockontheloule.org', // Domain of your site. No trailing slash!
   siteEmail: 'contact@oliviergenevest.info',
   siteLanguage: 'en', // Language Tag on <html> element
-  siteLogo: '/logoGris.png', // Used for SEO and manifest
+  siteLogo: '/logo-rotlo.png', // Used for SEO and manifest
   siteDescription: 'Rock on the l\'Oule',
   siteTel:'',
   author:'Olivier Genevest',
    authorUrl:'https://oliviergenevest.info/contacts',
    publisher:'Rock on the l\'Oule',
-    shareImage: '/images/gatsby-icon.png', // Open Graph Default Share Image. 1200x1200 is recommended
+    shareImage: '/images/rotlo-hp.png', // Open Graph Default Share Image. 1200x1200 is recommended
   //siteFBAppID: '123456789', // Facebook App ID
   facebookPageUrl:'https://www.facebook.com/Rock-on-the-lOule-230926355415/',
   //userTwitter: '@emma', // Twitter Username
@@ -24,7 +24,7 @@ module.exports = {
   // More information here: https://date-fns.org/v1.29.0/docs/format
   dateFormat: 'DD.MM.YYYY',
   // Manifest and Progress color
-  themeColor: '#4a4a4a',
-  backgroundColor: '#7F868A',
+  themeColor: '#f37260',
+  backgroundColor: '#000000',
    
 };
