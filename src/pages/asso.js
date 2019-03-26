@@ -57,7 +57,7 @@ No Shangsa, The Wicks</li>
 <li>2015 21ème: SoCalled, Orchestre National de Barbès, The Buttshakers</li>
 <li>2016 22ème: Danyel Waro, Lisa and the Lips, Dengue Dengue Dengue</li>
 <li>2017 23ème: Impérial Orpheon, Motivés! (annulé et remplacé par Fanfare Ciocărlia), Washington Dead Cats </li>
-    <li>2018</li>
+<li>2018 24ème: Loic Lantoine & the very big experimental Toubifri Orchestra, Acid Arab, Sir Jean & the Roots Doctors, Afuma : les échassiers du Togo</li>
   </ul>
     
     <h2>Contacts</h2>

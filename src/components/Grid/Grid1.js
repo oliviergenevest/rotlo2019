@@ -2,7 +2,6 @@ import React from 'react'
 /*import { Link } from 'gatsby'
 import Img from 'gatsby-image'*/
 import ScrollDownAnimation from '../ScrollDownAnimation/ScrollDownAnimation'
-/*import { Slug } from 'mauerwerk'*/
 import { Fade } from "react-reveal"
 import HeadShake from 'react-reveal/HeadShake'
 import styles from './Grid1.module.scss'

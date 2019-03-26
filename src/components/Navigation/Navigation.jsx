@@ -4,13 +4,13 @@ import Link from 'gatsby-link'
 import Headroom from 'react-headroom'
 import HamburgerMenu from 'react-hamburger-menu'
 import { slide as Menu } from 'react-burger-menu'
-import { Fade/*, Flip*/ } from 'react-reveal'
-import { FaFacebook, FaYoutube } from 'react-icons/fa'
+import { Fade } from 'react-reveal'
+import { FaFacebook } from 'react-icons/fa'
 import config from '../../config/SiteConfig'
 import styles from './Navigation.module.scss'
 import './Headroom.scss'
-/*import { rhythm } from '../../utils/typography'*/
 import Logo from "../../images/logo-rotlo-inverse.png"
+
 export default class Navigation extends Component {
   constructor(props) {
     super(props);
@@ -51,7 +51,7 @@ export default class Navigation extends Component {
 
       <div className={styles.mobileNavContent}> 
            
-              <Menu right isOpen={this.state.menuOpen} onStateChange={this.handleStateChange} width="350px" 
+            <Menu right isOpen={this.state.menuOpen} onStateChange={this.handleStateChange} width="350px" 
             burgerButtonClassName={ styles.bmBurgerButton }
             burgerBarClassName={ styles.bmBurgerBars }
             crossButtonClassName={ styles.bmCrossButton } 
@@ -64,55 +64,44 @@ export default class Navigation extends Component {
             customCrossIcon={ false }
             customBurgerIcon={ false }
             >
-
-             
-               <Link to="/programmation" activeClassName="active" onClick={() => this.closeMenu()}>
-                Edition 2019
+ 
+              <Link to="/programmation" activeClassName="active" onClick={() => this.closeMenu()}>
+                  Edition 2019
               </Link>
-            <Link to="/infos-pratiques" activeClassName="active" onClick={() => this.closeMenu()}>
-                Infos pratiques
-              </Link>
-            
-              
+              <Link to="/infos-pratiques" activeClassName="active" onClick={() => this.closeMenu()}>
+                  Infos pratiques
+              </Link> 
               <Link to="/asso" activeClassName="active" onClick={() => this.closeMenu()}>
-                L'association
+                  L'association
               </Link>
-            
-             
-              
-             
               <Link to="/contacts" activeClassName="active" onClick={() => this.closeMenu()}>
-                Contacts
+                  Contacts
               </Link>
            
-             <div className={styles.mobileNavSocialMedia}>
-                <a href="https://www.youtube.com/" aria-label="Youtube" target="_blank" rel="noopener noreferrer">
+            <div className={styles.mobileNavSocialMedia}>
+                {/*<a href="https://www.youtube.com/" aria-label="Youtube" target="_blank" rel="noopener noreferrer">
                   <FaYoutube />
-                </a>
+                </a>*/}
               
                 <a href={config.facebookPageUrl} aria-label="Facebook" target="_blank" rel="noopener noreferrer">
                   <FaFacebook />
                 </a>
-              </div>
+            </div>
             </Menu>
        </div>
 
       <header>
         <Headroom calcHeightOnResize disableInlineStyles  >
           <Fade down duration={2000} className={styles.wrapper}>
-
             <div className={styles.name}>
               <span>
-                <Link to="/" >
-             
-                  <img src={Logo} alt={config.siteAlt} width="100px" />
-                  
+                <Link to="/" name="Accueil">
+                  <img src={Logo} alt={config.siteTitleAlt} width="100px" />
                 </Link>
-              </span>
-           
+              </span>    
             </div>
             
-            <nav className={styles.navigation}>
+            {/*<nav className={styles.navigation}>
               <span>
               
                
@@ -122,7 +111,7 @@ export default class Navigation extends Component {
            
 
               </span>
-            </nav>
+            </nav>*/}
              <div className={ styles.bmBurgerButton }>
              <HamburgerMenu 
                 isOpen={this.state.menuOpen}
