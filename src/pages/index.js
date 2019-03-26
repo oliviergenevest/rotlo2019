@@ -8,13 +8,15 @@ import SEO from '../components/seo'
 import Grid1 from '../components/Grid/Grid1'
 import Grid2 from '../components/Grid/Grid2'
 /*import TimelineProg from '../components/timeline'*/
+import RandomImage from '../components/RandomImage'
 
 const IndexPage = ({data}) => {
    return (
       <Layout>
           <SEO title="Accueil" keywords={[`solutions numériques`, `website`, `react`]} />
           <Grid1 
-            image = { <Img fluid={data.placeholderImage.childImageSharp.fluid}/> } 
+            image = { <RandomImage gatsbyImageArray={data.backgroundImages}/> } 
+            flyer = {<Img fluid={data.flyer.childImageSharp.fluid} />}
             heroText = {{text:'Rock on the l\'Oule #25'}} 
             text1= {{text:'Mercredi 7 août - La Motte Chalancon'}} 
             text3= {{text:"C'est au Pas des Ondes que ça se passe ! Entre montagnes et plans d'eau, Rock on the l'Oule fêtera sa 25ème édition. Au programme : concerts, cirque, détente, jeux en bois, produits locaux et buvette, démarche éco-responsable. On compte sur vous !"}} 
@@ -45,7 +47,11 @@ const IndexPage = ({data}) => {
                 
             />
           </Container> 
-          
+            <Container grandBureau>
+              <Img fixed={data.logoGrandBureau.childImageSharp.fixed} style={{maxWidth: '200px',marginBottom:'2rem'}}/>
+              <p>Rock On The l’Oule fait parti du Grand Bureau. Grand Bureau est un réseau né de la fusion de la FEPPRA, du GRADA, du GRAL et de Tagada Tsoin Tsoin. Lancé officiellement fin janvier 2017, il coordonne une nouvelle dynamique de coopération entre les acteurs de la filière musiques actuelles. Grand Bureau est le réseau des acteurs musiques actuelles en Auvergne-Rhône-Alpes. Il regroupe à ce jour plus de 160 structures membres de l’ensemble de la filière des musiques actuelles, et leur donne un cadre de coopération.</p>
+              <p><a target="_blank" rel="noopener noreferrer" href="http://grandbureau.fr/">http://grandbureau.fr/</a></p>  
+          </Container>
          
      
 
@@ -58,13 +64,42 @@ export default IndexPage
 
 export const query = graphql`
   query {
-    placeholderImage: file(relativePath: { eq: "rotlo-hp.jpg" }) {
+
+    backgroundImages: allFile (filter:{relativeDirectory:{eq:"backgrounds"}, extension:{eq:"jpg"}}){
+    edges {
+      node {
+          childImageSharp {
+            fluid(maxWidth: 1600, quality:80) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+    }
+
+    placeholderImage: file(relativePath: { eq: "site.jpg" }) {
           childImageSharp {
             fluid(maxWidth: 1600, quality:80) {
               ...GatsbyImageSharpFluid
             }
           }
     }
+
+    flyer: file(relativePath: { eq: "aff-rotlo-2018.jpg" }) {
+          childImageSharp {
+            fluid(maxWidth: 400, quality:80) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+    }
+
+    logoGrandBureau: file(relativePath: { eq: "grand-bureau.png" }) {
+        childImageSharp {
+                fixed(width: 200, quality:80) {
+                  ...GatsbyImageSharpFixed
+                }
+              }
+      }
 
    environnement: file(relativePath: { eq: "8.jpg" }) {
       childImageSharp {

@@ -4,12 +4,14 @@ import Img from 'gatsby-image'*/
 import ScrollDownAnimation from '../ScrollDownAnimation/ScrollDownAnimation'
 /*import { Slug } from 'mauerwerk'*/
 import { Fade } from "react-reveal"
+import HeadShake from 'react-reveal/HeadShake'
 import styles from './Grid1.module.scss'
 
 
 
 
-const Grid1 = ({image, text1, heroText, text3}) => (
+
+const Grid1 = ({image, text1, heroText, text3, flyer}) => (
     <div className= {styles.gridContainer} >
 	    <div className={styles.contentWrapper} >  
 	        <div className= {styles.hero}>
@@ -28,11 +30,14 @@ const Grid1 = ({image, text1, heroText, text3}) => (
 	           	</Fade>
 	       </div>
 	    </div>
+	     <div className= {styles.flyer} > 
+      		<Fade delay={800}><HeadShake  delay={1500}>{flyer} 	</HeadShake></Fade>
+        </div>	
        	<div className= {styles.scrollDown} >
-           <Fade down  delay={800} distance="10px"><ScrollDownAnimation/></Fade>
+           <Fade down  delay={1000} distance="10px"><ScrollDownAnimation/></Fade>
         </div>
-        <div className= {styles.image} > 
-      {image} 
+        <div className= {styles.image}> 
+      	{image} 
         </div>	
 		<div className= {styles.bgDots} > </div>
 		<div className= {styles.bgGradient} > </div>       

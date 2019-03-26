@@ -31,37 +31,27 @@
 }
 
 
-.wrapSponsor {
- display:flex;
-  margin-top:2rem;
-  margin-bottom:2rem;
-  align-items:flex-start;
-  align-content: center;
-  @include for-tablet-landscape-down {
-    flex-direction: column;
-  }
-}
 
 .sponsor {
-  margin-top:2rem;
-  margin-left:2rem;
-  background-color:white;
+  margin-top:4rem;
+/*  margin-left:2rem;*/
+width:100%;
+max-width:100%;
    background-color:#2e2e2e;
    font-size:15px;
- /* max-width:450px;*/
-    padding:2rem;
 
+    padding:2rem;
+ 
 }
 
 
 .grandBureau {
+ margin-top: 4rem;
  background-color:$brand-cta;
  padding:2rem;
  padding-bottom:1rem;
  color:white;
- max-width:600px;
  font-size:15px;
-
  display:flex;
  flex-direction: column;
  justify-content: center; /*alignement vertical centré*/

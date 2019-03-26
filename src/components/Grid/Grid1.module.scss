@@ -18,7 +18,23 @@
 	}
 }
 
+.flyer {
+	grid-column: 3 / 5;
+	grid-row: 2 / 4;
+	z-index:2;
+	/*max-width:400px;*/ width:70%;
+	transform:rotate(5deg);
+	div {
+		    box-shadow: 0 5px 95px 1px #000000ad;  
+	}
+	
+	@include for-tablet-landscape-down {
+		display:none;
+	}
+}
+
 .image {
+	transition:all 1s ease;
 	grid-column: 1 / 5;
 	grid-row: 1 / 4;
 	overflow: hidden;
@@ -27,7 +43,7 @@
 
 }
 
-.image > div {height:100%;}
+.image > div  {height:100%;}
 
 .bgDots {
    background: url(../../images/pattern-white.svg) repeat;

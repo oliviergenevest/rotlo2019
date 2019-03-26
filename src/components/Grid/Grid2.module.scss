@@ -9,8 +9,7 @@
 
 .content {
   display:flex;
-  background-color:$brand-secondary;
-   background-color:#291d1d;
+    background: linear-gradient(to right, #291d1d, rgb(46, 46, 46));
   @include for-tablet-landscape-down {
       flex-direction:column;
     /*  background-color:inherit;*/

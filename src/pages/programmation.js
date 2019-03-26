@@ -13,7 +13,7 @@ const Programmation = () => (
     <h1>Programmation</h1>
     
     <h2>Prochainement</h2>
-    <p>Retrouvez très prochainement la programmation cmplète du festival Rock on the l'Oule 2019</p>
+    <p>Retrouvez très prochainement la programmation complète du festival Rock on the l'Oule 2019</p>
     
   
 
