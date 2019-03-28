@@ -82,6 +82,7 @@
 	align-items: flex-end;
 	align-content: flex-end;
 	flex-wrap: wrap;
+	padding-right: 2rem;
 	@include for-tablet-landscape-down {
 		grid-column: 2 / 4;
 	}
@@ -93,6 +94,7 @@
 	  }
 	  	 @include for-tablet-landscape-down {
 			 font-size: 1.8rem;
+			 padding-right: 0;
 		}
 	  
 	}

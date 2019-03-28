@@ -11,7 +11,7 @@ class RandomImage extends React.Component {
 
     this.state = {
       images: props.gatsbyImageArray,
-      activeImageIndex: 0
+      activeImageIndex: Math.floor(Math.random() * Math.floor(props.gatsbyImageArray.edges.length))
     }
   }
 

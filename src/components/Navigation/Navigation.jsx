@@ -74,6 +74,9 @@ export default class Navigation extends Component {
               <Link to="/asso" activeClassName="active" onClick={() => this.closeMenu()}>
                   L'association
               </Link>
+              <Link to="/archives" activeClassName="active" onClick={() => this.closeMenu()}>
+                  Archives
+              </Link>
               <Link to="/contacts" activeClassName="active" onClick={() => this.closeMenu()}>
                   Contacts
               </Link>

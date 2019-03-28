@@ -53,9 +53,6 @@ const IndexPage = ({data}) => {
               <p><a target="_blank" rel="noopener noreferrer" href="http://grandbureau.fr/">http://grandbureau.fr/</a></p>  
           </Container>
          
-     
-
-          
       </Layout>
 )
 }
