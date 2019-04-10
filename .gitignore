@@ -1,5 +1,5 @@
-#windows file system
-*.db
+# Windows thumbnail cache files
+Thumbs.db
 
 # Logs
 logs
