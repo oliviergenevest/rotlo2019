@@ -1,6 +1,5 @@
 #windows file system
-Thumbs.db
-desktop.ini
+*.db
 
 # Logs
 logs
