@@ -1,19 +1,19 @@
 import React from 'react'
 /*import { Link } from 'gatsby'*/
-import Img from 'gatsby-image'
+/*import Img from 'gatsby-image'*/
 import Layout from '../components/layout'
 import Container from '../components/Container/Container'
 import SEO from '../components/seo'
-import Card from '../components/card/card'
-import GridFlex from '../components/Grid/GridFlex'
-import { graphql } from 'gatsby'
+/*import Card from '../components/card/card'
+import GridFlex from '../components/Grid/GridFlex'*/
+/*import { graphql } from 'gatsby'*/
 import { FaFacebook } from 'react-icons/fa'
 import config from '../config/SiteConfig'
 
 const Contacts = () => {
 
  return  ( <Layout> 
-    <SEO title="Contacts" keywords={[`gatsby`, `application`, `react`]} />
+    <SEO title="Contacts" keywords={[`festival`, `rock on the l'oule`, `la motte chalancon`,`rock`,`musique`,`spectacle`,`concert`]} />
     <Container text first>   
         <h1>Contacts</h1> 
         <h2>Email</h2>

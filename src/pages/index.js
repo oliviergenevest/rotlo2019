@@ -13,7 +13,7 @@ import RandomImage from '../components/RandomImage'
 const IndexPage = ({data}) => {
    return (
       <Layout>
-          <SEO title="Accueil" keywords={[`solutions numériques`, `website`, `react`]} />
+          <SEO title="Accueil" keywords={[`festival`, `rock on the l'oule`, `la motte chalancon`,`rock`,`musique`,`spectacle`,`concert`]} />
           <Grid1 
             image = { <RandomImage gatsbyImageArray={data.backgroundImages}/> } 
             flyer = {<Img fluid={data.flyer.childImageSharp.fluid} />}

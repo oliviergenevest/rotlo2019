@@ -2,10 +2,13 @@
 
 /* Global styles - peut aussi se faire depuis typography.js (overrideStyles)*/
 
+
 body {
   background-color:$brand-primary;
   color:$brand-third;
 }
+
+
 
 :focus {
     outline: 1px solid #ffffff29;
@@ -22,23 +25,22 @@ body {
 }
 
 header {
-  
     position: absolute;
     width: 100%;
-
 }
 
 main {
   flex:1;
+  position: relative;
 }
 
 
 a {
   position: relative;
-   color:inherit;
-   &:hover{
+  color:inherit;
+  &:hover{
     text-decoration:none;
-   }
+  }
 }
 a:after {  
     content: "";

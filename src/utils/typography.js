@@ -12,6 +12,8 @@ const typography = new Typography( {
   bodyFontFamily: ["Montserrat", "sans-serif"],
 overrideStyles: ({ adjustFontSizeTo, rhythm }, options, styles) => ({
   body:{color:'#d9dad8'},
+  'html, body, #___gatsby,div[role="group"][tabindex]' :{ height: '100%'},
+
   h1: {
     fontFamily: ['Raleway', 'sans-serif'].join(','),
    textTransform:'uppercase',

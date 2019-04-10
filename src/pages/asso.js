@@ -6,7 +6,7 @@ import SEO from '../components/seo'
 /*import styles from './biography.module.scss'*/
 const AssoPage = () => (
   <Layout>
-    <SEO title="L'association Rock on the l'Oule" keywords={[`gatsby`, `application`, `react`]} />
+    <SEO title="L'association Rock on the l'Oule" keywords={[`festival`, `rock on the l'oule`, `la motte chalancon`,`rock`,`musique`,`spectacle`,`concert`]} />
 
  <Container text first>
     

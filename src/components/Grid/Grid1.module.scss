@@ -19,6 +19,7 @@
 }
 
 .flyer {
+	display:none;
 	grid-column: 3 / 5;
 	grid-row: 2 / 4;
 	z-index:2;
@@ -91,6 +92,7 @@
 	  	font-weight:900;
 	  	h2{
 	  	color:$brand-cta;
+	  	    margin-bottom: 0;
 	  }
 	  	 @include for-tablet-landscape-down {
 			 font-size: 1.8rem;

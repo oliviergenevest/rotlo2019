@@ -4,7 +4,7 @@ import Img from 'gatsby-image'
 import Layout from '../components/layout'
 import Container from '../components/Container/Container'
 import SEO from '../components/seo'
-import Card from '../components/card/card'
+import CardExpand from '../components/card/cardExpand'
 import GridFlex from '../components/Grid/GridFlex'
 import { graphql } from 'gatsby'
 
@@ -14,11 +14,11 @@ const Archives = ({data}) => {
 
   return  ( 
     <Layout> 
-      <SEO title="Archives" keywords={[`gatsby`, `application`, `react`]} />
+      <SEO title="Archives" keywords={[`festival`, `rock on the l'oule`, `la motte chalancon`,`rock`,`musique`,`spectacle`,`concert`]}/>
       <Container fluid first>
           <GridFlex>
               {images.map( (image,key) => (
-                  <Card  key={image.node.childImageSharp.fluid.src} edition={25-key-1} annee={2019-key-1} affiche={ <Img
+                  <CardExpand  key={image.node.childImageSharp.fluid.src} edition={25-key-1} annee={2019-key-1} affiche={ <Img
                          fluid={image.node.childImageSharp.fluid}
                             />}/>
               ))}

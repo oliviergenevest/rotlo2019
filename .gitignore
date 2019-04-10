@@ -1,3 +1,7 @@
+#windows file system
+Thumbs.db
+desktop.ini
+
 # Logs
 logs
 *.log

@@ -44,22 +44,12 @@
   margin-left: auto;
 }
 
-/* Navigation classique */ 
-.navigation {
-  a:not(:first-child) {
-    margin-left: 1rem;
-  }
-  justify-content: right;
-  display: none;
-   @include for-phone-only {
-    display: none;
-  }
-}
 
 .name {
   h3 {
     font-size: inherit;
     margin-bottom: 0 !important;
+    
   }
 
 
@@ -101,10 +91,10 @@
 
 
 .mobileNavSocialMedia {
-  color: $brand-secondary;
+
   font-size: 1.5rem;
   margin-top: 2rem;
-  color:$brand-secondary;
+ 
 
   a:not(:first-child) {
     margin-left: 1.5rem;
@@ -117,31 +107,22 @@
 /*MENU MOBILE*/
 
 
- .bmBurgerButton {
-  cursor:pointer;
-  /*position: fixed;
-  width: 56px;
-  height: 30px;
-  right: 1rem;
-  top: 28px;*/
+.bmBurgerButton {
+  cursor:pointer;  
   align-self: center;
   z-index:2000;
- /* display: none;*/
-   @include for-phone-only {
-    display: block;
-  }
 }
- .bmBurgerButton:hover {
+
+.bmBurgerButton:hover {
     div span:nth-child(2) {
       right:0px!important;
       background:$brand-cta!important;
     }
-
  }
 
 
 /* Color/shape of burger icon bars */
- .bmBurgerBars {
+.bmBurgerBars {
   background: #fff;
   height:4px;
 }
@@ -182,14 +163,25 @@
   flex-direction:column;
   justify-content:center;
   align-items: flex-end;
+
+ 
 }
 
-/* Individual item */
+/* Individual item a */
  .bmItem {
   display: inline-block;
   font-size:1.5em;  
-  color:white;
+  text-decoration: none;
   padding:.3em 0;
+  
+  &:hover{
+    color: white;
+  }
+  &.active {
+    color: $brand-cta;
+  }
+
+  
 
 }
 

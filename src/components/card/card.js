@@ -21,8 +21,9 @@ export default function Card(content) {
   // We add this ref to card element and use in onMouseMove event ...
   // ... to get element's offset and dimensions.
   const ref = useRef()
+ 
 
-    const [props, set] = useSpring(() => ({ xys: [0, 0, 0.9], config: { mass: 1, tension: 170, friction: 40 } }))
+  const [props, set] = useSpring(() => ({ xys: [0, 0, 0], config: { mass: 1, tension: 170, friction: 40 } }))
     
     return (
     <div  
@@ -48,7 +49,7 @@ export default function Card(content) {
       }       
       onMouseLeave={() => {
         // Set xy back to original
-        set({ xys: [0, 0,0.9] });
+        set({ xys: [0, 0,0] });
       }}
 
     > 

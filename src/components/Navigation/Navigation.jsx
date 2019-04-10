@@ -65,19 +65,19 @@ export default class Navigation extends Component {
             customBurgerIcon={ false }
             >
  
-              <Link to="/programmation" activeClassName="active" onClick={() => this.closeMenu()}>
+              <Link to="/programmation" activeClassName={styles.active}  onClick={() => this.closeMenu()}>
                   Edition 2019
               </Link>
-              <Link to="/infos-pratiques" activeClassName="active" onClick={() => this.closeMenu()}>
+              <Link to="/infos-pratiques" activeClassName={styles.active} onClick={() => this.closeMenu()}>
                   Infos pratiques
               </Link> 
-              <Link to="/asso" activeClassName="active" onClick={() => this.closeMenu()}>
+              <Link to="/asso" activeClassName={styles.active} onClick={() => this.closeMenu()}>
                   L'association
               </Link>
-              <Link to="/archives" activeClassName="active" onClick={() => this.closeMenu()}>
+              <Link to="/archives" activeClassName={styles.active} onClick={() => this.closeMenu()}>
                   Archives
               </Link>
-              <Link to="/contacts" activeClassName="active" onClick={() => this.closeMenu()}>
+              <Link to="/contacts" activeClassName={styles.active} onClick={() => this.closeMenu()}>
                   Contacts
               </Link>
            

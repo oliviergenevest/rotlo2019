@@ -38,20 +38,20 @@ const Layout = ({ children }) => (
     render={
 
       data => (
+      
       <div className={styles.page}>   
         <Navigation/>
         <main className={styles.content} >
           {children} 
+       
+          <Container  sponsor>           
+            <div className="logoContainer">
+               <Img fixed={data.logoDrome.childImageSharp.fixed} style={{maxWidth: '100px',marginBottom:'2rem'}}/>   
+              {/*} <Img fluid={data.logoLabelfolie.childImageSharp.fluid} style={{maxWidth: '100px',marginBottom:'2rem'}}/>*/}
+            </div>
+            <p>Rock On The l’Oule est soutenu par la Communauté des Communes du Diois, le Conseil Général de la Drôme (cantons de la Motte et de Rémuzat), des communes de la Motte Chalancon, de Cornillon sur l’Oule et des alentours.</p>
+          </Container>  
         </main>
-
-        <Container  sponsor>           
-          <div className="logoContainer">
-             <Img fixed={data.logoDrome.childImageSharp.fixed} style={{maxWidth: '100px',marginBottom:'2rem'}}/>   
-            {/*} <Img fluid={data.logoLabelfolie.childImageSharp.fluid} style={{maxWidth: '100px',marginBottom:'2rem'}}/>*/}
-          </div>
-          <p>Rock On The l’Oule est soutenu par la Communauté des Communes du Diois, le Conseil Général de la Drôme (cantons de la Motte et de Rémuzat), des communes de la Motte Chalancon, de Cornillon sur l’Oule et des alentours.</p>
-        </Container>  
-
         <footer>
           <Container fluid footer >
               <span> <a href={config.facebookPageUrl} aria-label="Facebook" target="_blank" rel="noopener noreferrer">
@@ -60,7 +60,7 @@ const Layout = ({ children }) => (
               <span>Association Rock On The L'Oule - 2019 - <Link to="/credits">Crédits</Link></span>
           </Container>
         </footer>
-      </div>
+     </div>
     )}
   />
 )

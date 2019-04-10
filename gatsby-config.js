@@ -45,7 +45,7 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Festival Rock on the l'Oule`,
-        short_name: `rotlo 2019`,
+        short_name: `Rock on the l'Oule`,
         start_url: `/`,
         background_color: `#000`,
         theme_color: `#f37260`,
