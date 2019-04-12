@@ -12,7 +12,7 @@ const Programmation = () => (
     
     <h1>Programmation</h1>
     
-    <h2>25èmem édition : Mercredi 7 août 2019</h2>
+    <h2>25ème édition : Mercredi 7 août 2019</h2>
     <p>Retrouvez très prochainement la programmation complète du festival Rock on the l'Oule 2019</p>
     
   
