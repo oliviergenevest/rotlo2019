@@ -52,7 +52,7 @@
   }
   
  @include for-tablet-landscape-down {
-      flex-direction:column;
+      flex-direction:column-reverse;
       /*background-color:inherit;*/
     }
 
