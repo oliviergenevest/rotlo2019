@@ -12,11 +12,6 @@ import styles from './Grid1.module.scss'
 
 const Grid1 = ({image, text1, heroText, text3, flyer}) => (
     <div className= {styles.gridContainer} >
-	   
-	     <div className= {styles.flyer} > 
-      		<Fade delay={800}><HeadShake  delay={1500}>{flyer} 	</HeadShake></Fade>
-        </div>	
-       	
         <div className= {styles.image}> 
       	{image} 
         </div>	
@@ -39,6 +34,9 @@ const Grid1 = ({image, text1, heroText, text3, flyer}) => (
 	           	</Fade>
 	       </div>
 	    </div> 
+	     <div className= {styles.flyer} > 
+      		<Fade delay={800}><HeadShake  delay={1500}>{flyer} 	</HeadShake></Fade>
+        </div>	
 	    <div className= {styles.scrollDown} >
            <Fade down  delay={1000} distance="10px"><ScrollDownAnimation/></Fade>
         </div>      

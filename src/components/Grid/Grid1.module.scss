@@ -50,7 +50,6 @@
    background: url(../../images/pattern-white.svg) repeat;
    /* height: 100%;*/
     opacity: 0.2;
-   
     z-index: 0;
     grid-column: 1 / 5;
 	grid-row: 1 / 4;
@@ -58,10 +57,10 @@
 
 .bgGradient {
 	background: linear-gradient(to right, rgba(5, 8, 101, 0.8), rgba(0, 24, 49, 0));
-	
 	grid-column: 1 / 5;
 	grid-row: 1 / 4;
 	  z-index: 0;
+	  opacity:0.9;
 }
 
 .scrollDown {
