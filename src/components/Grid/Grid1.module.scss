@@ -57,9 +57,8 @@
 }
 
 .bgGradient {
-	/*background: linear-gradient(to right, rgba(5, 8, 101, 0.8), rgba(0, 24, 49, 0));*/
-	/*background: linear-gradient(to right, #050865 80%,#001831 1%);*/
-	background: -webkit-gradient(linear, left top, right top, from(rgba(5, 8, 101, 0.8)), to(rgba(0, 24, 49, 0)));background: -webkit-linear-gradient(left, rgba(5, 8, 101, 0.8), rgba(0, 24, 49, 0));background: -o-linear-gradient(left, rgba(5, 8, 101, 0.8), rgba(0, 24, 49, 0));background: linear-gradient(to right, rgba(5, 8, 101, 0.8), rgba(0, 24, 49, 0));
+	background: linear-gradient(to right, rgba(5, 8, 101, 0.8), rgba(0, 24, 49, 0));
+	
 	grid-column: 1 / 5;
 	grid-row: 1 / 4;
 	  z-index: 0;
