@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     siteUrl:'https://rockontheloule.org',
     title: `Rock on the l'Oule - 2019`,
-    description: `Festival Rock on the l'Oule - 2019.`,
+    description: `Festival Rock on the l'Oule - Mercredi 7 Août 2019`,
     author: `Association Rock on the l'Oule`,
   }, 
   plugins: [
