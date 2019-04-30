@@ -19,7 +19,7 @@
 }
 
 .flyer {
-	display:none;
+	/*display:none;*/
 	grid-column: 3 / 5;
 	grid-row: 2 / 4;
 	z-index:2;
@@ -30,7 +30,10 @@
 	}
 	
 	@include for-tablet-landscape-down {
-		display:none;
+	/*	grid-column: 2 / 4;
+	grid-row: 3 ;
+	width:250px;*/
+	display:none;
 	}
 }
 
