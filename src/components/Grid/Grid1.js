@@ -21,7 +21,10 @@ const Grid1 = ({image, text1, heroText, text3, flyer}) => (
 	        <div className= {styles.hero}>
 	          <Fade up  delay={300} distance="10px">
 	           <h1 className= {styles.title}>Festival<br/>{ heroText.text }</h1>
-	          </Fade>         
+	          </Fade>
+	           <div className= {styles.flyerMobile} > 
+      				<Fade delay={800}><HeadShake  delay={1500}>{flyer} 	</HeadShake></Fade>
+        		</div>	         
 	        </div>
 	        <div className= {styles.subTitle} >
 		        <Fade up  delay={400} distance="10px">
