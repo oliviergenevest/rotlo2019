@@ -1,8 +1,9 @@
 module.exports = {
   siteMetadata: {
+    siteUrl:'https://rockontheloule.org',
     title: `Rock on the l'Oule - 2019`,
     description: `Festival Rock on the l'Oule - 2019.`,
-    author: `Olivier Genevest`,
+    author: `Association Rock on the l'Oule`,
   }, 
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -41,6 +42,7 @@ module.exports = {
 
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    'gatsby-plugin-sitemap',
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
