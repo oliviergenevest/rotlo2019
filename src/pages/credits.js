@@ -13,10 +13,10 @@ const Credits = () => (
     <h1>Credits</h1>
     
     <h2>Site internet</h2>
-    <p><a href="https://oliviergenevest.info">Olivier Genevest</a></p>
+    <p><a href="https://oliviergenevest.info" target="_blank" rel="noopener noreferrer" >Olivier Genevest</a></p>
     
     <h2>Photos</h2>
-    <p><a href="http://lafabegrafik.com/">Fabienne Chemin</a>, Claude Mery, Eric Roset</p>
+    <p><a href="http://lafabegrafik.com/" target="_blank" rel="noopener noreferrer" >Fabienne Chemin</a>, Claude Mery, <a href="http://www.eric-roset.ch/" target="_blank" rel="noopener noreferrer" >Eric Roset</a></p>
 
 
 

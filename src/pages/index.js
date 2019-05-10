@@ -91,7 +91,7 @@ export const query = graphql`
 
     flyer: file(relativePath: { eq: "aff-rotlo-2019.jpg" }) {
           childImageSharp {
-            fluid(maxWidth: 400, quality:80) {
+            fluid(maxWidth: 400, quality:90) {
               ...GatsbyImageSharpFluid
             }
           }
