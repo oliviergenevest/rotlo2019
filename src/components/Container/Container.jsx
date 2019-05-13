@@ -9,6 +9,7 @@ const Container = props => {
     { [styles.first]: props.first },
     { [styles.footer]: props.footer }, 
     { [styles.sponsor]: props.sponsor }, 
+    { [styles.newsletter]: props.newsletter }, 
     { [styles.grandBureau]: props.grandBureau},
     { [styles.wrapSponsor]: props.wrapSponsor},
     { [styles.fluid]: props.fluid }

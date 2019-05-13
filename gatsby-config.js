@@ -42,6 +42,12 @@ module.exports = {
 
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    {
+      resolve:`gatsby-plugin-mailchimp`,
+      options: {
+        endpoint:'https://gmail.us20.list-manage.com/subscribe/post?u=7255d41db250cfac4673fc379&amp;id=d34dcc4d2e',
+      }
+    },
     'gatsby-plugin-sitemap',
     {
       resolve: `gatsby-plugin-manifest`,
