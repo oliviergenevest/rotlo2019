@@ -4,7 +4,7 @@ import Img from 'gatsby-image'*/
 import { Fade } from "react-reveal"
 import styles from './Grid2.module.scss'
 import cx from 'classnames'
-import Video from '../Video'
+import Video from '../video'
 
 
 const Grid2 = ({image, text, title, reverse = false, artiste=null}) => {
