@@ -14,7 +14,10 @@ const Archives = ({data}) => {
 
   return  ( 
     <Layout> 
-      <SEO title="Archives" keywords={[`festival`, `rock on the l'oule`, `la motte chalancon`,`rock`,`musique`,`spectacle`,`concert`]}/>
+      <SEO 
+      title="Archives" 
+      keywords={[`festival`, `rock on the l'oule`, `la motte chalancon`,`rock`,`musique`,`spectacle`,`concert`]}
+      description="Un retour en image sur les 25 ans du festival Rock on The l'Oule à la Motte Chalancon. Retrouvez sur cette page le détail des éditions précédentes."/>
       <Container fluid first>
           <GridFlex>
               {images.map( (image,key) => (

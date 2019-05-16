@@ -6,7 +6,7 @@ import SEO from '../components/seo'
 /*import styles from './biography.module.scss'*/
 const Credits = () => (
   <Layout>
-    <SEO title="Credits" keywords={[`festival`, `rock on the l'oule`, `la motte chalancon`,`rock`,`musique`,`spectacle`,`concert`]} />
+    <SEO title="Crédits" keywords={[`festival`, `rock on the l'oule`, `la motte chalancon`,`rock`,`musique`,`spectacle`,`concert`]} />
 
  <Container text first>
     

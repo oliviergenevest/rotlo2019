@@ -44,6 +44,13 @@
    }
 }
 
+.tags {
+
+    color: $brand-cta;
+    font-weight: 700;
+
+}
+
 /*on alterne droite gauche pour l'image*/
 .reverse {
   flex-direction:row-reverse;

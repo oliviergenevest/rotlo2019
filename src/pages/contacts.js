@@ -13,7 +13,11 @@ import config from '../config/SiteConfig'
 const Contacts = () => {
 
  return  ( <Layout> 
-    <SEO title="Contacts" keywords={[`festival`, `rock on the l'oule`, `la motte chalancon`,`rock`,`musique`,`spectacle`,`concert`]} />
+    <SEO 
+        title="Contacts" 
+        keywords={[`festival`, `rock on the l'oule`, `la motte chalancon`,`rock`,`musique`,`spectacle`,`concert`]} 
+        decription="Association Rock On the l'Oule, Le Village, 26470 la Motte Chalancon - Pour nous contacter c'est par ici !"
+    />
     <Container text first>   
         <h1>Contacts</h1> 
         <h2>Email</h2>

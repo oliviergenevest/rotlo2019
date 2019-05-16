@@ -6,7 +6,11 @@ import SEO from '../components/seo'
 /*import styles from './biography.module.scss'*/
 const InfosPratiques = () => (
   <Layout>
-    <SEO title="Infos pratiques" keywords={[`festival`, `rock on the l'oule`, `la motte chalancon`,`rock`,`musique`,`spectacle`,`concert`]}/>
+    <SEO 
+      title="Infos pratiques" 
+      keywords={[`festival`, `rock on the l'oule`, `la motte chalancon`,`rock`,`musique`,`spectacle`,`concert`]}
+      description="Le Festival Rock on the l'Oule, c'est des concerts, des spectacles, des jeux en bois, des produits locaux et buvette, une démarche éco-responsable, un espace bivouac."
+    />
 
  <Container text first>
     
