@@ -13,7 +13,10 @@ import RandomImage from '../components/RandomImage'
 const IndexPage = ({data}) => {
    return (
       <Layout>
-          <SEO title="Accueil" keywords={[`festival`, `rock on the l'oule`, `la motte chalancon`,`rock`,`musique`,`spectacle`,`concert`]} description="Mercredi 7 août 2019, c'est au Pas des Ondes de la Motte Chalancon que ça se passe ! Entre montagnes et plans d'eau, Rock on the l'Oule fêtera sa 25ème édition. Au programme : concerts, cirque, détente, jeux en bois, produits locaux et buvette, démarche éco-responsable. On compte sur vous !"/>
+          <SEO title="Accueil" 
+          keywords={[`festival`, `rock on the l'oule`, `la motte chalancon`,`rock`,`musique`,`spectacle`,`concert`]} 
+          description="Mercredi 7 août 2019, c'est au Pas des Ondes de la Motte Chalancon que ça se passe ! Entre montagnes et plans d'eau, Rock on the l'Oule fêtera sa 25ème édition. Au programme : concerts, cirque, détente, jeux en bois, produits locaux et buvette, démarche éco-responsable. On compte sur vous !" 
+          image={data.seo.childImageSharp.resize}/>
           <Grid1 
             image = { <RandomImage gatsbyImageArray={data.backgroundImages}/> } 
             flyer = {<Img fluid={data.flyer.childImageSharp.fluid} />}
@@ -94,8 +97,18 @@ export const query = graphql`
             fluid(maxWidth: 400, quality:90) {
               ...GatsbyImageSharpFluid
             }
-          }
+          }  
     }
+
+    seo: file(relativePath: { eq: "aff-rotlo-2019.jpg" }) { 
+        childImageSharp {
+            resize(width: 1200) {
+              src
+              height
+              width
+            }
+          }
+        }
 
     logoGrandBureau: file(relativePath: { eq: "grand-bureau.png" }) {
         childImageSharp {

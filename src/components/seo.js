@@ -3,15 +3,21 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 
-function SEO({ description, lang, meta, keywords, title }) {
+function SEO({ description, lang, meta, keywords, title,  image: metaImage }) {
   return (
     <StaticQuery
       query={detailsQuery}
       render={data => {
         const metaDescription =
           description || data.site.siteMetadata.description
+        const image =
+          metaImage && metaImage.src
+            ? `${data.site.siteMetadata.siteUrl}${metaImage.src}`
+            : null
+          /*  console.log(image)
+            console.log(metaImage)*/
         return (
-          <Helmet
+          <Helmet 
             htmlAttributes={{
               lang,
             }}
@@ -59,6 +65,33 @@ function SEO({ description, lang, meta, keywords, title }) {
                     }
                   : []
               )
+              .concat(
+                  metaImage
+                    ? [
+                        {
+                          property: "og:image",
+                          content: image
+                        },
+                        {
+                          property: "og:image:width",
+                          content: metaImage.width
+                        },
+                        {
+                          property: "og:image:height",
+                          content: metaImage.height
+                        },
+                        {
+                          name: "twitter:card",
+                          content: "summary_large_image"
+                        }
+                      ]
+                    : [
+                        {
+                          name: "twitter:card",
+                          content: "summary"
+                        }
+                      ]
+                )
               .concat(meta)}
           />
         )
@@ -90,6 +123,7 @@ const detailsQuery = graphql`
         title
         description
         author
+        siteUrl
       }
     }
   }
