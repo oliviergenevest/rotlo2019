@@ -29,7 +29,7 @@ const Grid2 = ({image, text, title, reverse = false, artiste=null}) => {
 							/>
 
 							<p><br/>En savoir plus : <br/>
-								<a href={artiste.websiteURL} target="_blank" rel="noopener noreferrer">Site internet</a> - 
+								<a href={artiste.websiteURL} target="_blank" rel="noopener noreferrer">Site internet</a> { } - { } 
 								<a href={artiste.facebookURL} target="_blank" rel="noopener noreferrer">Page Facebook</a>
 							</p>
 							

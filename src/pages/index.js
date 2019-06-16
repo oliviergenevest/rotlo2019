@@ -21,7 +21,8 @@ const IndexPage = ({data}) => {
             image = { <RandomImage gatsbyImageArray={data.backgroundImages}/> } 
             flyer = {<Img fluid={data.flyer.childImageSharp.fluid} />}
             heroText = {{text:'Rock on the l\'Oule #25'}} 
-            text1= {{text:'Mercredi 7 août 2019 - La Motte Chalancon'}} 
+            text1= {{text:"Mercredi 7 août 2019 - La Motte Chalancon"}} 
+            text2= {{text:"ANTIBALAS - SAODAJ' - PINIOL - DJ VON KIDS"}} 
             text3= {{text:"C'est au Pas des Ondes que ça se passe ! Entre montagnes et plans d'eau, Rock on the l'Oule fêtera sa 25ème édition. Au programme : concerts, cirque, détente, jeux en bois, produits locaux et buvette, démarche éco-responsable. On compte sur vous !"}} 
           />
 

@@ -10,7 +10,7 @@ import styles from './Grid1.module.scss'
 
 
 
-const Grid1 = ({image, text1, heroText, text3, flyer}) => (
+const Grid1 = ({image, text1, heroText, text3, text2, flyer}) => (
     <div className= {styles.gridContainer} >
         <div className= {styles.image}> 
       	{image} 
@@ -29,11 +29,13 @@ const Grid1 = ({image, text1, heroText, text3, flyer}) => (
 	        <div className= {styles.subTitle} >
 		        <Fade up  delay={400} distance="10px">
 		        	<h2>{ text1.text }</h2>
+		        		<p>{ text2.text }</p>
 		        </Fade>      
 	        </div>
 			<div className= {styles.description} >
 	          	<Fade up  delay={500} distance="10px">
 	       		 	<p>{ text3.text }</p>
+	       		 
 	           	</Fade>
 	       </div>
 	    </div> 

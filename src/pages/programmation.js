@@ -19,14 +19,32 @@ const artistes = [
 		video:'https://www.youtube.com/embed/xM6HBAM93V4',
 	},
 	{ 
-		name:'Groupe 2',
-		genre:'#Rock', 
-		websiteURL:'https://antibalas.com',
-		facebookURL: 'https://www.facebook.com/antibalas',
-		description:'bla bla',
-		cover: <Img fluid={data.antibalas.childImageSharp.fluid} />,
-		video:'https://www.youtube.com/embed/xM6HBAM93V4',
+		name:"Saodaj'",
+		genre:'#Maloya', 
+		websiteURL:'https://saodaj.bandcamp.com',
+		facebookURL: 'https://www.facebook.com/saodaj',
+		description:'Groupe qui a bien le vent en poupe (transmusicales, Vieilles charrues, Francofolies…), chouette et avec des filles dedans. ',
+		cover: <Img fluid={data.saodaj.childImageSharp.fluid} />,
+		video:'https://www.youtube.com/embed/IbSopDjYsZA',
 	},
+	{ 
+		name:"Piniol",
+		genre:'#Rock', 
+		websiteURL:'https://piniol.bandcamp.com/',
+		facebookURL: 'https://www.facebook.com/PinioLband',
+		description:'Sur scène, ce sont 2 trios guitare basse batterie, un à jardin, l’autre à cour, séparés par un claviériste, élément central et point convergent qui créent une étrange impression. Voit-on double ? Oui et non et c’est probablement cette incertitude qui invite à la perte des sens et à un certain abandon. Piniol ne choisit pas entre maxi et minimalisme et affirme sa singularité dans son approche syncrétique d’extrêmes musicaux qu’on aurait pu juger compliqué à accommoder de prime abord.',
+		cover: <Img fluid={data.piniol.childImageSharp.fluid} />,
+		video:'https://www.youtube.com/embed/rWRQ5aHBWtI',
+	},
+	{ 
+		name:"DJ Von Kids",
+		genre:'#DjSet', 
+		websiteURL:'https://www.facebook.com/von.kids.5',
+		facebookURL: 'https://www.facebook.com/von.kids.5',
+		description:'DJ Von Kids',
+		cover: <Img fluid={data.djvonkids.childImageSharp.fluid} />,
+		video:'https://www.youtube.com/embed/lQDPpN3JwNE',
+	}
 
 ]
 return (
@@ -40,23 +58,25 @@ return (
  	<Container text first>		    
 	    <h1>Programmation</h1>
 	     <h2>25ème édition : Mercredi 7 août 2019</h2>
+	     <p>C'est au Pas des Ondes à la Motte Chalancon que ça se passe ! Entre montagnes et plans d'eau, Rock on the l'Oule fêtera sa 25ème édition. Au programme : concerts, cirque, détente, jeux en bois, produits locaux et buvette, démarche éco-responsable. On compte sur vous !</p>
 	</Container>
- 	<Grid2 
-        text={{text:artistes[0].description}}
-        image={artistes[0].cover}
-        title={artistes[0].name}
-		artiste={artistes[0]}          
-        reverse
-    />
-    {/*<Grid2 
-        text={{text:artistes[1].description}}
-        image={artistes[1].cover}
-        title={artistes[1].name}
-		artiste={artistes[1]}          
-        
-    />*/}
-	<Container text first>		    
-	    <p>Retrouvez très prochainement la programmation complète du festival Rock on the l'Oule 2019</p>
+	{
+		artistes.map( (artiste, key) => (
+
+			<Grid2 
+			key={key}
+	        text={{text:artiste.description}}
+	        image={artiste.cover}
+	        title={artiste.name}
+			artiste={artiste}  
+			reverse={key%2}
+			
+	    	/>
+	 
+    	))
+	}
+	<Container text >		    
+	    <p>Le 7 Août prochain, prenez les routes sinueuses qui mènent au Pas des Ondes, on s'occupe du reste !</p>
 	    <Img fluid={data.flyer.childImageSharp.fluid} style={{'maxWidth':'400px'}}/>
 	</Container>
 	
@@ -79,6 +99,30 @@ export const query = graphql`
 	    }
 
 	    antibalas:file(relativePath: { eq: "programmation/antibalas.jpg" }) {
+	          childImageSharp {
+	            fluid(maxWidth: 1500, quality:98) {
+	              ...GatsbyImageSharpFluid
+	            }
+	          }
+	    }
+
+	    piniol:file(relativePath: { eq: "programmation/piniol.jpg" }) {
+	          childImageSharp {
+	            fluid(maxWidth: 1500, quality:98) {
+	              ...GatsbyImageSharpFluid
+	            }
+	          }
+	    }
+
+	    saodaj:file(relativePath: { eq: "programmation/saodaj3.jpg" }) {
+	          childImageSharp {
+	            fluid(maxWidth: 1500, quality:98) {
+	              ...GatsbyImageSharpFluid
+	            }
+	          }
+	    }
+
+	    djvonkids:file(relativePath: { eq: "programmation/djvonkids.jpg" }) {
 	          childImageSharp {
 	            fluid(maxWidth: 1500, quality:98) {
 	              ...GatsbyImageSharpFluid
