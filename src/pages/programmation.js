@@ -27,7 +27,7 @@ const artistes = [
 		genre:'#Maloya #Réunion', 
 		websiteURL:'https://saodaj.bandcamp.com',
 		facebookURL: 'https://www.facebook.com/saodaj',
-		description:'Mlocêlant les influences d’Afrique Australe, d’Europe et de l’Océan Indien, le groupe créé des chansons hors du temps par l’alliance de rythmes provoquant la transe et de chants polyphoniques extatiques. Un Maloya nomade dépouillé d’artifice.',
+		description:'Mêlant les influences d’Afrique Australe, d’Europe et de l’Océan Indien, le groupe créé des chansons hors du temps par l’alliance de rythmes provoquant la transe et de chants polyphoniques extatiques. Un Maloya nomade dépouillé d’artifice.',
 		cover: <Img fluid={data.saodaj.childImageSharp.fluid} />,
 		video:'https://www.youtube.com/embed/IbSopDjYsZA',
 	},
