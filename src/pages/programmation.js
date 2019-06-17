@@ -8,40 +8,55 @@ import Grid2 from '../components/Grid/Grid2'
 /*import styles from './biography.module.scss'*/
 const Programmation = () => {
 const data = useStaticQuery(query)
+
+
 const artistes = [
 	{ 
-		name:'ANTIBALAS', 
-		genre:'#Afrobeat #Etats-Unis',
-		websiteURL:'https://antibalas.com',
-		facebookURL: 'https://www.facebook.com/antibalas',
-		description:"Nous aurons le privilège d’accueillir au plan d'eau du Pas des Ondes (26) le groupe new-yorkais ANTIBALAS à l'occasion de leur tournée européenne. Pionnier de l’afrobeat aux États-Unis, Antibalas s'est forgé une réputation scénique sans précédent sur les plus grandes scènes internationales depuis 20 ans.",
-		cover: <Img fluid={data.antibalas.childImageSharp.fluid} />,
-		video:'https://www.youtube.com/embed/xM6HBAM93V4',
+		name:'Goodbye Persil (Cie L’Arbre à Vache)', 
+		heure:'19h00',
+		genre:'#théâtre de rue',
+		websiteURL:'https://www.cielarbreavache.com',
+		facebookURL: 'https://www.facebook.com/Compagnie-lArbre-%C3%A0-Vache-38569513095/',
+		description:"Une voiture rôde puis se gare devant l’entrée d’un jardin public. Deux individus en sortent, prêts à tout pour réussir leur mission... Un spectacle familial plein de surprises, drôle et touchant.",
+		cover: <Img fluid={data.persil.childImageSharp.fluid} />,
+		video:'https://www.youtube.com/embed/nX6im-ztrl0',
 	},
 	{ 
 		name:"Saodaj'",
-		genre:'#Maloya', 
+		heure:'20h00',
+		genre:'#Maloya #Réunion', 
 		websiteURL:'https://saodaj.bandcamp.com',
 		facebookURL: 'https://www.facebook.com/saodaj',
-		description:'Groupe qui a bien le vent en poupe (transmusicales, Vieilles charrues, Francofolies…), chouette et avec des filles dedans. ',
+		description:'Mlocêlant les influences d’Afrique Australe, d’Europe et de l’Océan Indien, le groupe créé des chansons hors du temps par l’alliance de rythmes provoquant la transe et de chants polyphoniques extatiques. Un Maloya nomade dépouillé d’artifice.',
 		cover: <Img fluid={data.saodaj.childImageSharp.fluid} />,
 		video:'https://www.youtube.com/embed/IbSopDjYsZA',
 	},
 	{ 
+		name:'Antibalas',
+		heure:'22h00', 
+		genre:'#Afrobeat #NewYork',
+		websiteURL:'https://antibalas.com',
+		facebookURL: 'https://www.facebook.com/antibalas',
+		description:"Collectif culte du renouveau afrobeat, le big band de Brooklyn fête 20 ans de carrière par une tournée mondiale qui s’arrêtera au Pas des Ondes. La promesse d’un live fulgurant mêlant esprit festif et considérations politiques dans un cocktail de jazz, de funk, de rythmes africains et latinos. Mystique et mythique !",
+		cover: <Img fluid={data.antibalas.childImageSharp.fluid} />,
+		video:'https://www.youtube.com/embed/xM6HBAM93V4',
+	},
+	{ 
 		name:"Piniol",
-		genre:'#Rock', 
+		heure:'00h00',
+		genre:'#RockLibre #Lyon', 
 		websiteURL:'https://piniol.bandcamp.com/',
 		facebookURL: 'https://www.facebook.com/PinioLband',
-		description:'Sur scène, ce sont 2 trios guitare basse batterie, un à jardin, l’autre à cour, séparés par un claviériste, élément central et point convergent qui créent une étrange impression. Voit-on double ? Oui et non et c’est probablement cette incertitude qui invite à la perte des sens et à un certain abandon. Piniol ne choisit pas entre maxi et minimalisme et affirme sa singularité dans son approche syncrétique d’extrêmes musicaux qu’on aurait pu juger compliqué à accommoder de prime abord.',
+		description:'Hydre à 7 têtes née de la fusion des groupes PoiL et Ni, PinioL choisit d’occuper des terrains musicaux débridés et libres (noise, jazz, avant rock, math) tout en cultivant une recherche permanente. Un set aussi pêchu qu’inclassable.',
 		cover: <Img fluid={data.piniol.childImageSharp.fluid} />,
 		video:'https://www.youtube.com/embed/rWRQ5aHBWtI',
 	},
 	{ 
 		name:"DJ Von Kids",
-		genre:'#DjSet', 
+		genre:'#Dj #Rocknroll #Valence', 
 		websiteURL:'https://www.facebook.com/von.kids.5',
 		facebookURL: 'https://www.facebook.com/von.kids.5',
-		description:'DJ Von Kids',
+		description:'Un mix sauvage et envoûtant où se mêleront vinyles d’un autre âge et productions récentes, rockabilly, surf, garage, punk, cold wave et electro. De quoi se déhancher tout au long de la soirée.',
 		cover: <Img fluid={data.djvonkids.childImageSharp.fluid} />,
 		video:'https://www.youtube.com/embed/lQDPpN3JwNE',
 	}
@@ -98,6 +113,14 @@ export const query = graphql`
 	          }
 	    }
 
+ 		persil:file(relativePath: { eq: "programmation/compagnie-theatre-persil4.jpg" }) {
+	          childImageSharp {
+	            fluid(maxWidth: 1500, quality:98) {
+	              ...GatsbyImageSharpFluid
+	            }
+	          }
+	    }
+
 	    antibalas:file(relativePath: { eq: "programmation/antibalas.jpg" }) {
 	          childImageSharp {
 	            fluid(maxWidth: 1500, quality:98) {
@@ -106,7 +129,7 @@ export const query = graphql`
 	          }
 	    }
 
-	    piniol:file(relativePath: { eq: "programmation/piniol.jpg" }) {
+	    piniol:file(relativePath: { eq: "programmation/piniol2.jpg" }) {
 	          childImageSharp {
 	            fluid(maxWidth: 1500, quality:98) {
 	              ...GatsbyImageSharpFluid
@@ -114,7 +137,7 @@ export const query = graphql`
 	          }
 	    }
 
-	    saodaj:file(relativePath: { eq: "programmation/saodaj3.jpg" }) {
+	    saodaj:file(relativePath: { eq: "programmation/saodaj.jpg" }) {
 	          childImageSharp {
 	            fluid(maxWidth: 1500, quality:98) {
 	              ...GatsbyImageSharpFluid
