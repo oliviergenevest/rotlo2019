@@ -67,7 +67,7 @@ return (
     <SEO 
     title="Programmation Rock on the l'Oule 2019" 
     keywords={[`festival`, `rock on the l'oule`, `la motte chalancon`,`rock`,`musique`,`spectacle`,`concert`,'antibalas']} 
-    description="Pour la 25ème édition, nous aurons le privilège d’accueillir au plan d'eau du Pas des Ondes (26) le groupe new-yorkais ANTIBALAS à l'occasion de leur tournée européenne."
+    description="Pour la 25ème édition, nous aurons le privilège d’accueillir au plan d'eau du Pas des Ondes (26) le groupe new-yorkais ANTIBALAS à l'occasion de leur tournée européenne - SAODAJ' - PINIOL - DJ VON KIDS - CIE L’ARBRE A VACHE"
      image={data.seo.childImageSharp.resize}
      />
  	<Container text first>		    
