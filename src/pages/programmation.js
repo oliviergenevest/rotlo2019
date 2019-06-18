@@ -49,7 +49,7 @@ const artistes = [
 		facebookURL: 'https://www.facebook.com/PinioLband',
 		description:'Hydre à 7 têtes née de la fusion des groupes PoiL et Ni, PinioL choisit d’occuper des terrains musicaux débridés et libres (noise, jazz, avant rock, math) tout en cultivant une recherche permanente. Un set aussi pêchu qu’inclassable.',
 		cover: <Img fluid={data.piniol.childImageSharp.fluid} />,
-		video:'https://www.youtube.com/embed/rWRQ5aHBWtI',
+		video:'https://www.youtube.com/embed/Hha9glUq-MU',
 	},
 	{ 
 		name:"DJ Von Kids",
