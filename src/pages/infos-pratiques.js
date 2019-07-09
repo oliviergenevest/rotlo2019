@@ -35,7 +35,7 @@ const InfosPratiques = () => (
     <p>04 75 27 24 67</p>
 
      <h2>Devenir bénévole</h2>
-    <p>prochainement</p>
+    <iframe src="https://framaforms.org/rock-on-the-loule-25-inscription-benevoles-1556698674" width="100%" height="800" border="0" ></iframe>
 
 
 </Container>
