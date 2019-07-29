@@ -53,6 +53,7 @@ const artistes = [
 	},
 	{ 
 		name:"DJ Von Kids",
+		heure: "interscène",
 		genre:'#Dj #Rocknroll #Valence', 
 		websiteURL:'https://www.facebook.com/von.kids.5',
 		facebookURL: 'https://www.facebook.com/von.kids.5',
@@ -82,7 +83,7 @@ return (
 			key={key}
 	        text={{text:artiste.description}}
 	        image={artiste.cover}
-	        title={artiste.name}
+	        title={' [ '+artiste.heure+' ] '+ artiste.name}
 			artiste={artiste}  
 			reverse={key%2}
 			

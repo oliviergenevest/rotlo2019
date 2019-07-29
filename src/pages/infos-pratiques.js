@@ -17,7 +17,7 @@ const InfosPratiques = () => (
     <h1>Infos pratiques</h1>
     
     <h2>Billetterie</h2>
-     <p>La billetterie se fait uniquement sur place.</p>
+     <p>La billetterie se fait uniquement sur place à partir de 18h30</p>
      <p>Tarif : 15 € - 12 € (tarif réduit)</p>
     <h2>Se loger</h2>
     <p>Un espace est aménagé sur le site du Pas des Ondes, pour planter vos tentes. Le bivouac y est autorisé le soir du festival.</p>
