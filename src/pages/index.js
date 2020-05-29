@@ -17,7 +17,7 @@ const IndexPage = ({data}) => {
           keywords={[`festival`, `rock on the l'oule`, `la motte chalancon`,`rock`,`musique`,`spectacle`,`concert`]} 
           description="Mercredi 7 août 2019, c'est au Pas des Ondes de la Motte Chalancon que ça se passe ! Entre montagnes et plans d'eau, Rock on the l'Oule fêtera sa 25ème édition. Au programme : concerts, cirque, détente, jeux en bois, produits locaux et buvette, démarche éco-responsable. On compte sur vous !" 
           image={data.seo.childImageSharp.resize}/>
-          <Grid1 
+        {/*  <Grid1 
             image = { <RandomImage gatsbyImageArray={data.backgroundImages}/> } 
             flyer = {<Img fluid={data.flyer.childImageSharp.fluid} />}
             heroText = {{text:'Rock on the l\'Oule #25'}} 
@@ -25,10 +25,19 @@ const IndexPage = ({data}) => {
             text2= {{text:"ANTIBALAS - SAODAJ' - PINIOL - DJ VON KIDS - CIE L’ARBRE A VACHE"}} 
             text3= {{text:"C'est au Pas des Ondes que ça se passe ! Entre montagnes et plans d'eau, Rock on the l'Oule fêtera sa 25ème édition. Au programme : concerts, cirque, détente, jeux en bois, produits locaux et buvette, démarche éco-responsable. On compte sur vous !"}} 
           />
-
+        */}
           {/*<TimelineProg/>*/}
-          
-          
+ <Container text first> 
+ <h1>Festival Rock on the l'Oule</h1>
+  <p>Votre petit festival rural et génial est dans ses petits souliers. Désarçonné par ces événements sanitaires et leurs conséquences qui nous dépassent largement.</p>
+  <p>Dans ce contexte trop incertain, nous excluons avec regret la possibilité d’organiser une 26ème édition cet été.</p>
+  <p>Nous avons le cœur gros d’abandonner ici toute la préparation du Festival - fruit de l’échange depuis plusieurs mois avec tous nos bénévoles - que nous souhaitions cette année encore international, avec des artistes venus du Royaume Uni et de La Réunion.</p>
+  <p>Cependant nous sommes toujours animés par ce besoin vital de lien social, et l’envie furieuse de partage et de rencontres, aujourd’hui peut-être plus encore nécessaires dans cette longue période d’isolement.</p>
+  <p>Prolongeant notre réflexion tout en guettant l’évolution de la situation sanitaire, économique et sociale, nous espérons pouvoir vous proposer cet été une forme culturelle alternative qui ait du sens, sur le plan d’eau du Pas des Ondes ou ailleurs.</p>
+  <p>On vous en dit plus courant juillet !</p>
+
+  <p>Portez-vous bien les amis, on pense fort à vous !</p>
+ </Container>
           
         <Container fluid > 
           <Grid2 
