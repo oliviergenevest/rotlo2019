@@ -52,7 +52,7 @@ const Layout = ({ children }) => (
                <Img fixed={data.logoDrome.childImageSharp.fixed} style={{maxWidth: '100px',marginBottom:'2rem'}}/>   
               {/*} <Img fluid={data.logoLabelfolie.childImageSharp.fluid} style={{maxWidth: '100px',marginBottom:'2rem'}}/>*/}
             </div>
-            <p>Rock On The l’Oule est soutenu par Conseil Général de la Drôme et les communes de Cornillon sur l'Oule, la Motte Chalancon, Rémuzat, St May, Arnayon et Rottier.</p>
+            <p>Rock On The l’Oule est soutenu par le Conseil Départemental de la Drôme, la Région Auvergne Rhône-Alpes, et les communes de Cornillon sur l'Oule, la Motte Chalancon, Rémuzat, St May, Arnayon et Rottier. </p>
           </Container>
          
 

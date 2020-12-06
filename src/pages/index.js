@@ -7,6 +7,7 @@ import { graphql } from 'gatsby'
 import SEO from '../components/seo'
 import Grid1 from '../components/Grid/Grid1'
 import Grid2 from '../components/Grid/Grid2'
+import GridImage from '../components/Grid/GridImage'
 /*import TimelineProg from '../components/timeline'*/
 import RandomImage from '../components/RandomImage'
 
@@ -27,7 +28,8 @@ const IndexPage = ({data}) => {
           />
         */}
           {/*<TimelineProg/>*/}
- <Container text first> 
+{/*
+<Container text first> 
  <h1>Festival Rock on the l'Oule</h1>
   <p>Votre petit festival rural et génial est dans ses petits souliers. Désarçonné par ces événements sanitaires et leurs conséquences qui nous dépassent largement.</p>
   <p>Dans ce contexte trop incertain, nous excluons avec regret la possibilité d’organiser une 26ème édition cet été.</p>
@@ -38,7 +40,19 @@ const IndexPage = ({data}) => {
 
   <p>Portez-vous bien les amis, on pense fort à vous !</p>
  </Container>
-          
+  */}
+  <Container text first> 
+ <h1>Festival Rock on the l'Oule</h1>
+  <p>Des étoiles plein les yeux des petits et grands venus assister à cette édition exceptionnelle de Rock on the l'Oule, mercredi 05 août 2020! </p> <p>
+On aurait aimé accueillir plus de monde, mais le contexte sanitaire en a décidé autrement. </p>
+ <p>Un grand merci aux conteurs Leila Darwiche, Corentin Cayla, Sophie Biset et sa musicienne Lucie Galibois, ainsi qu'au saxophoniste Sylvain Rifflet pour cette belle soirée intimiste. 
+
+</p>
+
+  <p>Rendez-vous l'an prochain! 
+Portez-vous bien!</p>
+<GridImage images={data.edition2020Gallery}/>
+ </Container>
         <Container fluid > 
           <Grid2 
             text={{text:"Deux plans d’eau posés au coeur des montagnes préalpines, à la frontière entre Diois et Baronnies. Un oasis dominé par les ruines du château médiéval de Cornillon et survolé par les hérons, vautours et autres spécimens de la faune locale."}}
@@ -158,6 +172,18 @@ export const query = graphql`
               ...GatsbyImageSharpFluid
             }
           }
+    }
+
+    edition2020Gallery: allFile (filter:{relativeDirectory:{eq:"edition2020"}, extension:{eq:"jpg"}}, sort: {fields: [name], order: DESC}){
+    edges {
+      node {
+          childImageSharp {
+            fluid(maxWidth: 450, quality:80) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
     }
   }
 `
