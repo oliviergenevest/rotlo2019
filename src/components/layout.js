@@ -27,7 +27,7 @@ const Layout = ({ children }) => (
                   }
                 }
         }
-        logoLabelfolie: file(relativePath: { eq: "logo_labelfolie.png" }) {
+        logoRegion: file(relativePath: { eq: "logo_region.png" }) {
           childImageSharp {
                   fixed(width: 250, quality:80) {
                     ...GatsbyImageSharpFixed
@@ -50,7 +50,9 @@ const Layout = ({ children }) => (
           <Container  sponsor>           
             <div className="logoContainer">
                <Img fixed={data.logoDrome.childImageSharp.fixed} style={{maxWidth: '100px',marginBottom:'2rem'}}/>   
-              {/*} <Img fluid={data.logoLabelfolie.childImageSharp.fluid} style={{maxWidth: '100px',marginBottom:'2rem'}}/>*/}
+              
+               <Img fixed={data.logoRegion.childImageSharp.fixed} style={{marginBottom:'2rem',marginLeft:'2rem'}}/>
+
             </div>
             <p>Rock On The l’Oule est soutenu par le Conseil Départemental de la Drôme, la Région Auvergne Rhône-Alpes, et les communes de Cornillon sur l'Oule, la Motte Chalancon, Rémuzat, St May, Arnayon et Rottier. </p>
           </Container>
@@ -63,7 +65,7 @@ const Layout = ({ children }) => (
               <span> <a href={config.facebookPageUrl} aria-label="Facebook" target="_blank" rel="noopener noreferrer">
                 <FaFacebook size={20} style={{ }}  />
                 </a></span>
-              <span>Association Rock On The L'Oule - 2019 - <Link to="/credits">Crédits</Link></span>
+              <span>Association Rock On The L'Oule - 2020 - <Link to="/credits">Crédits</Link></span>
           </Container>
         </footer>
      </div>
