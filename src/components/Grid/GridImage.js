@@ -10,7 +10,7 @@ const GridImage = ({images}) => {
 
 <div className={styles.gridContainer}>
       {imgList.map( (image,key) => ( 
-        <div className= {styles.gallery__img}> 
+        <div key={key} className= {styles.gallery__img}> 
       		<Img fluid={image.node.childImageSharp.fluid} alt="Rock on the l'Oule - Edition 2020"/>
 	    </div> 
 	             

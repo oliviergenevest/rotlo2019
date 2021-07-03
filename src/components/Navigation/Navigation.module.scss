@@ -5,8 +5,7 @@
   display: flex;
 
   a {
-    color: $body-color;
-
+    color: $white;
     &:hover {
       color: $brand-secondary;
     }
@@ -157,7 +156,7 @@
 
 /* Wrapper for item list */
  .bmItemList {
-  color: #b8b7ad;
+  color: $white;
   padding: 0.8em;
   display:flex;
   flex-direction:column;
@@ -175,7 +174,7 @@
   padding:.3em 0;
   
   &:hover{
-    color: white;
+    color:#b6fcb6;
   }
   &.active {
     color: $brand-cta;

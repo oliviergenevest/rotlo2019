@@ -16,17 +16,17 @@ const IndexPage = ({data}) => {
       <Layout>
           <SEO title="Accueil" 
           keywords={[`festival`, `rock on the l'oule`, `la motte chalancon`,`rock`,`musique`,`spectacle`,`concert`]} 
-          description="Mercredi 7 août 2019, c'est au Pas des Ondes de la Motte Chalancon que ça se passe ! Entre montagnes et plans d'eau, Rock on the l'Oule fêtera sa 25ème édition. Au programme : concerts, cirque, détente, jeux en bois, produits locaux et buvette, démarche éco-responsable. On compte sur vous !" 
+          description="Mardi 3 et mercredi 4 août 2021, c'est sur la place du Fort de la Motte Chalancon que ça se passe. Rock on the l'Oule fêtera sa 27ème édition. Au programme : concerts, expo, détente, jeux en bois, produits locaux et buvette, démarche éco-responsable. On compte sur vous !" 
           image={data.seo.childImageSharp.resize}/>
-        {/*  <Grid1 
+          <Grid1 
             image = { <RandomImage gatsbyImageArray={data.backgroundImages}/> } 
             flyer = {<Img fluid={data.flyer.childImageSharp.fluid} />}
-            heroText = {{text:'Rock on the l\'Oule #25'}} 
-            text1= {{text:"Mercredi 7 août 2019 - 19h - La Motte Chalancon"}} 
-            text2= {{text:"ANTIBALAS - SAODAJ' - PINIOL - DJ VON KIDS - CIE L’ARBRE A VACHE"}} 
-            text3= {{text:"C'est au Pas des Ondes que ça se passe ! Entre montagnes et plans d'eau, Rock on the l'Oule fêtera sa 25ème édition. Au programme : concerts, cirque, détente, jeux en bois, produits locaux et buvette, démarche éco-responsable. On compte sur vous !"}} 
+            heroText = {{text:'Rock on the l\'Oule #27'}} 
+            text1= {{text:"3 & 4 août 2021 - 19h - La Motte Chalancon"}} 
+            text2= {{text:"Dan Gharibian Trio - René Lacaille - Guaracha Sabrosa - David Suissa Quartet"}} 
+            text3= {{text:"C'est sur la place du Fort que ça se passe ! Rock on the l'Oule fêtera sa 27ème édition. Au programme : concerts, expo, détente, jeux en bois, produits locaux et buvette, démarche éco-responsable. On compte sur vous !"}} 
           />
-        */}
+        
           {/*<TimelineProg/>*/}
 {/*
 <Container text first> 
@@ -42,23 +42,39 @@ const IndexPage = ({data}) => {
  </Container>
   */}
   <Container text first> 
- <h1>Festival Rock on the l'Oule</h1>
-  <p>Des étoiles plein les yeux des petits et grands venus assister à cette édition exceptionnelle de Rock on the l'Oule, mercredi 05 août 2020! </p> <p>
-On aurait aimé accueillir plus de monde, mais le contexte sanitaire en a décidé autrement. </p>
- <p>Un grand merci aux conteurs Leila Darwiche, Corentin Cayla, Sophie Biset et sa musicienne Lucie Galibois, ainsi qu'au saxophoniste Sylvain Rifflet pour cette belle soirée intimiste. 
-
+ <h2>Les parenthèses de l'Oule #2</h2>
+  <p>L’association Rock On The l’Oule est très heureuse de pouvoir proposer à nouveau des
+événements suite à la crise sanitaire qui a largement affecté nos activités depuis plus d’un an.
+Néanmoins, nous avons profité de ce temps pour nous organiser, dernière nos écrans, en
+termes de budget, conseils d’administration, et autres réunions d’équipe pour remodeler notre
+implantation sur le territoire.</p>
+<p>
+En 2020, nous avons été contraints d’organiser une soirée « à minima », dans un jardin privé,
+avec une jauge limitée et en respectant les consignes sanitaires. Il y avait quelque chose de
+féerique ce mercredi 05 août 2020 dans cette soirée insolite et intergénérationnelle sous les
+étoiles, ci-dessous quelques clichés :
 </p>
-
-  <p>Rendez-vous l'an prochain! 
-Portez-vous bien!</p>
 <GridImage images={data.edition2020Gallery}/>
+<p>Pour cet été, les mardi 3 et mercredi 4 Aout 2021, nous prévoyons 2 soirées de concerts au
+jardin du fort, au cœur du village de La Motte Chalancon. Ambiance festive et tout public,
+avec repas complet proposé sur la place du Fort, buvette sur place, jeux en bois pour petits et
+grands, et exposition de tableaux de la jeune artiste diplômée des Beaux-Arts de Valence,
+Leila Festa.</p>
+<p>
+Côté concerts, voici les premiers noms confirmés pour cette édition :
+Ambiance latine avec le groupe de musique Cubaine : « Guaracha Sabrosa »
+Chanson Française et Arménienne avec le « Dan Gharibian Trio ».</p>
+<p>La programmation complète sera dévoilée début juillet, avec billetterie en ligne sur notre site
+(attention, jauge limitée !). Merci au Département de la Drôme, à la Région Auvergne Rhône
+Alpes et aux communes de la Motte Chalancon, de Cornillon et de Rottier pour leur soutien
+inconditionnel.</p>
  </Container>
         <Container fluid > 
-          <Grid2 
+       {/* <Grid2 
             text={{text:"Deux plans d’eau posés au coeur des montagnes préalpines, à la frontière entre Diois et Baronnies. Un oasis dominé par les ruines du château médiéval de Cornillon et survolé par les hérons, vautours et autres spécimens de la faune locale."}}
               image={<Img fluid={data.siteExceptionnel.childImageSharp.fluid} />}
               title="Un lieu magique : le site du Pas des Ondes."
-            />
+            /> */}  
 
           <Grid2 
             text={{text:"Dans une ambiance familiale rappelant les fêtes de village traditionnelles, Rock on the l’Oule propose une programmation artistique de premier choix faisant la part belle au métissage. Une rencontre entre les genres musicaux les plus variés et des artistes aux origines géographiques multiples. Mais aussi du cirque, des performances en tous genres, des jeux en bois, un salon de thé sous tentes berbères... De quoi rassembler toutes les générations de public et faire se rencontrer les cultures."}}
@@ -77,7 +93,7 @@ Portez-vous bien!</p>
              <Grid2 
                 text={{text:"Fait rare pour un festival qui dure depuis plus de vingt ans, son organisation est toujours le fait d’une équipe 100 % bénévole. Une bande de passionnés, attachée à la région, qui a su rassembler des énergies multiples et fidèles autour de ce projet au long cours. Aujourd’hui, ce sont près de 70 bénévoles et le soutien de nombreux habitants, associations et entreprises de la région qui permettent à cette aventure de se poursuivre."}}
                 image={<Img fluid={data.benevoles.childImageSharp.fluid} />}
-                title="Une aventure humaine et collective qui dure depuis... 25 ans."
+                title="Une aventure humaine et collective qui dure depuis... 26 ans."
                 reverse
             />
           </Container> 
@@ -96,7 +112,7 @@ export default IndexPage
 export const query = graphql`
   query {
 
-    backgroundImages: allFile (filter:{relativeDirectory:{eq:"backgrounds"}, extension:{eq:"jpg"}}){
+    backgroundImages: allFile (filter:{relativeDirectory:{eq:"backgrounds2021"}, extension:{eq:"jpg"}}){
     edges {
       node {
           childImageSharp {

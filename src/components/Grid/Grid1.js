@@ -22,9 +22,9 @@ const Grid1 = ({image, text1, heroText, text3, text2, flyer}) => (
 	          <Fade up  delay={300} distance="10px">
 	           <h1 className= {styles.title}>Festival<br/>{ heroText.text }</h1>
 	          </Fade>
-	           <div className= {styles.flyerMobile} > 
+	          {/*    <div className= {styles.flyerMobile} > 
       				<Fade delay={800}><HeadShake  delay={1500}>{flyer} 	</HeadShake></Fade>
-        		</div>	         
+</div>	  */}       
 	        </div>
 	        <div className= {styles.subTitle} >
 		        <Fade up  delay={400} distance="10px">
@@ -39,9 +39,9 @@ const Grid1 = ({image, text1, heroText, text3, text2, flyer}) => (
 	           	</Fade>
 	       </div>
 	    </div> 
-	     <div className= {styles.flyer} > 
+	  {/*   <div className= {styles.flyer} > 
       		<Fade delay={800}><HeadShake  delay={1500}>{flyer} 	</HeadShake></Fade>
-        </div>	
+        </div>	*/} 
 	    <div className= {styles.scrollDown} >
            <Fade down  delay={1000} distance="10px"><ScrollDownAnimation/></Fade>
         </div>      
