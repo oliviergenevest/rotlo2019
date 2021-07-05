@@ -11,70 +11,81 @@ const data = useStaticQuery(query)
 
 
 const artistes = [
+	
 	{ 
-		name:'Goodbye Persil (Cie L’Arbre à Vache)', 
-		heure:'19h00',
-		genre:'#théâtre de rue',
-		websiteURL:'https://www.cielarbreavache.com',
-		facebookURL: 'https://www.facebook.com/Compagnie-lArbre-%C3%A0-Vache-38569513095/',
-		description:"Une voiture rôde puis se gare devant l’entrée d’un jardin public. Deux individus en sortent, prêts à tout pour réussir leur mission... Un spectacle familial plein de surprises, drôle et touchant.",
-		cover: <Img fluid={data.persil.childImageSharp.fluid} />,
-		video:'https://www.youtube.com/embed/nX6im-ztrl0',
-	},
-	{ 
-		name:"Saodaj'",
-		heure:'20h00',
+		name:"René Lacaille",
+		heure:'Mardi : 21h30',
 		genre:'#Maloya #Réunion', 
-		websiteURL:'https://saodaj.bandcamp.com',
-		facebookURL: 'https://www.facebook.com/saodaj',
-		description:'Mêlant les influences d’Afrique Australe, d’Europe et de l’Océan Indien, le groupe créé des chansons hors du temps par l’alliance de rythmes provoquant la transe et de chants polyphoniques extatiques. Un Maloya nomade dépouillé d’artifice.',
-		cover: <Img fluid={data.saodaj.childImageSharp.fluid} />,
-		video:'https://www.youtube.com/embed/IbSopDjYsZA',
+		websiteURL:'https://www.renelacaille.net/',
+		facebookURL: 'https://www.facebook.com/profile.php?id=100011841307113',
+		description:'Attention, la Renyon lela ! Dans l’histoire des musiques de l’Océan indien, René Lacaille est un monument. Acteur de la transition entre sonorités rurales et musiques urbaines au début des années 70, issu d’une famille d’agriculteurs et segatiers, formé à l’école exigeante des «bals poussière», il fut un acteur essentiel du renouveau esthétique du cru (sur les registres sega-jazz, maloya électrique, pop). Sollicité par de grands musiciens, salué par l’Académie Charles Cros ou le Prix Gus Viseur, ce poly-instrumentiste doublé d’un conteur formidable a depuis partagé les facettes de sa créolité dans le monde entier. ',
+		cover: <Img fluid={data.lacaille.childImageSharp.fluid} />,
+		video:'https://www.youtube.com/embed/ngoj5PSXGUA',
 	},
 	{ 
-		name:'Antibalas',
-		heure:'22h00', 
-		genre:'#Afrobeat #NewYork',
-		websiteURL:'https://antibalas.com',
-		facebookURL: 'https://www.facebook.com/antibalas',
-		description:"Collectif culte du renouveau afrobeat, le big band de Brooklyn fête 20 ans de carrière par une tournée mondiale qui s’arrêtera au Pas des Ondes. La promesse d’un live fulgurant mêlant esprit festif et considérations politiques dans un cocktail de jazz, de funk, de rythmes africains et latinos. Mystique et mythique !",
-		cover: <Img fluid={data.antibalas.childImageSharp.fluid} />,
-		video:'https://www.youtube.com/embed/xM6HBAM93V4',
+		name:'David Suissa Quartet', 
+		heure:'Mardi : 23h30',
+		genre:'#MusiqueDuMonde #Rock #Jazz #Lyon',
+		websiteURL:'https://chanteettaistoi.com/suissa/',
+		facebookURL: 'https://www.facebook.com/Compagnie-lArbre-%C3%A0-Vache-38569513095/',
+		description:"Suissa est un artiste de chansons baignées dans la musique du monde, le rock et le jazz. Il se nourrit de cultures mélangées, ensoleillées et de la musique des années 70, expérimentale, sauvage, vivante. Riche d’une dizaine d’albums dont trois sous son nom et de créations avec Bigre, Balmino, Leitmotiv Blastik Pertran, le Grand Bal des Cousins, Coquine... Il est aussi producteur phonographique avec le label chante et tais toi (Eric le Rouge, Kacimi, XXL, Six Ring Circus…)",
+		cover: <Img fluid={data.suissa.childImageSharp.fluid} />,
+		video:'https://www.youtube.com/embed/DfcLuW8CV-w',
 	},
 	{ 
-		name:"Piniol",
-		heure:'00h00',
-		genre:'#RockLibre #Lyon', 
-		websiteURL:'https://piniol.bandcamp.com/',
-		facebookURL: 'https://www.facebook.com/PinioLband',
-		description:'Hydre à 7 têtes née de la fusion des groupes PoiL et Ni, PinioL choisit d’occuper des terrains musicaux débridés et libres (noise, jazz, avant rock, math) tout en cultivant une recherche permanente. Un set aussi pêchu qu’inclassable.',
-		cover: <Img fluid={data.piniol.childImageSharp.fluid} />,
-		video:'https://www.youtube.com/embed/Hha9glUq-MU',
+		name:"Cie Soum-Soum : les Jumelles de l'Alchimiste",
+		heure: "Mercredi : 18h30",
+		genre:'#Mime #Conte #Théâtre', 
+		websiteURL:'https://www.facebook.com/ciesoumsoum',
+		facebookURL: 'https://www.facebook.com/ciesoumsoum',
+		description:'La Cie Soum-Soum est une toute jeune compagnie alliant théâtre du mouvement, conte, mime et chant. Entrée libre !',
+		cover: <Img fluid={data.lucia.childImageSharp.fluid} />,
+		video:'',
 	},
 	{ 
-		name:"DJ Von Kids",
-		heure: "interscène",
-		genre:'#Dj #Rocknroll #Valence', 
-		websiteURL:'https://www.facebook.com/von.kids.5',
-		facebookURL: 'https://www.facebook.com/von.kids.5',
-		description:'Un mix sauvage et envoûtant où se mêleront vinyles d’un autre âge et productions récentes, rockabilly, surf, garage, punk, cold wave et electro. De quoi se déhancher tout au long de la soirée.',
-		cover: <Img fluid={data.djvonkids.childImageSharp.fluid} />,
-		video:'https://www.youtube.com/embed/lQDPpN3JwNE',
+		name:'Dan Gharibian Trio',
+		heure:'Mercredi : 21h30', 
+		genre:'#Chanson #Arménie',
+		websiteURL:'https://www.lamastrock.com/dan-gharibian-trio/',
+		facebookURL: 'https://www.facebook.com/DanGharibianTrio',
+		description:"Si Bratsch fut le fer de lance de la musique tsigane et de l’Est dans les années 1980/90 et jusqu’à cette date fatidique du 31 décembre 2015 où ils arrêtèrent de sillonner le monde, Dan Gharibian en est une des figures emblématiques. Santiags jamais quittées, élégance orientale, une “tronche” remarquable entre toutes et surtout une Voix. Une voix qui semble avoir absorbé toutes les fumées des bars de rébétiko, frottée à l’arak et à la vodka; une voix qui chante les chansons et ballades tsiganes, arméniennes, russes, le blues grec. Alors bienvenue à ce nouveau trio qui réunit Benoit Convert des “Doigts de l’homme” et Antoine Girard, enfant de la balle , nourri dès son plus jeune âge de ces ballades.",
+		cover: <Img fluid={data.dan.childImageSharp.fluid} />,
+		video:'https://www.youtube.com/embed/o6UkurBQ6IA',
+	},
+	{ 
+		name:"Guaracha Sabrosa",
+		heure:'Mercredi : 23h30',
+		genre:'#SonCubano #Lyon', 
+		websiteURL:'https://soundcloud.com/guarachasabrosa',
+		facebookURL: 'https://www.facebook.com/guarachasabrosa/',
+		description:'Dans le vaste univers des musiques cubaines, le son cubano occupe une place centrale. Né dans la partie orientale de l’île, c’est lui qui a donné naissance à la salsa, et ce sont sur des rythmes de son que dans le monde entier on danse depuis plus d’un siècle en songeant à Cuba. Avec une énergie festive et tropicale, Guaracha sabrosa propose un cocktail torride de sones cubains pour que les corps oscillent et vacillent les uns contre les autres...',
+		cover: <Img fluid={data.guaracha.childImageSharp.fluid} />,
+		video:'https://www.youtube.com/embed/Wzk3lWHWEE8',
+	},
+	
+	{ 
+		name:"Leïla Festa : ON/OFF",
+		heure: "Mardi et mercredi",
+		genre:'#Exposition', 
+		websiteURL:'https://www.redbubble.com/fr/people/festal/shop?asc=u',
+		facebookURL: 'https://www.facebook.com/FESTA-L%C3%A9%C3%AFla-Productions-111402553818515/',
+		description:'Exposition de tableaux de la jeune artiste diplômée des Beaux-Arts de Valence,	Leïla Festa. Entrée libre !',
+		cover: <Img fluid={data.leila.childImageSharp.fluid} />,
+		video:'',
 	}
-
 ]
 return (
   <Layout>
     <SEO 
-    title="Programmation Rock on the l'Oule 2019" 
+    title="Programmation Les Parenthèses de l'Oule 2021" 
     keywords={[`festival`, `rock on the l'oule`, `la motte chalancon`,`rock`,`musique`,`spectacle`,`concert`,'antibalas']} 
-    description="Pour la 25ème édition, nous aurons le privilège d’accueillir au plan d'eau du Pas des Ondes (26) le groupe new-yorkais ANTIBALAS à l'occasion de leur tournée européenne - SAODAJ' - PINIOL - DJ VON KIDS - CIE L’ARBRE A VACHE"
+    description="Les 3 et 4 août 2021, prenez les routes sinueuses qui mènent à la Motte Chalancon, on s'occupe du reste ! C'est à la Motte Chalancon que ça se passe ! Au programme : concerts, expo, détente, jeux en bois, produits locaux et buvette, démarche éco-responsable. On compte sur vous !"
      image={data.seo.childImageSharp.resize}
      />
  	<Container text first>		    
 	    <h1>Programmation</h1>
-	     <h2>25ème édition : Mercredi 7 août 2019</h2>
-	     <p>C'est au Pas des Ondes à la Motte Chalancon que ça se passe ! Entre montagnes et plans d'eau, Rock on the l'Oule fêtera sa 25ème édition. Au programme : concerts, cirque, détente, jeux en bois, produits locaux et buvette, démarche éco-responsable. On compte sur vous !</p>
+	     <h2>Mardi 3 & Mercredi 4 août 2021</h2>
+	     <p>C'est à la Motte Chalancon que ça se passe ! Au programme : concerts, expo, détente, jeux en bois, produits locaux et buvette, démarche éco-responsable. On compte sur vous !</p>
 	</Container>
 	{
 		artistes.map( (artiste, key) => (
@@ -92,7 +103,7 @@ return (
     	))
 	}
 	<Container text >		    
-	    <p>Le 7 Août prochain, prenez les routes sinueuses qui mènent au Pas des Ondes, on s'occupe du reste !</p>
+	    <p>Les 3 et 4 août 2021, prenez les routes sinueuses qui mènent à la Motte Chalancon, on s'occupe du reste !</p>
 	    <Img fluid={data.flyer.childImageSharp.fluid} style={{'maxWidth':'400px'}}/>
 	</Container>
 	
@@ -114,7 +125,7 @@ export const query = graphql`
 	          }
 	    }
 
- 		persil:file(relativePath: { eq: "programmation/compagnie-theatre-persil4.jpg" }) {
+ 		suissa:file(relativePath: { eq: "programmation/suissa.jpg" }) {
 	          childImageSharp {
 	            fluid(maxWidth: 1500, quality:98) {
 	              ...GatsbyImageSharpFluid
@@ -122,7 +133,7 @@ export const query = graphql`
 	          }
 	    }
 
-	    antibalas:file(relativePath: { eq: "programmation/antibalas.jpg" }) {
+	    dan:file(relativePath: { eq: "programmation/cover-dan.jpg" }) {
 	          childImageSharp {
 	            fluid(maxWidth: 1500, quality:98) {
 	              ...GatsbyImageSharpFluid
@@ -130,7 +141,14 @@ export const query = graphql`
 	          }
 	    }
 
-	    piniol:file(relativePath: { eq: "programmation/piniol2.jpg" }) {
+	    guaracha:file(relativePath: { eq: "programmation/guaracha.jpg" }) {
+	          childImageSharp {
+	            fluid(maxWidth: 1500, quality:98) {
+	              ...GatsbyImageSharpFluid
+	            }
+	          }
+	    }
+	    leila:file(relativePath: { eq: "programmation/leila.jpg" }) {
 	          childImageSharp {
 	            fluid(maxWidth: 1500, quality:98) {
 	              ...GatsbyImageSharpFluid
@@ -138,7 +156,7 @@ export const query = graphql`
 	          }
 	    }
 
-	    saodaj:file(relativePath: { eq: "programmation/saodaj.jpg" }) {
+	    lacaille:file(relativePath: { eq: "programmation/lacaille.jpg" }) {
 	          childImageSharp {
 	            fluid(maxWidth: 1500, quality:98) {
 	              ...GatsbyImageSharpFluid
@@ -146,13 +164,13 @@ export const query = graphql`
 	          }
 	    }
 
-	    djvonkids:file(relativePath: { eq: "programmation/djvonkids.jpg" }) {
+	    lucia:file(relativePath: { eq: "programmation/Lucia & Melys-4-2.jpg" }) {
 	          childImageSharp {
 	            fluid(maxWidth: 1500, quality:98) {
 	              ...GatsbyImageSharpFluid
 	            }
 	          }
-	    }
+	    } 
 
 	    seo: file(relativePath: { eq: "aff-rotlo-2019.jpg" }) { 
 	        childImageSharp {

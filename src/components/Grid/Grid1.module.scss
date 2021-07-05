@@ -18,6 +18,28 @@
 	}
 }
 
+.btnCta {
+	
+    padding: 1rem 2rem;
+    background: white;
+    color: #368059;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-shadow: none;
+    border-radius: 8px;
+	text-decoration: none;
+    letter-spacing: .5px;
+    transition: all .3s ease-in-out;
+	&:hover {
+		background: #368059;
+    	color: white;
+		text-decoration: none;
+		&:after {
+			display:none;
+		}
+	}
+}
+
 .flyer {
 	/*display:none;*/
 	grid-column: 3 / 5;
@@ -105,12 +127,16 @@
 	@include for-tablet-landscape-down {
 		grid-column: 2 / 4;
 	}
+	.slogan {
+		font-family:'Caveat Brush';
+		font-size: 1.8rem;
+	}
 	.subTitle {
 	    text-transform:uppercase;
 	  	font-weight:900;
 	  	h2{
-	  	color:$brand-cta;
-	  	    margin-bottom: 0;
+	  	color: $brand-fluo;
+	  	    margin-bottom: 0.8rem;
 	  }
 	  	 @include for-tablet-landscape-down {
 			 font-size: 1.8rem;

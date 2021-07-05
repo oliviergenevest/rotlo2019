@@ -23,7 +23,7 @@ const Archives = ({data}) => {
       <Container fluid first>
           <GridFlex>
               {images.map( (image,key) => (
-                  <CardExpand  key={image.node.childImageSharp.fluid.src} edition={25-key-1} annee={2019-key-1} affiche={ <Img
+                  <CardExpand  key={image.node.childImageSharp.fluid.src} edition={26-key-1} annee={2020-key-1} affiche={ <Img
                          fluid={image.node.childImageSharp.fluid}
                             />}/>
               ))}
