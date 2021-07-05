@@ -11,19 +11,10 @@ const data = useStaticQuery(query)
 
 
 const artistes = [
-	{ 
-		name:'David Suissa Quartet', 
-		heure:'23h00',
-		genre:'#MusiqueDuMonde #Rock #Jazz #Lyon',
-		websiteURL:'https://chanteettaistoi.com/suissa/',
-		facebookURL: 'https://www.facebook.com/Compagnie-lArbre-%C3%A0-Vache-38569513095/',
-		description:"Suissa est un artiste de chansons baignées dans la musique du monde, le rock et le jazz. Il se nourrit de cultures mélangées, ensoleillées et de la musique des années 70, expérimentale, sauvage, vivante. Riche d’une dizaine d’albums dont trois sous son nom et de créations avec Bigre, Balmino, Leitmotiv Blastik Pertran, le Grand Bal des Cousins, Coquine... Il est aussi producteur phonographique avec le label chante et tais toi (Eric le Rouge, Kacimi, XXL, Six Ring Circus…)",
-		cover: <Img fluid={data.suissa.childImageSharp.fluid} />,
-		video:'https://www.youtube.com/embed/DfcLuW8CV-w',
-	},
+	
 	{ 
 		name:"René Lacaille",
-		heure:'20h00',
+		heure:'Mardi : 21h30',
 		genre:'#Maloya #Réunion', 
 		websiteURL:'https://www.renelacaille.net/',
 		facebookURL: 'https://www.facebook.com/profile.php?id=100011841307113',
@@ -32,8 +23,28 @@ const artistes = [
 		video:'https://www.youtube.com/embed/ngoj5PSXGUA',
 	},
 	{ 
+		name:'David Suissa Quartet', 
+		heure:'Mardi : 23h30',
+		genre:'#MusiqueDuMonde #Rock #Jazz #Lyon',
+		websiteURL:'https://chanteettaistoi.com/suissa/',
+		facebookURL: 'https://www.facebook.com/Compagnie-lArbre-%C3%A0-Vache-38569513095/',
+		description:"Suissa est un artiste de chansons baignées dans la musique du monde, le rock et le jazz. Il se nourrit de cultures mélangées, ensoleillées et de la musique des années 70, expérimentale, sauvage, vivante. Riche d’une dizaine d’albums dont trois sous son nom et de créations avec Bigre, Balmino, Leitmotiv Blastik Pertran, le Grand Bal des Cousins, Coquine... Il est aussi producteur phonographique avec le label chante et tais toi (Eric le Rouge, Kacimi, XXL, Six Ring Circus…)",
+		cover: <Img fluid={data.suissa.childImageSharp.fluid} />,
+		video:'https://www.youtube.com/embed/DfcLuW8CV-w',
+	},
+	{ 
+		name:"Cie Soum-Soum : les Jumelles de l'Alchimiste",
+		heure: "Mercredi : 18h30",
+		genre:'#Mime #Conte #Théâtre', 
+		websiteURL:'https://www.facebook.com/ciesoumsoum',
+		facebookURL: 'https://www.facebook.com/ciesoumsoum',
+		description:'La Cie Soum-Soum est une toute jeune compagnie alliant théâtre du mouvement, conte, mime et chant. Entrée libre !',
+		cover: <Img fluid={data.lucia.childImageSharp.fluid} />,
+		video:'',
+	},
+	{ 
 		name:'Dan Gharibian Trio',
-		heure:'21h30', 
+		heure:'Mercredi : 21h30', 
 		genre:'#Chanson #Arménie',
 		websiteURL:'https://www.lamastrock.com/dan-gharibian-trio/',
 		facebookURL: 'https://www.facebook.com/DanGharibianTrio',
@@ -43,7 +54,7 @@ const artistes = [
 	},
 	{ 
 		name:"Guaracha Sabrosa",
-		heure:'23h30',
+		heure:'Mercredi : 23h30',
 		genre:'#SonCubano #Lyon', 
 		websiteURL:'https://soundcloud.com/guarachasabrosa',
 		facebookURL: 'https://www.facebook.com/guarachasabrosa/',
@@ -51,29 +62,29 @@ const artistes = [
 		cover: <Img fluid={data.guaracha.childImageSharp.fluid} />,
 		video:'https://www.youtube.com/embed/Wzk3lWHWEE8',
 	},
+	
 	{ 
-		name:"Cie Soum-Soum : les Jumelles de l'Alchimiste",
-		heure: "mardi & mercredi : 18h30",
-		genre:'#Mime #Conte #Théâtre', 
-		websiteURL:'https://www.facebook.com/ciesoumsoum',
-		facebookURL: 'https://www.facebook.com/ciesoumsoum',
-		description:'La Cie Soum-Soum est une toute jeune compagnie alliant théâtre du mouvement, conte, mime et chant.',
-		cover: <Img fluid={data.lucia.childImageSharp.fluid} />,
-		video:'https://youtu.be/Wzk3lWHWEE8',
+		name:"Leïla Festa : ON/OFF",
+		heure: "Mardi et mercredi",
+		genre:'#Exposition', 
+		websiteURL:'https://www.redbubble.com/fr/people/festal/shop?asc=u',
+		facebookURL: 'https://www.facebook.com/FESTA-L%C3%A9%C3%AFla-Productions-111402553818515/',
+		description:'Exposition de tableaux de la jeune artiste diplômée des Beaux-Arts de Valence,	Leïla Festa. Entrée libre !',
+		cover: <Img fluid={data.leila.childImageSharp.fluid} />,
+		video:'',
 	}
-
 ]
 return (
   <Layout>
     <SEO 
-    title="Programmation Rock on the l'Oule 2019" 
+    title="Programmation Les Parenthèses de l'Oule 2021" 
     keywords={[`festival`, `rock on the l'oule`, `la motte chalancon`,`rock`,`musique`,`spectacle`,`concert`,'antibalas']} 
-    description="Pour la 25ème édition, nous aurons le privilège d’accueillir au plan d'eau du Pas des Ondes (26) le groupe new-yorkais ANTIBALAS à l'occasion de leur tournée européenne - SAODAJ' - PINIOL - DJ VON KIDS - CIE L’ARBRE A VACHE"
+    description="Les 3 et 4 août 2021, prenez les routes sinueuses qui mènent à la Motte Chalancon, on s'occupe du reste ! C'est à la Motte Chalancon que ça se passe ! Au programme : concerts, expo, détente, jeux en bois, produits locaux et buvette, démarche éco-responsable. On compte sur vous !"
      image={data.seo.childImageSharp.resize}
      />
  	<Container text first>		    
 	    <h1>Programmation</h1>
-	     <h2>27ème édition : Mardi 3 & Mercredi 4 août 2021</h2>
+	     <h2>Mardi 3 & Mercredi 4 août 2021</h2>
 	     <p>C'est à la Motte Chalancon que ça se passe ! Au programme : concerts, expo, détente, jeux en bois, produits locaux et buvette, démarche éco-responsable. On compte sur vous !</p>
 	</Container>
 	{
@@ -137,6 +148,13 @@ export const query = graphql`
 	            }
 	          }
 	    }
+	    leila:file(relativePath: { eq: "programmation/leila.jpg" }) {
+	          childImageSharp {
+	            fluid(maxWidth: 1500, quality:98) {
+	              ...GatsbyImageSharpFluid
+	            }
+	          }
+	    }
 
 	    lacaille:file(relativePath: { eq: "programmation/lacaille.jpg" }) {
 	          childImageSharp {
@@ -152,7 +170,7 @@ export const query = graphql`
 	              ...GatsbyImageSharpFluid
 	            }
 	          }
-	    }
+	    } 
 
 	    seo: file(relativePath: { eq: "aff-rotlo-2019.jpg" }) { 
 	        childImageSharp {

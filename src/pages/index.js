@@ -1,5 +1,5 @@
 import React from 'react'
-//import { Link } from 'gatsby'
+import { Link } from 'gatsby'
 import Img from 'gatsby-image'
 import Layout from '../components/layout'
 import Container from '../components/Container/Container'
@@ -10,6 +10,7 @@ import Grid2 from '../components/Grid/Grid2'
 import GridImage from '../components/Grid/GridImage'
 /*import TimelineProg from '../components/timeline'*/
 import RandomImage from '../components/RandomImage'
+import JavaVideoMp4 from '../images/java.mp4'
 
 const IndexPage = ({data}) => {
    return (
@@ -21,9 +22,9 @@ const IndexPage = ({data}) => {
           <Grid1 
             image = { <RandomImage gatsbyImageArray={data.backgroundImages}/> } 
             flyer = {<Img fluid={data.flyer.childImageSharp.fluid} />}
-            heroText = {{text:'Rock on the l\'Oule #27'}} 
-            text1= {{text:"3 & 4 août 2021 - 19h - La Motte Chalancon"}} 
-            text2= {{text:"Dan Gharibian Trio - René Lacaille - Guaracha Sabrosa - David Suissa Quartet"}} 
+            heroText = {{text:'de l\'Oule #2'}} 
+            text1= {{text:"3 & 4 août 2021 - La Motte Chalancon (26)"}} 
+            text2= {{text:"Dan Gharibian Trio - René Lacaille - Guaracha Sabrosa - David Suissa Quartet - Les Jumelles de l'Alchimiste - Leïla Festa"}} 
             text3= {{text:"C'est sur la place du Fort que ça se passe ! Rock on the l'Oule fêtera sa 27ème édition. Au programme : concerts, expo, détente, jeux en bois, produits locaux et buvette, démarche éco-responsable. On compte sur vous !"}} 
           />
         
@@ -41,8 +42,39 @@ const IndexPage = ({data}) => {
   <p>Portez-vous bien les amis, on pense fort à vous !</p>
  </Container>
   */}
-  <Container text first> 
+<Container text first> 
  <h2>Les parenthèses de l'Oule #2</h2>
+ <p>Depuis de longs mois, on a cherché, tourné et retourné dans tous les sens comment s’adapter à la situation sanitaire tout en respectant l’essence du festival. Et bon ben, sur une édition traditionnelle respecter les protocoles sanitaires actuels c’est plutôt compliqué...visez un peu :
+</p>
+<p>
+<i>JAVA @ Rock on the l’Oule 2010</i>
+<video autoPlay mute="true" loop style={{width:'100%'}}> 
+      <source src={JavaVideoMp4} type="video/mp4" />
+    </video>
+</p>
+<p>Et en même temps, deux ans sans se voir c’est looooong.</p>
+<p>Du coup on est pas peu fiers de t’avoir préparé une édition remaniée aux petits oignons, en attendant un
+retour aux concerts rock and roll où les corps se déchainent, ruisselant de sueur.</p>
+<p>On change de site, on change de nom, on change de format pour cette année transitoire, histoire de fêter
+l’été, les rencontres humaines et artistiques et le plaisir d’etre ensemble.</p>
+<p>
+Les Parenthèses de l’Oule t’emmenèront début août à Cuba, en Arménie, à la Réunion !!
+Une programmation éclectique sur 2 jours les mardi 03 et mercredi 04 août 2021. <Link to="/programmation">Programmation complète ici</Link>.</p>
+<p>
+On déménage dans le village de La Motte Chalancon, au jardin du Fort : Bel écrin en plein air
+surplombant les toits du village. Repas complets préparés sur place par notre chef David avec des produits
+locaux. Mais également snacking, buvette, jeux en bois et exposition d’oeuvres rétroéclairées. Viens ca va
+être bien.</p>
+<p>Attention places limitées !! Cette année on bloque à 200 places, autant dire qu’il faut pas trainer pour réserver ! <Link to="/billetterie">C’est par ici : Billetterie en ligne</Link></p>
+<p>
+On résume : cet été tu te régaleras de bons petits plats locaux sur la place du Fort du village de La Motte
+Chalancon, mardi 03 et mercredi 04 août 2021, avant de te rincer les oreilles avec une programmation de
+haute volée pendant que tes gosses prennent du bon temps sur les jeux en bois.</p>
+<p>Les <i>Parenthèses de l’Oule</i> n’attendent plus que toi, alors <Link to="/billetterie">inscris-toi</Link> on se charge du reste !</p>
+
+<p>La team Rock on the l’Oule</p>
+</Container>
+{/*
   <p>L’association Rock On The l’Oule est très heureuse de pouvoir proposer à nouveau des
 événements suite à la crise sanitaire qui a largement affecté nos activités depuis plus d’un an.
 Néanmoins, nous avons profité de ce temps pour nous organiser, dernière nos écrans, en
@@ -59,7 +91,7 @@ féerique ce mercredi 05 août 2020 dans cette soirée insolite et intergénéra
 jardin du fort, au cœur du village de La Motte Chalancon. Ambiance festive et tout public,
 avec repas complet proposé sur la place du Fort, buvette sur place, jeux en bois pour petits et
 grands, et exposition de tableaux de la jeune artiste diplômée des Beaux-Arts de Valence,
-Leila Festa.</p>
+Leïla Festa.</p>
 <p>
 Côté concerts, voici les premiers noms confirmés pour cette édition :
 Ambiance latine avec le groupe de musique Cubaine : « Guaracha Sabrosa »
@@ -68,7 +100,8 @@ Chanson Française et Arménienne avec le « Dan Gharibian Trio ».</p>
 (attention, jauge limitée !). Merci au Département de la Drôme, à la Région Auvergne Rhône
 Alpes et aux communes de la Motte Chalancon, de Cornillon et de Rottier pour leur soutien
 inconditionnel.</p>
- </Container>
+*/}
+
         <Container fluid > 
        {/* <Grid2 
             text={{text:"Deux plans d’eau posés au coeur des montagnes préalpines, à la frontière entre Diois et Baronnies. Un oasis dominé par les ruines du château médiéval de Cornillon et survolé par les hérons, vautours et autres spécimens de la faune locale."}}
@@ -181,7 +214,13 @@ export const query = graphql`
             }
           }
     }
-
+    java: file(relativePath: { eq: "java.jpg" }) {
+      childImageSharp {
+            fluid(maxWidth: 800, quality:80) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+    }
     benevoles: file(relativePath: { eq: "equipe1.jpg" }) {
       childImageSharp {
             fluid(maxWidth: 1600, quality:80) {

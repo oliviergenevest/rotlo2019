@@ -43,6 +43,7 @@
     "react-typography": "^0.16.19",
     "react-vanilla-tilt": "^1.0.0",
     "sharp": "^0.25.3",
+    "typeface-caveat-brush": "^1.1.13",
     "typeface-montserrat": "^0.0.54",
     "typeface-raleway": "^0.0.54",
     "typography": "^0.16.19",
