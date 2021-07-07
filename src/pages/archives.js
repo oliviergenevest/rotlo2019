@@ -20,7 +20,7 @@ const Archives = ({data}) => {
       description="Un retour en image sur les 25 ans du festival Rock on The l'Oule à la Motte Chalancon. Retrouvez sur cette page le détail des éditions précédentes."
        image={data.seo.childImageSharp.resize}
        />
-      <Container fluid first>
+      <Container fluid first bgBlack>
           <GridFlex>
               {images.map( (image,key) => (
                   <CardExpand  key={image.node.childImageSharp.fluid.src} edition={26-key-1} annee={2020-key-1} affiche={ <Img

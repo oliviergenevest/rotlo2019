@@ -22,7 +22,7 @@ const Layout = ({ children }) => (
       query {       
         logoDrome: file(relativePath: { eq: "logo_drome.jpg" }) {
           childImageSharp {
-                  fixed(width: 100, quality:80) {
+                  fixed(width: 80, quality:80) {
                     ...GatsbyImageSharpFixed
                   }
                 }
@@ -36,7 +36,7 @@ const Layout = ({ children }) => (
         }
         logoDrac: file(relativePath: { eq: "logo_drac.png" }) {
           childImageSharp {
-                  fixed(width: 100, quality:90) {
+                  fixed(width: 80, quality:80) {
                     ...GatsbyImageSharpFixed
                   }
                 }
@@ -56,15 +56,13 @@ const Layout = ({ children }) => (
           </Container>
           <Container  sponsor>           
             <div className="logoContainer">
-               <Img fixed={data.logoDrome.childImageSharp.fixed} style={{maxWidth: '100px',marginBottom:'2rem'}}/>   
-              
-               <Img fixed={data.logoRegion.childImageSharp.fixed} style={{marginBottom:'2rem',marginLeft:'2rem'}}/>
-               <Img fixed={data.logoDrac.childImageSharp.fixed} style={{marginBottom:'2rem',marginLeft:'2rem'}}/>
-
+              <Img fixed={data.logoDrac.childImageSharp.fixed} style={{marginBottom:'2rem',marginLeft:'.5rem'}}/>
+              <Img fixed={data.logoRegion.childImageSharp.fixed} style={{marginBottom:'2rem',marginLeft:'.5rem'}}/>
+              <Img fixed={data.logoDrome.childImageSharp.fixed} style={{maxWidth: '100px',marginBottom:'2rem', marginLeft:'.5rem'}}/>   
             </div>
-            <p>Ce projet est soutenu dans le cadre du dispositif « Eté Culturel » du Ministère de la Culture.
+            <p>Ce projet est soutenu dans le cadre du dispositif « Eté Culturel » du Ministère de la Culture, par la Région Auvergne Rhône-Alpes, le Conseil Départemental de la Drôme  et les communes de la Motte Chalancon, Cornillon sur l'Oule et Rottier. 
 </p>
-            <p>Rock On The l’Oule est soutenu par le Conseil Départemental de la Drôme, la Région Auvergne Rhône-Alpes, et les communes de la Motte Chalancon, Cornillon sur l'Oule et Rottier. </p>
+
           </Container>
          
 

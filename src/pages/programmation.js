@@ -64,12 +64,12 @@ const artistes = [
 	},
 	
 	{ 
-		name:"Leïla Festa : ON/OFF",
+		name:"Léïla Festa : ON/OFF",
 		heure: "Mardi et mercredi",
 		genre:'#Exposition', 
 		websiteURL:'https://www.redbubble.com/fr/people/festal/shop?asc=u',
 		facebookURL: 'https://www.facebook.com/FESTA-L%C3%A9%C3%AFla-Productions-111402553818515/',
-		description:'Exposition de tableaux de la jeune artiste diplômée des Beaux-Arts de Valence,	Leïla Festa. Entrée libre !',
+		description:"Jeune artiste diplomée des Beaux Arts de Grenoble-Valence en 2016, Léïla FESTA se définit comme peintre \"lumineux\" car l'exposition que vous allez voir a pour moteur la lumière. Les tableaux que vous allez découvrir vous surprendront une fois allumés dans le noir. Entrée libre !",
 		cover: <Img fluid={data.leila.childImageSharp.fluid} />,
 		video:'',
 	}
@@ -148,7 +148,7 @@ export const query = graphql`
 	            }
 	          }
 	    }
-	    leila:file(relativePath: { eq: "programmation/leila.jpg" }) {
+	    leila:file(relativePath: { eq: "programmation/leila2.jpg" }) {
 	          childImageSharp {
 	            fluid(maxWidth: 1500, quality:98) {
 	              ...GatsbyImageSharpFluid

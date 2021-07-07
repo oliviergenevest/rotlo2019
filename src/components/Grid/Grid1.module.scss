@@ -19,10 +19,10 @@
 }
 
 .btnCta {
-	
     padding: 1rem 2rem;
     background: white;
-    color: #368059;
+    //color: #368059;
+    color: $brand-primary;
     text-transform: uppercase;
     font-weight: 700;
     text-shadow: none;
@@ -31,7 +31,8 @@
     letter-spacing: .5px;
     transition: all .3s ease-in-out;
 	&:hover {
-		background: #368059;
+	//	background: #368059;
+		background: $brand-primary;
     	color: white;
 		text-decoration: none;
 		&:after {
@@ -75,13 +76,11 @@
 }
 
 .image {
-	transition:all 1s ease;
+	/*transition:all 1s ease;*/
 	grid-column: 1 / 5;
 	grid-row: 1 / 4;
 	overflow: hidden;
 	z-index: 0;
-    
-
 }
 
 .image > div  {height:100%;}
@@ -136,11 +135,13 @@
 	  	font-weight:900;
 	  	h2{
 	  	color: $brand-fluo;
+	  	color: $brand-third;
 	  	    margin-bottom: 0.8rem;
-	  }
+	  	}
 	  	 @include for-tablet-landscape-down {
 			 font-size: 1.8rem;
 			 padding-right: 0;
+			 p {font-size: 1.2rem;}
 		}
 	  
 	}

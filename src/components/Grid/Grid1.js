@@ -2,18 +2,21 @@ import React from 'react'
 /*import { Link } from 'gatsby'
 import Img from 'gatsby-image'*/
 import ScrollDownAnimation from '../ScrollDownAnimation/ScrollDownAnimation'
+import Slideshow from '../Slideshow'
 import { Fade } from "react-reveal"
-import HeadShake from 'react-reveal/HeadShake'
+//import HeadShake from 'react-reveal/HeadShake'
 import styles from './Grid1.module.scss'
 require('typeface-caveat-brush')
 
 
 
 
-const Grid1 = ({image, text1, heroText, text3, text2, flyer}) => (
+const Grid1 = ({image, text1, heroText, text3, text2, flyer, slidesData}) => (
     <div className= {styles.gridContainer} >
         <div className= {styles.image}> 
-      	{image} 
+      	{/*image*/} 
+      	<Slideshow slides={slidesData} />
+		 
         </div>	
         <div className= {styles.bgDots} ></div>		
 		<div className= {styles.bgGradient} ></div>
@@ -35,7 +38,7 @@ const Grid1 = ({image, text1, heroText, text3, text2, flyer}) => (
 		        		<p>{ text2.text }</p>
 		        </Fade>      
 	        </div>
-			<a href="https://www.helloasso.com/associations/association-rock-on-the-l-oule/evenements/festival-rock-on-the-l-oule" className={styles.btnCta} target="_blank" rel="noreferrer noopener">Billetterie</a>
+			<Fade delay={800}><a href="https://www.helloasso.com/associations/association-rock-on-the-l-oule/evenements/festival-rock-on-the-l-oule" className={styles.btnCta} target="_blank" rel="noreferrer noopener">Billetterie</a></Fade>
 		 {/* 	<div className= {styles.description} >
 	          	<Fade up  delay={500} distance="10px">
 	       		 	<p>{ text3.text }</p>

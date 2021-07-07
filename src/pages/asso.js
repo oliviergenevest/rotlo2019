@@ -62,6 +62,9 @@ No Shangsa, The Wicks</li>
 <li>2016 22ème: Danyel Waro, Lisa and the Lips, Dengue Dengue Dengue</li>
 <li>2017 23ème: Impérial Orpheon, Motivés! (annulé et remplacé par Fanfare Ciocărlia), Washington Dead Cats </li>
 <li>2018 24ème: Loic Lantoine & the very big experimental Toubifri Orchestra, Acid Arab, Sir Jean & the Roots Doctors, Afuma : les échassiers du Togo</li>
+<li>2019 25ème: Saodaj', Antibalas, Piniol, DJ Von Kids</li>
+<li>2020 Les Parenthèses de l'Oule #1 : Soirée Conteurs + Sylvain Rifflet</li>
+<li>2021 Les Parenthèses de l'Oule #2 : Dan Gharibian Trio, Guaracha Sabrosa, René Lacaille Quartet, David Suissa Quartet, Les Jumelles de l'Astronaute, Expo tableaux lumineux Léïla Festa</li>
   </ul>
     
     <h2>Contacts</h2>

@@ -88,6 +88,7 @@ export default class Navigation extends Component {
                 {/*<a href="https://www.youtube.com/" aria-label="Youtube" target="_blank" rel="noopener noreferrer">
                   <FaYoutube />
                 </a>*/}
+                
               
                 <a href={config.facebookPageUrl} aria-label="Facebook" target="_blank" rel="noopener noreferrer">
                   <FaFacebook />
@@ -118,7 +119,10 @@ export default class Navigation extends Component {
 
               </span>
             </nav>*/}
+            <a href="https://www.helloasso.com/associations/association-rock-on-the-l-oule/evenements/festival-rock-on-the-l-oule" className={styles.btnCta} target="_blank" rel="noreferrer noopener">Billetterie</a>
+
              <div className={ styles.bmBurgerButton }>
+
              <HamburgerMenu 
                 isOpen={this.state.menuOpen}
                 menuClicked={this.handleClick.bind(this)}

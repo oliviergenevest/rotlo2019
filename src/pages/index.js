@@ -21,10 +21,11 @@ const IndexPage = ({data}) => {
           image={data.seo.childImageSharp.resize}/>
           <Grid1 
             image = { <RandomImage gatsbyImageArray={data.backgroundImages}/> } 
+            slidesData = {data.backgroundImages}
             flyer = {<Img fluid={data.flyer.childImageSharp.fluid} />}
             heroText = {{text:'de l\'Oule #2'}} 
             text1= {{text:"3 & 4 août 2021 - La Motte Chalancon (26)"}} 
-            text2= {{text:"Dan Gharibian Trio - René Lacaille - Guaracha Sabrosa - David Suissa Quartet - Les Jumelles de l'Alchimiste - Leïla Festa"}} 
+            text2= {{text:"Dan Gharibian Trio - René Lacaille - Guaracha Sabrosa - David Suissa Quartet - Les Jumelles de l'Alchimiste - Léïla Festa"}} 
             text3= {{text:"C'est sur la place du Fort que ça se passe ! Rock on the l'Oule fêtera sa 27ème édition. Au programme : concerts, expo, détente, jeux en bois, produits locaux et buvette, démarche éco-responsable. On compte sur vous !"}} 
           />
         
@@ -48,7 +49,7 @@ const IndexPage = ({data}) => {
 </p>
 <p>
 <i>JAVA @ Rock on the l’Oule 2010</i>
-<video autoPlay mute="true" loop style={{width:'100%'}}> 
+<video controls autoPlay playsInline  muted={true} loop style={{width:'100%'}}> 
       <source src={JavaVideoMp4} type="video/mp4" />
     </video>
 </p>
@@ -145,7 +146,7 @@ export default IndexPage
 export const query = graphql`
   query {
 
-    backgroundImages: allFile (filter:{relativeDirectory:{eq:"backgrounds2021"}, extension:{eq:"jpg"}}){
+    backgroundImages: allFile (sort: {order: ASC, fields: name},filter:{relativeDirectory:{eq:"backgrounds2021"}, extension:{eq:"jpg"}}){
     edges {
       node {
           childImageSharp {
