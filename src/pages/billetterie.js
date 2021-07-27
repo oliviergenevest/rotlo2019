@@ -9,7 +9,8 @@ const BilletteriePage = () => (
     <SEO 
     title="Association Rock on the l'Oule" 
     keywords={[`festival`, `rock on the l'oule`, `la motte chalancon`,`rock`,`musique`,`spectacle`,`concert`]}
-    description="Achetez vos billets en ligne pour le festival 'Les Parenthèses de l'Oule' 3 et 4 août 2021 à la Motte Chalancon (26)"
+    description="Achetez vos billets en ligne pour le festival 'Les hi
+    Parenthèses de l'Oule' 3 et 4 août 2021 à la Motte Chalancon (26)"
     />
 
  <Container text first>

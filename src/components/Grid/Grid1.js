@@ -21,8 +21,9 @@ const Grid1 = ({image, text1, heroText, text3, text2, flyer, slidesData}) => (
         <div className= {styles.bgDots} ></div>		
 		<div className= {styles.bgGradient} ></div>
 		<div className={styles.contentWrapper} >  
-	        <div className= {styles.hero}>
+	        <div className= {styles.hero}>{flyer}
 	          <Fade up  delay={300} distance="10px">
+				
 	           <h1 className= {styles.title}>Les Parenthèses<br/>{ heroText.text }</h1>
 			 {/*  <span className={styles.slogan}>Les parenthèses de l'Oule #2</span> */}   
 			  </Fade>

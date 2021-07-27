@@ -17,7 +17,7 @@ const IndexPage = ({data}) => {
       <Layout>
           <SEO title="Accueil" 
           keywords={[`festival`, `rock on the l'oule`, `la motte chalancon`,`rock`,`musique`,`spectacle`,`concert`]} 
-          description="Mardi 3 et mercredi 4 août 2021, c'est sur la place du Fort de la Motte Chalancon que ça se passe. Rock on the l'Oule fêtera sa 27ème édition. Au programme : concerts, expo, détente, jeux en bois, produits locaux et buvette, démarche éco-responsable. On compte sur vous !" 
+          description="Mardi 3 et mercredi 4 août 2021, c'est sur la place du Fort de la Motte Chalancon que ça se passe. Les Parenthèses de l’Oule vous emmèneront les 3 et 4 août 2021 à Cuba, à la Réunion, ici ou là. !" 
           image={data.seo.childImageSharp.resize}/>
           <Grid1 
             image = { <RandomImage gatsbyImageArray={data.backgroundImages}/> } 
@@ -112,7 +112,7 @@ inconditionnel.</p>
 
           <Grid2 
             text={{text:"Dans une ambiance familiale rappelant les fêtes de village traditionnelles, Rock on the l’Oule propose une programmation artistique de premier choix faisant la part belle au métissage. Une rencontre entre les genres musicaux les plus variés et des artistes aux origines géographiques multiples. Mais aussi du cirque, des performances en tous genres, des jeux en bois, un salon de thé sous tentes berbères... De quoi rassembler toutes les générations de public et faire se rencontrer les cultures."}}
-              image={<Img fluid={data.brassageCulture.childImageSharp.fluid} />}
+              image={<Img fluid={data.brassageCulture.childImageSharp.fluid} style={{width:'100%'}}/>}
               title="Un joyeux brassage de cultures"
               reverse
             />
@@ -166,15 +166,16 @@ export const query = graphql`
           }
     }
 
-    flyer: file(relativePath: { eq: "aff-rotlo-2019.jpg" }) {
+    flyer: file(relativePath: { eq: "lesparenthesesdeloule.png" }) {
           childImageSharp {
-            fluid(maxWidth: 400, quality:90) {
+            fluid(maxWidth: 600, quality:90) {
               ...GatsbyImageSharpFluid
+              ...GatsbyImageSharpFluidLimitPresentationSize
             }
           }  
     }
 
-    seo: file(relativePath: { eq: "aff-rotlo-2019.jpg" }) { 
+    seo: file(relativePath: { eq: "lesparenthesesdeloule.png" }) { 
         childImageSharp {
             resize(width: 1200) {
               src

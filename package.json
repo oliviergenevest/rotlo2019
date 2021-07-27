@@ -43,6 +43,7 @@
     "react-media-player": "^0.7.9",
     "react-reveal": "^1.2.2",
     "react-spring": "^8.0.27",
+    "react-spring-modal": "^2.0.7",
     "react-tilt": "^0.1.4",
     "react-typography": "^0.16.19",
     "react-vanilla-tilt": "^1.0.0",

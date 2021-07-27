@@ -119,7 +119,7 @@ export const query = graphql`
 	query progQuery{
 	    flyer: file(relativePath: { eq: "aff-rotlo-2019.jpg" }) {
 	          childImageSharp {
-	            fluid(maxWidth: 400, quality:80) {
+	            fluid(maxWidth: 600, quality:80) {
 	              ...GatsbyImageSharpFluid
 	            }
 	          }
@@ -172,7 +172,7 @@ export const query = graphql`
 	          }
 	    } 
 
-	    seo: file(relativePath: { eq: "aff-rotlo-2019.jpg" }) { 
+	    seo: file(relativePath: { eq: "lesparenthesesdeloule.png" }) { 
 	        childImageSharp {
 	            resize(width: 1200) {
 	              src
