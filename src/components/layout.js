@@ -36,7 +36,7 @@ const Layout = ({ children }) => (
         }
         logoEteCulturel: file(relativePath: { eq: "logo_ete_culturel.png" }) {
           childImageSharp {
-                  fixed(width: 80, quality:80) {
+                  fixed(width: 180, quality:80) {
                     ...GatsbyImageSharpFixed
                   }
                 }
