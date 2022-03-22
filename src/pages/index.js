@@ -23,9 +23,9 @@ const IndexPage = ({data}) => {
             image = { <RandomImage gatsbyImageArray={data.backgroundImages}/> } 
             slidesData = {data.backgroundImages}
             flyer = {<Img fluid={data.flyer.childImageSharp.fluid} />}
-            heroText = {{text:'Rock on the l\'Oule'}} 
+            heroText = {{text:'Rock on the l\'Oule 2022'}} 
             text1= {{text:"La Motte Chalancon (26)"}} 
-            text2= {{text:"Tenez vous prêts pour 2022 !"}} 
+            text2= {{text:"Bientôt de retour, tenez-vous prêts pour cet été !"}} 
             text3= {{text:"C'est sur la place du Fort que ça se passe ! Rock on the l'Oule fêtera sa 27ème édition. Au programme : concerts, expo, détente, jeux en bois, produits locaux et buvette, démarche éco-responsable. On compte sur vous !"}} 
           />
         
