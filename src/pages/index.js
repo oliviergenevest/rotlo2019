@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'gatsby'
+/*import { Link } from 'gatsby'*/
 import Img from 'gatsby-image'
 import Layout from '../components/layout'
 import Container from '../components/Container/Container'
@@ -7,10 +7,10 @@ import { graphql } from 'gatsby'
 import SEO from '../components/seo'
 import Grid1 from '../components/Grid/Grid1'
 import Grid2 from '../components/Grid/Grid2'
-import GridImage from '../components/Grid/GridImage'
+/*import GridImage from '../components/Grid/GridImage'*/
 /*import TimelineProg from '../components/timeline'*/
 import RandomImage from '../components/RandomImage'
-import JavaVideoMp4 from '../images/java.mp4'
+/*import JavaVideoMp4 from '../images/java.mp4'*/
 
 const IndexPage = ({data}) => {
    return (
@@ -23,9 +23,9 @@ const IndexPage = ({data}) => {
             image = { <RandomImage gatsbyImageArray={data.backgroundImages}/> } 
             slidesData = {data.backgroundImages}
             flyer = {<Img fluid={data.flyer.childImageSharp.fluid} />}
-            heroText = {{text:'de l\'Oule #2'}} 
-            text1= {{text:"3 & 4 août 2021 - La Motte Chalancon (26)"}} 
-            text2= {{text:"Dan Gharibian Trio - René Lacaille - Guaracha Sabrosa - David Suissa Quartet - Les Jumelles de l'Alchimiste - Léïla Festa"}} 
+            heroText = {{text:'Rock on the l\'Oule'}} 
+            text1= {{text:"La Motte Chalancon (26)"}} 
+            text2= {{text:"Tenez vous prêts pour 2022 !"}} 
             text3= {{text:"C'est sur la place du Fort que ça se passe ! Rock on the l'Oule fêtera sa 27ème édition. Au programme : concerts, expo, détente, jeux en bois, produits locaux et buvette, démarche éco-responsable. On compte sur vous !"}} 
           />
         
@@ -42,7 +42,7 @@ const IndexPage = ({data}) => {
 
   <p>Portez-vous bien les amis, on pense fort à vous !</p>
  </Container>
-  */}
+ 
 <Container text first> 
  <h2>Les parenthèses de l'Oule #2</h2>
  <p>Depuis de longs mois, on a cherché, tourné et retourné dans tous les sens comment s’adapter à la situation sanitaire tout en respectant l’essence du festival. Et bon ben, sur une édition traditionnelle respecter les protocoles sanitaires actuels c’est plutôt compliqué...visez un peu :
@@ -74,7 +74,7 @@ haute volée pendant que tes gosses prennent du bon temps sur les jeux en bois.<
 <p>Les <i>Parenthèses de l’Oule</i> n’attendent plus que toi, alors <Link to="/billetterie">inscris-toi</Link> on se charge du reste !</p>
 
 <p>La team Rock on the l’Oule</p>
-</Container>
+   </Container>*/}
 {/*
   <p>L’association Rock On The l’Oule est très heureuse de pouvoir proposer à nouveau des
 événements suite à la crise sanitaire qui a largement affecté nos activités depuis plus d’un an.
@@ -103,7 +103,7 @@ Alpes et aux communes de la Motte Chalancon, de Cornillon et de Rottier pour leu
 inconditionnel.</p>
 */}
 
-        <Container fluid > 
+        <Container fluid first > 
        {/* <Grid2 
             text={{text:"Deux plans d’eau posés au coeur des montagnes préalpines, à la frontière entre Diois et Baronnies. Un oasis dominé par les ruines du château médiéval de Cornillon et survolé par les hérons, vautours et autres spécimens de la faune locale."}}
               image={<Img fluid={data.siteExceptionnel.childImageSharp.fluid} />}
@@ -146,7 +146,7 @@ export default IndexPage
 export const query = graphql`
   query {
 
-    backgroundImages: allFile (sort: {order: ASC, fields: name},filter:{relativeDirectory:{eq:"backgrounds2021"}, extension:{eq:"jpg"}}){
+    backgroundImages: allFile (sort: {order: ASC, fields: name},filter:{relativeDirectory:{eq:"teaser2022"}, extension:{eq:"jpg"}}){
     edges {
       node {
           childImageSharp {

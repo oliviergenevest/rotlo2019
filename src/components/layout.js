@@ -11,8 +11,8 @@ import MailChimpSubscribe from './mailchimp-subscribe'
 import 'typeface-montserrat'
 import 'typeface-raleway'
 import styles from './layout.module.scss'
-/*import AudioPlayer from '../components/Player/player'*/
-import  ModalRotlo  from './modal';
+/*import AudioPlayer from '../components/Player/player'
+import  ModalRotlo  from './modal';*/
 
 
 
@@ -34,13 +34,7 @@ const Layout = ({ children }) => (
                   }
                 }
         }
-        logoEteCulturel: file(relativePath: { eq: "logo_ete_culturel.png" }) {
-          childImageSharp {
-                  fixed(width: 180, quality:80) {
-                    ...GatsbyImageSharpFixed
-                  }
-                }
-        }
+       
         logoDrac: file(relativePath: { eq: "logo_drac.png" }) {
           childImageSharp {
                   fixed(width: 80, quality:80) {
@@ -50,7 +44,7 @@ const Layout = ({ children }) => (
         }
         logoEteCulturel: file(relativePath: { eq: "logo_ete_culturel.png" }) {
           childImageSharp {
-                  fixed(width: 80, quality:80) {
+                  fixed(width: 180, quality:80) {
                     ...GatsbyImageSharpFixed
                   }
                 }
@@ -66,7 +60,7 @@ const Layout = ({ children }) => (
         <Navigation/>
       
         <main className={styles.content} >
-        <ModalRotlo/>
+      {/*  <ModalRotlo/> */}
           {children} 
           <Container  text>
             <MailChimpSubscribe/>
@@ -91,7 +85,7 @@ const Layout = ({ children }) => (
               <span> <a href={config.facebookPageUrl} aria-label="Facebook" target="_blank" rel="noopener noreferrer">
                 <FaFacebook size={20} style={{ }}  />
                 </a></span>
-              <span>Association Rock On The L'Oule - 2021 - <Link to="/credits">Crédits</Link></span>
+              <span>Association Rock On The L'Oule - 2022 - <Link to="/credits">Crédits</Link></span>
           </Container>
         </footer>
      </div>
