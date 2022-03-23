@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
     siteUrl:'https://rockontheloule.org',
-    title: `Les Parenthèses de l'Oule`,
-    description: `Festival Les Parenthèses de l'Oule - mardi 3 & mercredi 4 août 2021`,
+    title: `Rock on the l'Oule`,
+    description: `Festival Rock on the l'Oule`,
     author: `Association Rock on the l'Oule`,
   }, 
   plugins: [
@@ -52,8 +52,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Les parenthèses de l'Oule`,
-        short_name: `Les parenthèses de l'Oule`,
+        name: `Rock on the l'Oule`,
+        short_name: `Rock on the l'Oule`,
         start_url: `/`,
         background_color: `#000`,
         theme_color: `#f37260`,

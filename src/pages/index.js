@@ -17,7 +17,7 @@ const IndexPage = ({data}) => {
       <Layout>
           <SEO title="Accueil" 
           keywords={[`festival`, `rock on the l'oule`, `la motte chalancon`,`rock`,`musique`,`spectacle`,`concert`]} 
-          description="Mardi 3 et mercredi 4 août 2021, c'est sur la place du Fort de la Motte Chalancon que ça se passe. Les Parenthèses de l’Oule vous emmèneront les 3 et 4 août 2021 à Cuba, à la Réunion, ici ou là. !" 
+          description="Bientôt de retour, tenez-vous prêts pour cet été !!" 
           image={data.seo.childImageSharp.resize}/>
           <Grid1 
             image = { <RandomImage gatsbyImageArray={data.backgroundImages}/> } 
