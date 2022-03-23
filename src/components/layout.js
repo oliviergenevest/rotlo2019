@@ -12,7 +12,7 @@ import 'typeface-montserrat'
 import 'typeface-raleway'
 import styles from './layout.module.scss'
 /*import AudioPlayer from '../components/Player/player'*/
-import  ModalRotlo  from './modal';
+/*import  ModalRotlo  from './modal';*/
 
 
 
@@ -52,7 +52,7 @@ const Layout = ({ children }) => (
         <Navigation/>
       
         <main className={styles.content} >
-        <ModalRotlo/>
+        {/*<ModalRotlo/> */}
           {children} 
           <Container  text>
             <MailChimpSubscribe/>
