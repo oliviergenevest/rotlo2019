@@ -39,7 +39,7 @@ const Grid1 = ({image, text1, heroText, text3, text2, intro, flyer, slidesData})
 		        	<h2>{ text1.text }</h2>
 		        		<p>{ text2.text }</p>
 		        </Fade>    
-				<Fade delay={500}><p><a href="https://www.helloasso.com/associations/association-rock-on-the-l-oule/evenements/festival-rock-on-the-l-oule" className={styles.btnCta} target="_blank" rel="noreferrer noopener">Billetterie</a></p></Fade>
+				<Fade delay={500}><p><a href="https://www.helloasso.com/associations/association-rock-on-the-l-oule/evenements/beaux-et-cons-a-la-fois-un-certain-jacques-brel" className={styles.btnCta} target="_blank" rel="noreferrer noopener">Billetterie</a></p></Fade>
 
 	        </div>
 		 	<div className= {styles.description} >
