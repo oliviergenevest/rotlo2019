@@ -6,6 +6,7 @@
   margin-top:3rem;
   margin-bottom:8rem;
   z-index:1000;
+
 }
 
 
@@ -42,6 +43,7 @@
   align-content: center;
   display: flex;
   flex-direction: column;
+  & h2 {color:$brand-fluo;}
    @include for-tablet-landscape-down {
     padding:1rem;
    }

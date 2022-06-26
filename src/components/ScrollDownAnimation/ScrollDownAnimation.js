@@ -20,7 +20,7 @@ const ScrollDownAnimation = () => (
 	</span>
 </span>
 	
-  <span>SCROLL DOWN</span>
+  <span>DEFILER VERS LE BAS</span>
 </div>
 
      

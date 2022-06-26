@@ -135,7 +135,7 @@
 	  	font-weight:900;
 	  	h2{
 	  	color: $brand-fluo;
-	  	color: $brand-third;
+	  //	color: $brand-third;
 	  	    margin-bottom: 0.8rem;
 	  	}
 	  	 @include for-tablet-landscape-down {
@@ -172,6 +172,7 @@
 		    font-family:'Montserrat',sans-serif;
 		    letter-spacing:1px;
 		    font-size: 3.6rem;
+			margin-bottom: 0.5rem;
 		    font-weight:900;
 		    line-height: 4.165rem;
 		    @include for-tablet-landscape-down {

@@ -16,7 +16,7 @@ const Credits = () => (
     <p><a href="https://oliviergenevest.info" target="_blank" rel="noopener noreferrer" >Olivier Genevest</a></p>
     
     <h2>Photos</h2>
-    <p><a href="http://lafabegrafik.com/" target="_blank" rel="noopener noreferrer" >Fabienne Chemin</a>, Claude Mery, <a href="http://www.eric-roset.ch/" target="_blank" rel="noopener noreferrer" >Eric Roset</a></p>
+    <p><a href="http://lafabegrafik.com/" target="_blank" rel="noopener noreferrer" >Fabienne Chemin</a>, Claude Mery, <a href="http://www.eric-roset.ch/" target="_blank" rel="noopener noreferrer" >Eric Roset</a>, Emmanuel Pampuri, Jeff Humbert, Cassandre Magagnini</p>
 
 
 

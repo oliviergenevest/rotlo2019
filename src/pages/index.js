@@ -20,12 +20,12 @@ const IndexPage = ({data}) => {
           description="Bientôt de retour, tenez-vous prêts pour cet été !!" 
           image={data.seo.childImageSharp.resize}/>
           <Grid1 
-            image = { <RandomImage gatsbyImageArray={data.backgroundImages}/> } 
-            slidesData = {data.backgroundImages}
+            image = { <RandomImage gatsbyImageArray={data.edition2022Gallery}/> } 
+            slidesData = {data.edition2022Gallery}
             flyer = {<Img fluid={data.flyer.childImageSharp.fluid} />}
-            heroText = {{text:'Rock on the l\'Oule 2022'}} 
-            text1= {{text:"La Motte Chalancon (26)"}} 
-            text2= {{text:"Bientôt de retour, tenez-vous prêts pour cet été !"}} 
+            heroText = {{text:'Rock on the l\'Oule #26'}} 
+            text1= {{text:"Mercredi 3 août 2022 - La Motte Chalancon (26)"}} 
+            text2= {{text:"TRANS KABAR - Banan N Jug - Imperial Kikiristan - Bold Circus - Smokey Joe & The Kid (DJ Set)"}} 
             text3= {{text:"C'est sur la place du Fort que ça se passe ! Rock on the l'Oule fêtera sa 27ème édition. Au programme : concerts, expo, détente, jeux en bois, produits locaux et buvette, démarche éco-responsable. On compte sur vous !"}} 
           />
         
@@ -104,11 +104,11 @@ inconditionnel.</p>
 */}
 
         <Container fluid first > 
-       {/* <Grid2 
+        <Grid2 
             text={{text:"Deux plans d’eau posés au coeur des montagnes préalpines, à la frontière entre Diois et Baronnies. Un oasis dominé par les ruines du château médiéval de Cornillon et survolé par les hérons, vautours et autres spécimens de la faune locale."}}
               image={<Img fluid={data.siteExceptionnel.childImageSharp.fluid} />}
               title="Un lieu magique : le site du Pas des Ondes."
-            /> */}  
+            /> 
 
           <Grid2 
             text={{text:"Dans une ambiance familiale rappelant les fêtes de village traditionnelles, Rock on the l’Oule propose une programmation artistique de premier choix faisant la part belle au métissage. Une rencontre entre les genres musicaux les plus variés et des artistes aux origines géographiques multiples. Mais aussi du cirque, des performances en tous genres, des jeux en bois, un salon de thé sous tentes berbères... De quoi rassembler toutes les générations de public et faire se rencontrer les cultures."}}
@@ -231,11 +231,11 @@ export const query = graphql`
           }
     }
 
-    edition2020Gallery: allFile (filter:{relativeDirectory:{eq:"edition2020"}, extension:{eq:"jpg"}}, sort: {fields: [name], order: DESC}){
+    edition2022Gallery: allFile (filter:{relativeDirectory:{eq:"edition2022"}, extension:{eq:"jpg"}}, sort: {fields: [name], order: DESC}){
     edges {
       node {
           childImageSharp {
-            fluid(maxWidth: 450, quality:80) {
+            fluid(maxWidth: 2000, quality:80) {
               ...GatsbyImageSharpFluid
             }
           }

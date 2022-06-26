@@ -7,7 +7,7 @@
   a {
     color: $white;
     &:hover {
-      color: $brand-secondary;
+      color: $brand-cta;
     }
   }
 }
@@ -29,7 +29,7 @@
   transition: all .3s ease-in-out;
 &:hover {
 //	background: #368059;
-  background: $brand-primary;
+  background: $brand-cta;
     color: white!important;
   text-decoration: none;
   &:after {
@@ -80,7 +80,7 @@
     text-decoration: none;
     &:hover,
     &:focus {
-      color: $body-color;
+      color: $brand-cta ;
       text-decoration: none!important;
     }
     &:after {display:none;}
@@ -167,7 +167,7 @@
 
 /* General sidebar styles */
  .bmMenu {
-  background: $brand-primary;
+  background: #03739e;
   padding: 2.5em 1.5em 0;
   font-size: 1.15em;
 
@@ -198,11 +198,11 @@
   padding:.3em 0;
   
   &:hover{
-    color:#b6fcb6;
+    color:$brand-cta;
   }
   &.active {
     color: $brand-cta;
-    color: #b6fcb6;
+ 
   }
 
   

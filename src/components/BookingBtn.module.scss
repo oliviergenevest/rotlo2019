@@ -1,0 +1,25 @@
+@import "../config/variables";
+
+.btnBooking {
+  padding: .5rem 1rem;
+  background: white;
+ 
+  color: $brand-primary!important;
+  margin-right:2rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-shadow: none;
+  border-radius: 8px;
+  text-decoration: none;
+  letter-spacing: .5px;
+  transition: all .3s ease-in-out;
+&:hover {
+
+  background: $brand-primary;
+    color: white!important;
+  text-decoration: none;
+  &:after {
+    display:none;
+  }
+}
+}

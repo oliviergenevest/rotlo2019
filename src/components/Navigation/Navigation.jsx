@@ -10,7 +10,7 @@ import config from '../../config/SiteConfig'
 import styles from './Navigation.module.scss'
 import './Headroom.scss'
 import Logo from "../../images/logo-rotlo-inverse.png"
-
+import BookingBtn from '../BookingBtn'
 
 export default class Navigation extends Component {
   constructor(props) {
@@ -66,7 +66,7 @@ export default class Navigation extends Component {
             customBurgerIcon={ false }
             >
  
-            {/*  <Link to="/programmation" activeClassName={styles.active}  onClick={() => this.closeMenu()}>
+              <Link to="/programmation" activeClassName={styles.active}  onClick={() => this.closeMenu()}>
                   Programmation
               </Link>
               <Link to="/billetterie" activeClassName={styles.active}  onClick={() => this.closeMenu()}>
@@ -75,7 +75,7 @@ export default class Navigation extends Component {
               <Link to="/infos-pratiques" activeClassName={styles.active} onClick={() => this.closeMenu()}>
                   Infos pratiques
               </Link> 
-    */}
+    
               <Link to="/asso" activeClassName={styles.active} onClick={() => this.closeMenu()}>
                   L'association
               </Link>
@@ -125,9 +125,9 @@ export default class Navigation extends Component {
 
        {/*      <a href="https://www.helloasso.com/associations/association-rock-on-the-l-oule/evenements/festival-rock-on-the-l-oule" className={styles.btnCta} target="_blank" rel="noreferrer noopener">Billetterie</a>
 */}
-
+<BookingBtn/>
              <div className={ styles.bmBurgerButton }>
-
+             
              <HamburgerMenu 
                 isOpen={this.state.menuOpen}
                 menuClicked={this.handleClick.bind(this)}
