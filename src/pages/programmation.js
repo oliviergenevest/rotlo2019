@@ -66,7 +66,7 @@ const artistes = [
 return (
   <Layout>
     <SEO 
-    title="Programmation Les Parenthèses de l'Oule 2022" 
+    title="Programmation Rock on the l'Oule 2022" 
     keywords={[`festival`, `rock on the l'oule`, `la motte chalancon`,`rock`,`musique`,`spectacle`,`concert`,'antibalas']} 
     description="Mercredi 3 août 2022, prenez les routes sinueuses qui mènent à la Motte Chalancon, on s'occupe du reste ! C'est au plan d'eau du Pas des Ondes que ça se passe ! Au programme : concerts, détente, jeux en bois, produits locaux et buvette, démarche éco-responsable. On compte sur vous !"
      image={data.seo.childImageSharp.resize}

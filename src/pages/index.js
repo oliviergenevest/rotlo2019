@@ -15,7 +15,7 @@ import RandomImage from '../components/RandomImage'
 const IndexPage = ({data}) => {
    return (
       <Layout>
-          <SEO title="Accueil" 
+          <SEO title="Festival Rock on the l'Oule 2022" 
           keywords={[`festival`, `rock on the l'oule`, `la motte chalancon`,`rock`,`musique`,`spectacle`,`concert`]} 
           description="Festival Rock On the l'Oule - Mercredi 3 août 2022 - TRANS KABAR - Banan'N Jug - Imperial Kikiristan - Bold Circus - Smokey Joe & The Kid (DJ Set)" 
           image={data.seo.childImageSharp.resize}/>
