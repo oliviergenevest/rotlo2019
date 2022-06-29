@@ -17,7 +17,7 @@ const IndexPage = ({data}) => {
       <Layout>
           <SEO title="Accueil" 
           keywords={[`festival`, `rock on the l'oule`, `la motte chalancon`,`rock`,`musique`,`spectacle`,`concert`]} 
-          description="Bientôt de retour, tenez-vous prêts pour cet été !!" 
+          description="Festival Rock On the l'Oule - Mercredi 3 août 2022 - TRANS KABAR - Banan'N Jug - Imperial Kikiristan - Bold Circus - Smokey Joe & The Kid (DJ Set)" 
           image={data.seo.childImageSharp.resize}/>
           <Grid1 
             image = { <RandomImage gatsbyImageArray={data.edition2022Gallery}/> } 
@@ -26,7 +26,7 @@ const IndexPage = ({data}) => {
             heroText = {{text:'Rock on the l\'Oule #26'}} 
             text1= {{text:"Mercredi 3 août 2022 - La Motte Chalancon (26)"}} 
             text2= {{text:"TRANS KABAR - Banan N Jug - Imperial Kikiristan - Bold Circus - Smokey Joe & The Kid (DJ Set)"}} 
-            text3= {{text:"C'est sur la place du Fort que ça se passe ! Rock on the l'Oule fêtera sa 27ème édition. Au programme : concerts, expo, détente, jeux en bois, produits locaux et buvette, démarche éco-responsable. On compte sur vous !"}} 
+            text3= {{text:"On compte sur vous !"}} 
           />
         
           {/*<TimelineProg/>*/}
@@ -146,17 +146,7 @@ export default IndexPage
 export const query = graphql`
   query {
 
-    backgroundImages: allFile (sort: {order: ASC, fields: name},filter:{relativeDirectory:{eq:"teaser2022"}, extension:{eq:"jpg"}}){
-    edges {
-      node {
-          childImageSharp {
-            fluid(maxWidth: 1600, quality:80) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-      }
-    }
+   
 
     placeholderImage: file(relativePath: { eq: "site.jpg" }) {
           childImageSharp {

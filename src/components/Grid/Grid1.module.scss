@@ -41,6 +41,15 @@
 	}
 }
 
+.linkProg:hover {
+	 	text-decoration:none;
+		color:$brand-cta;
+		&:after { content:none}
+	
+}
+
+.linkProg { text-decoration:none;&:after{content:none}}
+
 .flyer {
 	/*display:none;*/
 	grid-column: 3 / 5;

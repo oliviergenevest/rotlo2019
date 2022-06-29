@@ -65,7 +65,7 @@ No Shangsa, The Wicks</li>
 <li>2019 25ème: Saodaj', Antibalas, Piniol, DJ Von Kids</li>
 <li>2020 Les Parenthèses de l'Oule #1 : Soirée Conteurs + Sylvain Rifflet</li>
 <li>2021 Les Parenthèses de l'Oule #2 : (ANNULE) Dan Gharibian Trio, Guaracha Sabrosa, René Lacaille Quartet, David Suissa Quartet, Les Jumelles de l'Astronaute, Expo tableaux lumineux Léïla Festa</li>
-<li>2022 Rock on the l'Oule : en préparation... </li>
+<li>2022 Rock on the l'Oule : enfin le retour, on vous y attend !!! </li>
   </ul>
     
     <h2>Contacts</h2>

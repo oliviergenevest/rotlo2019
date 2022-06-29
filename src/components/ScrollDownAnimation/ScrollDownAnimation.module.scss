@@ -49,8 +49,8 @@ color: #fff;
 .scrollBtn > *:focus,
 .scrollBtn > *:active,
 .scrollBtn > *.active {
-	opacity: 0.8;
-	filter: alpha(opacity=80);
+/*	opacity: 0.8;
+	filter: alpha(opacity=80);*/
 }
 .scrollBtn .mouse {
 	/*position: absolute;*/
@@ -60,7 +60,7 @@ color: #fff;
 	margin-right: 20px;
 
 	box-sizing: border-box;
-	border: 3px solid #b9675c;
+	//border: 3px solid #b9675c;
 	border: 3px solid $brand-fluo;
 	border-radius: 23px;
 }
@@ -72,7 +72,7 @@ color: #fff;
 	width: 8px;
 	height: 8px;
 	margin: -4px 0 0 -4px;
-	background: #fff;
+	background:  $brand-fluo;
 	border-radius: 50%;
 	
 	animation: aniMouse 2.5s linear infinite;

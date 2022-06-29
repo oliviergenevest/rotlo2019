@@ -43,7 +43,7 @@
   align-content: center;
   display: flex;
   flex-direction: column;
-  & h2 {color:$brand-fluo;}
+  &  h2 {color:$brand-primary;}
    @include for-tablet-landscape-down {
     padding:1rem;
    }

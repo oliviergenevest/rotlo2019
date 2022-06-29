@@ -20,7 +20,7 @@ const Contacts = () => {
     />
     <Container text first>   
         <h1>Contacts</h1> 
-        <h2>Email</h2>
+        <h2>Email</h2> 
         <p><a href="mailto:contact@rockontheloule.org">contact@rockontheloule.org</a></p>
         <h2>Téléphone</h2>
         <p>07 64 79 23 59</p>

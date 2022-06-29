@@ -1,5 +1,6 @@
 import React from 'react'
-/*import { Link } from 'gatsby'
+import { Link } from 'gatsby'
+/*
 import Img from 'gatsby-image'*/
 import ScrollDownAnimation from '../ScrollDownAnimation/ScrollDownAnimation'
 import Slideshow from '../Slideshow'
@@ -36,7 +37,7 @@ const Grid1 = ({image, text1, heroText, text3, text2, flyer, slidesData}) => (
 		        <Fade up  delay={400} distance="10px">
 
 		        	<h2>{ text1.text }</h2>
-		        		<p>{ text2.text }</p>
+		        		<p><Link to='/programmation' title="Voir la programmation détaillée" className= {styles.linkProg}>{ text2.text }</Link></p>
 		        </Fade>      
 	        </div>
 		 {/*	<Fade delay={800}><a href="https://www.helloasso.com/associations/association-rock-on-the-l-oule/evenements/festival-rock-on-the-l-oule" className={styles.btnCta} target="_blank" rel="noreferrer noopener">Billetterie</a></Fade>
