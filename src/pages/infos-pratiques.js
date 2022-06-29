@@ -17,8 +17,7 @@ const InfosPratiques = ({data}) => (
  <Container text first>
     
     <h1>Infos pratiques</h1>
-    <h2>Infos & renseignements</h2>
-    <p>04 75 27 24 67</p>
+  
     <h2>Billetterie</h2>
      <p>Nous vous recommandons de réserver votre place via notre billetterie en ligne <br/><a href="https://www.helloasso.com/associations/association-rock-on-the-l-oule/evenements/festival-rock-on-the-l-oule-2022" target="_blank" rel="noreferrer noopener">Réserver dès maintenant</a>
      </p>
