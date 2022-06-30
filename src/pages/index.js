@@ -165,9 +165,9 @@ export const query = graphql`
           }  
     }
 
-    seo: file(relativePath: { eq: "lesparenthesesdeloule.png" }) { 
+    seo: file(relativePath: { eq: "programmation/flyer2022.jpg" }) { 
         childImageSharp {
-            resize(width: 1200) {
+            resize(width: 300) {
               src
               height
               width
