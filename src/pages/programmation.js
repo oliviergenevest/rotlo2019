@@ -26,7 +26,7 @@ const artistes = [
 		genre:'#fanfare', 
 		websiteURL:'https://www.kikiristan.com/',
 		facebookURL: 'https://www.facebook.com/imperial.kikiristanddimperial.kikiristandds/',
-		description:'Issu de 10 ans de pérégrinations musicales dans plus de 30 pays, l\'orchestre Imperial Kikiristan condense le meilleur de son savoir-faire : interaction, chorégraphies, humour, musique, chants et danses, solos frénétiques, sérénades...C\'est en fanfare et avec de nombreux rituels d\'intronisation que nos kikiristanais sauront se faire accepter auprès de la population locale...tout du moins c\'est ce qu\ils espèrent !',
+		description:'Issu de 10 ans de pérégrinations musicales dans plus de 30 pays, l\'orchestre Imperial Kikiristan condense le meilleur de son savoir-faire : interaction, chorégraphies, humour, musique, chants et danses, solos frénétiques, sérénades...C\'est en fanfare et avec de nombreux rituels d\'intronisation que nos kikiristanais sauront se faire accepter auprès de la population locale...tout du moins c\'est ce qu\'ils espèrent !',
 		cover: <Img fluid={data.kikiristan.childImageSharp.fluid} />,
 		video:'https://www.youtube.com/embed/IpHp7ijECK4',
 	},
@@ -57,7 +57,7 @@ const artistes = [
 		genre:'#FR HIP HOP #Bass music #DJSet #Bordeaux',
 		websiteURL:'https://smokeyjoethekid.bandcamp.com/',
 		facebookURL: 'https://www.facebook.com/smokeyjoeandthekid/',
-		description:"Association de 2 beatmakers de Bordeaux, Smokey Koe & The Kid est une plongée dans le Hip-Hop US, le funk et la soul 70\' avec toujours la même volonté d\'en tirer l'essentiel : la beauté des mélodies et le groove implacable. Les DjSets de Smokey Joe & TheKid sont groovy, puissants et terriblement funs. Let's dance",
+		description:"Association de 2 beatmakers de Bordeaux, Smokey Koe & The Kid est une plongée dans le Hip-Hop US, le funk et la soul 70' avec toujours la même volonté d'en tirer l'essentiel : la beauté des mélodies et le groove implacable. Les DjSets de Smokey Joe & TheKid sont groovy, puissants et terriblement funs. Let's dance",
 		cover: <Img fluid={data.smokeyjoeandthekid.childImageSharp.fluid} />,
 		video:'https://www.youtube.com/embed/ujD3OezaeyY',
 	}

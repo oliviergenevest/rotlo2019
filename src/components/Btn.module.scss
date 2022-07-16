@@ -1,11 +1,11 @@
 @import "../config/variables";
 
-.btnBooking {
+.btn {
   padding: .5rem 1rem;
   background: white;
- 
   color: $brand-primary!important;
-  margin-right:2rem;
+  margin-right:1rem;
+  margin-bottom:1rem;
   text-transform: uppercase;
   font-weight: 700;
   text-shadow: none;
@@ -13,11 +13,10 @@
   text-decoration: none;
   letter-spacing: .5px;
   transition: all .3s ease-in-out;
-&:hover {
-
-  background: $brand-cta;
+  &:hover {
+    background: $brand-cta;
     color: #000!important;
-  text-decoration: none;
+    text-decoration: none;
   &:after {
     display:none;
   }

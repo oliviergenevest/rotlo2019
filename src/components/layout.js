@@ -8,7 +8,8 @@ import Navigation from './Navigation/Navigation'
 import Container from './Container/Container'
 import MailChimpSubscribe from './mailchimp-subscribe'
 /*import Header from './header'*/
-import 'typeface-montserrat'
+import "@fontsource/montserrat";
+import "@fontsource/montserrat/900.css";
 import 'typeface-raleway'
 import styles from './layout.module.scss'
 /*import AudioPlayer from '../components/Player/player'

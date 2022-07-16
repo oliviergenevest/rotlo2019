@@ -10,6 +10,7 @@ import Grid2 from '../components/Grid/Grid2'
 /*import GridImage from '../components/Grid/GridImage'*/
 /*import TimelineProg from '../components/timeline'*/
 import RandomImage from '../components/RandomImage'
+import Btn from '../components/Btn'
 /*import JavaVideoMp4 from '../images/java.mp4'*/
 
 const IndexPage = ({data}) => {
@@ -103,7 +104,12 @@ Alpes et aux communes de la Motte Chalancon, de Cornillon et de Rottier pour leu
 inconditionnel.</p>
 */}
 
-        <Container fluid first > 
+        <Container fluid first >
+          <div style={{'display':'flex','justifyContent':'center'}} >
+            <Btn to='/programmation'>Programmation 2022</Btn>
+            <Btn to='/billetterie'>Billetterie</Btn>
+            <Btn external to='https://framaforms.org/inscriptions-benevoles-rock-on-the-loule-2022-1657456112' target="_blank" rel="noreferrer noopener" >Devenir Bénévole</Btn>
+        </div>
         <Grid2 
             text={{text:"Deux plans d’eau posés au coeur des montagnes préalpines, à la frontière entre Diois et Baronnies. Un oasis dominé par les ruines du château médiéval de Cornillon et survolé par les hérons, vautours et autres spécimens de la faune locale."}}
               image={<Img fluid={data.siteExceptionnel.childImageSharp.fluid} />}

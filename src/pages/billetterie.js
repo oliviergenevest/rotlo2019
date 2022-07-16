@@ -16,7 +16,7 @@ const BilletteriePage = () => (
     
     <h1>Billetterie</h1>
     <p >Infos & renseignements : 04 75 27 24 67</p>
-    <iframe title="billetteriehelloasso" id="haWidget" allowtransparency="true" scrolling="auto" src="https://www.helloasso.com/associations/association-rock-on-the-l-oule/evenements/festival-rock-on-the-l-oule-2022/widget" style={{width: "100%", height: "750px", border:"none"}} onload="window.scroll(0, this.offsetTop)"></iframe>
+    <iframe title="billetteriehelloasso" id="haWidget" allowtransparency="true"  src="https://www.helloasso.com/associations/association-rock-on-the-l-oule/evenements/festival-rock-on-the-l-oule-2022/widget" style={{width: "100%", height: "750px", border:"none"}} onload="window.scroll(0, this.offsetTop)"></iframe>
  
 
 </Container>
