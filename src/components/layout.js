@@ -43,9 +43,9 @@ const Layout = ({ children }) => (
                   }
                 }
         }
-        logoEteCulturel: file(relativePath: { eq: "logo_ete_culturel.png" }) {
+        logoEteCulturel: file(relativePath: { eq: "logo_ete_culturel_2022.jpg" }) {
           childImageSharp {
-                  fixed(width: 180, quality:80) {
+                  fixed(width: 150, quality:80) {
                     ...GatsbyImageSharpFixed
                   }
                 }
@@ -69,7 +69,7 @@ const Layout = ({ children }) => (
           <Container  sponsor>           
             <div className="logoContainer">
               <Img fixed={data.logoDrac.childImageSharp.fixed} style={{marginBottom:'2rem',marginLeft:'.5rem'}}/>
-            {/*  <Img fixed={data.logoEteCulturel.childIm > */}
+              <Img fixed={data.logoEteCulturel.childImageSharp.fixed} style={{marginBottom:'2rem',marginLeft:'.5rem'}}/>
               <Img fixed={data.logoRegion.childImageSharp.fixed} style={{marginBottom:'2rem',marginLeft:'.5rem'}}/>
               <Img fixed={data.logoDrome.childImageSharp.fixed} style={{maxWidth: '100px',marginBottom:'2rem', marginLeft:'.5rem'}}/>   
             </div>
