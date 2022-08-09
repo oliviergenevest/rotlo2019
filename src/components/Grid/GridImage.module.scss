@@ -4,8 +4,8 @@
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	grid-template-rows: repeat(2, auto);
-	grid-gap: 1.5rem; 
-      margin-bottom:10rem;
+	grid-gap: .3rem; 
+      margin-bottom:4rem;
     @include for-tablet-landscape-down {
 		 height:auto;
 		  grid-template-columns: 1fr;

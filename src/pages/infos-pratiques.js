@@ -19,7 +19,7 @@ const InfosPratiques = ({data}) => (
     <h1>Infos pratiques</h1>
   
     <h2>Billetterie</h2>
-     <p>Nous vous recommandons de réserver votre place via notre billetterie en ligne <br/><a href="https://www.helloasso.com/associations/association-rock-on-the-l-oule/evenements/festival-rock-on-the-l-oule-2022" target="_blank" rel="noreferrer noopener">Réserver dès maintenant</a>
+     <p>Nous vous recommandons de réserver votre place via notre billetterie en ligne <br/><a href="https://www.helloasso.com/associations/association-rock-on-the-l-oule/evenements/festival-rock-on-the-l-oule-2022" target="_blank" rel="noreferrer noopener">Réserver dès maintenant</a>. Une billetterie physique sera également isponible le soir même sur place.
      </p>
      <p>Tarifs : 20 € - 15 € (tarif réduit) - Gratuit pour les moins de 12 ans</p>
     <h2>Se loger</h2>

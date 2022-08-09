@@ -7,7 +7,7 @@ import { graphql } from 'gatsby'
 import SEO from '../components/seo'
 import Grid1 from '../components/Grid/Grid1'
 import Grid2 from '../components/Grid/Grid2'
-/*import GridImage from '../components/Grid/GridImage'*/
+import GridImage from '../components/Grid/GridImage'
 /*import TimelineProg from '../components/timeline'*/
 import RandomImage from '../components/RandomImage'
 import Btn from '../components/Btn'
@@ -31,19 +31,16 @@ const IndexPage = ({data}) => {
           />
         
           {/*<TimelineProg/>*/}
-{/*
-<Container text first> 
- <h1>Festival Rock on the l'Oule</h1>
-  <p>Votre petit festival rural et génial est dans ses petits souliers. Désarçonné par ces événements sanitaires et leurs conséquences qui nous dépassent largement.</p>
-  <p>Dans ce contexte trop incertain, nous excluons avec regret la possibilité d’organiser une 26ème édition cet été.</p>
-  <p>Nous avons le cœur gros d’abandonner ici toute la préparation du Festival - fruit de l’échange depuis plusieurs mois avec tous nos bénévoles - que nous souhaitions cette année encore international, avec des artistes venus du Royaume Uni et de La Réunion.</p>
-  <p>Cependant nous sommes toujours animés par ce besoin vital de lien social, et l’envie furieuse de partage et de rencontres, aujourd’hui peut-être plus encore nécessaires dans cette longue période d’isolement.</p>
-  <p>Prolongeant notre réflexion tout en guettant l’évolution de la situation sanitaire, économique et sociale, nous espérons pouvoir vous proposer cet été une forme culturelle alternative qui ait du sens, sur le plan d’eau du Pas des Ondes ou ailleurs.</p>
-  <p>On vous en dit plus courant juillet !</p>
 
-  <p>Portez-vous bien les amis, on pense fort à vous !</p>
+<Container text first> 
+  <p>Rock On The l'Oule, festival né dans l'ancien monde, fêtait sa 26ème édition le 3 août dernier. Tel le phénix, il a su se relever des cendres post-covid. 
+C'était un immense plaisir de revoir tous ces sourires et de participer au brassage des générations.. quelle joie d'avoir partagé ce moment sous les étoiles du Pas des Ondes.  
+</p><p>Merci à tous les artistes, techniciens, prestataires, soutiens, bénévoles et festivaliers d'avoir rendu possible ce moment suspendu. 
+</p><p>Quelques souvenirs visuels en attendant la suite 😘😘</p>
+<GridImage images={data.edition2022retour}/>
+
  </Container>
- 
+ {/*
 <Container text first> 
  <h2>Les parenthèses de l'Oule #2</h2>
  <p>Depuis de longs mois, on a cherché, tourné et retourné dans tous les sens comment s’adapter à la situation sanitaire tout en respectant l’essence du festival. Et bon ben, sur une édition traditionnelle respecter les protocoles sanitaires actuels c’est plutôt compliqué...visez un peu :
@@ -104,7 +101,7 @@ Alpes et aux communes de la Motte Chalancon, de Cornillon et de Rottier pour leu
 inconditionnel.</p>
 */}
 
-        <Container fluid first >
+        <Container fluid  >
           <div style={{'display':'flex','justifyContent':'center'}} >
             <Btn to='/programmation'>Programmation 2022</Btn>
             <Btn to='/billetterie'>Billetterie</Btn>
@@ -238,5 +235,16 @@ export const query = graphql`
         }
       }
     }
+    edition2022retour: allFile (filter:{relativeDirectory:{eq:"edition2022retour"}, extension:{eq:"jpg"}}, sort: {fields: [name], order: DESC}){
+      edges {
+        node {
+            childImageSharp {
+              fluid(maxWidth: 500, maxHeight: 300, quality:80) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        }
+      }
   }
 `

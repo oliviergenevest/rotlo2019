@@ -1,5 +1,6 @@
 import React from 'react'
 import Img from 'gatsby-image'
+
 import { Fade } from "react-reveal"
 import styles from './GridImage.module.scss'
 
@@ -11,7 +12,7 @@ const GridImage = ({images}) => {
 <div className={styles.gridContainer}>
       {imgList.map( (image,key) => ( 
         <div key={key} className= {styles.gallery__img}> 
-      		<Img fluid={image.node.childImageSharp.fluid} alt="Rock on the l'Oule - Edition 2020"/>
+      		<Img fluid={image.node.childImageSharp.fluid} alt="Rock on the l'Oule - Retour sur l'édition 2022"/>
 	    </div> 
 	             
            )
