@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import addToMailchimp from 'gatsby-plugin-mailchimp'
 import useForm from '../hooks/useForm'
-import styles from './mailchimp-subscribe.module.scss'
+import * as styles from './mailchimp-subscribe.module.scss'
 const MailChimpSubscribe = () => {
 	const { values, handleChange, handleSubmit } = useForm(subscribe)
   const [subscribed, setSubscribe] = useState(false)
@@ -11,7 +11,7 @@ const MailChimpSubscribe = () => {
     .then(data => {
       // I recommend setting data to React state
       // but you can do whatever you want (including ignoring this `then()` altogether)
-      console.log(data)
+     // console.log(data)
       setSubscribe(data)
 
     })

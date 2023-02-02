@@ -1,9 +1,9 @@
 import React from 'react'
 /*import { Link } from 'gatsby'*/
-/*import Img from 'gatsby-image'*/
+/*import {GatsbyImage} from 'gatsby-plugin-image'*/
 import Layout from '../components/layout'
 import Container from '../components/Container/Container'
-import SEO from '../components/seo'
+import {Seo} from '../components/seo'
 /*import Card from '../components/card/card'
 import GridFlex from '../components/Grid/GridFlex'*/
 /*import { graphql } from 'gatsby'*/
@@ -13,11 +13,7 @@ import config from '../config/SiteConfig'
 const Contacts = () => {
 
  return  ( <Layout> 
-    <SEO 
-        title="Contacts" 
-        keywords={[`festival`, `rock on the l'oule`, `la motte chalancon`,`rock`,`musique`,`spectacle`,`concert`]} 
-        decription="Association Rock On the l'Oule, Le Village, 26470 la Motte Chalancon - Pour nous contacter c'est par ici !"
-    />
+  
     <Container text first>   
         <h1>Contacts</h1> 
         <h2>Email</h2> 
@@ -40,3 +36,12 @@ const Contacts = () => {
 }
 
 export default Contacts
+
+
+// TODO : utiliser les props de la page en parametre du composant Seo pour recuperer les infos de datocms
+export const Head = () => (
+	<Seo title="Contacts" 
+	
+  />
+  )
+  

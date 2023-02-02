@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-import styles from './ScrollDownAnimation.module.scss'
+import * as styles  from './ScrollDownAnimation.module.scss'
 
 /* 
 A faire :

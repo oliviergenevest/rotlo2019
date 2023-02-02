@@ -1,6 +1,6 @@
 import React from 'react'
 import cx from 'classnames'
-import styles from './Container.module.scss'
+import * as styles  from './Container.module.scss'
 
 const Container = props => {
   const { children } = props;
@@ -11,7 +11,7 @@ const Container = props => {
     { [styles.sponsor]: props.sponsor }, 
     { [styles.newsletter]: props.newsletter }, 
     { [styles.grandBureau]: props.grandBureau},
-    { [styles.wrapSponsor]: props.wrapSponsor},
+
     { [styles.fluid]: props.fluid },
     { [styles.bgBlack]: props.bgBlack }
     );

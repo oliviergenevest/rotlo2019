@@ -1,8 +1,8 @@
 import React from 'react'
 /*import { Link } from 'gatsby'
-import Img from 'gatsby-image'*/
-import { Fade } from "react-reveal"
-import styles from './Grid2.module.scss'
+import {GatsbyImage} from 'gatsby-plugin-image'*/
+
+import * as styles from './Grid2.module.scss'
 import cx from 'classnames'
 import Video from '../video'
 
@@ -12,7 +12,7 @@ const Grid2 = ({image, text, title, reverse = false, artiste=null}) => {
    	const classes = cx(styles.content, { [styles.reverse]: reverse })
     
       return (
-      	<Fade up distance="50px">
+
       	
       	<div className= {styles.gridContainer} >
 			<div className={classes}>
@@ -46,7 +46,7 @@ const Grid2 = ({image, text, title, reverse = false, artiste=null}) => {
 		    </div>
       	</div>
       
-      </Fade>
+     
       )
 }
 

@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./Btn.module.scss";
+import * as styles from "./Btn.module.scss";
 import { Link } from 'gatsby';
 const Btn = ({type='button' , children, to, external, ...rest}) => {
 

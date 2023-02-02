@@ -2,11 +2,10 @@ import React from 'react'
 /*import { Link } from 'gatsby'*/
 import Layout from '../components/layout'
 import Container from '../components/Container/Container'
-import SEO from '../components/seo'
+import {Seo} from '../components/seo'
 /*import styles from './biography.module.scss'*/
 const Credits = () => (
   <Layout>
-    <SEO title="Crédits" keywords={[`festival`, `rock on the l'oule`, `la motte chalancon`,`rock`,`musique`,`spectacle`,`concert`]} />
 
  <Container text first>
     
@@ -25,3 +24,12 @@ const Credits = () => (
 )
 
 export default Credits
+
+
+
+// TODO : utiliser les props de la page en parametre du composant Seo pour recuperer les infos de datocms
+export const Head = () => (
+	<Seo title="Crédits" 
+  />
+  )
+  

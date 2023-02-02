@@ -1,21 +1,19 @@
 import React, { Component } from 'react'
-import Link from 'gatsby-link'
-/*import Img from 'gatsby-image'*/
+import {Link} from 'gatsby'
+import { StaticImage} from 'gatsby-plugin-image'
 import Headroom from 'react-headroom'
 import HamburgerMenu from 'react-hamburger-menu'
 import { slide as Menu } from 'react-burger-menu'
-import { Fade } from 'react-reveal'
 import { FaFacebook } from 'react-icons/fa'
 import config from '../../config/SiteConfig'
-import styles from './Navigation.module.scss'
+import * as styles  from './Navigation.module.scss'
 import './Headroom.scss'
-import Logo from "../../images/logo-rotlo-inverse.png"
+
 import BookingBtn from '../BookingBtn'
 
 export default class Navigation extends Component {
   constructor(props) {
     super(props);
-    //console.log(rhythm)
     this.state = {
       menuOpen: false,
     };
@@ -50,7 +48,7 @@ export default class Navigation extends Component {
     
     <>
 
-      <div className={styles.mobileNavContent}> 
+      <div > 
            
             <Menu right isOpen={this.state.menuOpen} onStateChange={this.handleStateChange} width="350px" 
             burgerButtonClassName={ styles.bmBurgerButton }
@@ -101,34 +99,21 @@ export default class Navigation extends Component {
 
       <header>
         <Headroom calcHeightOnResize disableInlineStyles  >
-          <Fade down duration={2000} className={styles.wrapper}>
             <div className={styles.name}>
               <span>
                 <Link to="/" name="Accueil">
-                  <img src={Logo} alt={config.siteTitleAlt} width="100px" />
+                  <StaticImage 
+                  src="../../images/logo-rotlo-inverse.png" 
+                  alt={config.siteTitleAlt} 
+                  width={100} 
+                  height={63}
+                  />
                 </Link>
               </span>    
             </div>
-            
-            {/*<nav className={styles.navigation}>
-              <span>
-              
-               
-                <Link to="/tilt"  activeClassName="active">Tilt</Link>
-                <Link to="/"  activeClassName="active">Contact</Link>
- 
-           
-
-              </span>
-            </nav>*/}
-           
-
-       {/*      <a href="https://www.helloasso.com/associations/association-rock-on-the-l-oule/evenements/festival-rock-on-the-l-oule" className={styles.btnCta} target="_blank" rel="noreferrer noopener">Billetterie</a>
-*/}
-<BookingBtn/>
-             <div className={ styles.bmBurgerButton }>
-             
-             <HamburgerMenu 
+            <BookingBtn/>
+            <div className={ styles.bmBurgerButton }>
+              <HamburgerMenu 
                 isOpen={this.state.menuOpen}
                 menuClicked={this.handleClick.bind(this)}
                 width={46}
@@ -137,26 +122,12 @@ export default class Navigation extends Component {
                 rotate={0}
                 color='white'
                 borderRadius={0}
-                animationDuration={0.5}
-                
-            />
+                animationDuration={0.5}   
+              />
             </div> 
-             
-          </Fade>
       </Headroom>
-
-          
-           
-         
-       
-
-
-    
-        
-      </header>
-         
-      </>
-      
+      </header> 
+      </>     
     );
   }
 }

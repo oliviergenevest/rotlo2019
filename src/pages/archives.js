@@ -1,9 +1,9 @@
 import React from 'react'
 /*import { Link } from 'gatsby'*/
-import Img from 'gatsby-image'
+import {GatsbyImage} from 'gatsby-plugin-image'
 import Layout from '../components/layout'
 import Container from '../components/Container/Container'
-import SEO from '../components/seo'
+import {Seo} from '../components/seo'
 import CardExpand from '../components/card/cardExpand'
 import GridFlex from '../components/Grid/GridFlex'
 import { graphql } from 'gatsby'
@@ -14,17 +14,12 @@ const Archives = ({data}) => {
 
   return  ( 
     <Layout> 
-      <SEO 
-      title="Archives" 
-      keywords={[`festival`, `rock on the l'oule`, `la motte chalancon`,`rock`,`musique`,`spectacle`,`concert`]}
-      description="Un retour en image sur les 25 ans du festival Rock on The l'Oule à la Motte Chalancon. Retrouvez sur cette page le détail des éditions précédentes."
-       image={data.seo.childImageSharp.resize}
-       />
+    
       <Container fluid first bgBlack>
           <GridFlex>
               {images.map( (image,key) => (
-                  <CardExpand  key={image.node.childImageSharp.fluid.src} edition={26-key-1} annee={2020-key-1} affiche={ <Img
-                         fluid={image.node.childImageSharp.fluid}
+                  <CardExpand  key={key} edition={27-key-1} annee={2023-key-1} affiche={ <GatsbyImage
+                         image={image.node.childImageSharp.gatsbyImageData} alt=""
                             />}/>
               ))}
           </GridFlex>
@@ -37,38 +32,31 @@ export default Archives
 
 
 
+// TODO : utiliser les props de la page en parametre du composant Seo pour recuperer les infos de datocms
+export const Head = () => (
+	<Seo title="Archives Rock on the l'Oule" 
+  />
+  )
+  
+
 export const query = graphql`
   query {
 
-    affiches: allFile (filter:{relativeDirectory:{eq:"affiches"}, extension:{eq:"jpg"}}, sort: {fields: [name], order: DESC}){
+    affiches: allFile (filter:{relativeDirectory:{eq:"affiches"}, extension:{eq:"jpg"}}, sort: {name: DESC}){
     edges {
       node {
+        id
           childImageSharp {
-            fluid(maxWidth: 1600, quality:80) {
-              ...GatsbyImageSharpFluid
-            }
+            gatsbyImageData(width:350)
+          
           }
         }
       }
     }
 
-    placeholderImage: file(relativePath: { eq: "site.jpg" }) {
-          childImageSharp {
-            fluid(maxWidth: 1600, quality:80) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-    }
+   
 
-    seo: file(relativePath: { eq: "aff-rotlo-2019.jpg" }) { 
-        childImageSharp {
-            resize(width: 1200) {
-              src
-              height
-              width
-            }
-          }
-    }
+   
 
   }
 `

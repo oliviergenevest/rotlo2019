@@ -1,7 +1,7 @@
 import React from 'react'
 /*import { Link } from 'gatsby'
-import Img from 'gatsby-image'*/
-import styles from './GridFlex.module.scss'
+import {GatsbyImage} from 'gatsby-plugin-image'*/
+import * as styles from './GridFlex.module.scss'
 
 
 const GridFlex = ({children}) => {

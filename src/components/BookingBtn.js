@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./BookingBtn.module.scss";
+import * as styles from "./BookingBtn.module.scss";
 
 const BookingBtn = () => {
  // console.log(styles)

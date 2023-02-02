@@ -1,18 +1,14 @@
 import React from 'react'
 /*import { Link } from 'gatsby'*/
-import Img from 'gatsby-image'
+import {GatsbyImage} from 'gatsby-plugin-image'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import Container from '../components/Container/Container'
-import SEO from '../components/seo'
+import {Seo} from '../components/seo'
 /*import styles from './biography.module.scss'*/
 const InfosPratiques = ({data}) => (
   <Layout>
-    <SEO 
-      title="Infos pratiques" 
-      keywords={[`festival`, `rock on the l'oule`, `la motte chalancon`,`rock`,`musique`,`spectacle`,`concert`]}
-      description="Le Festival Rock on the l'Oule, c'est des concerts, des jeux en bois, des produits locaux et buvette, une démarche éco-responsable."
-    />
+   
 
  <Container text first>
     
@@ -39,7 +35,7 @@ Alors voici le lien pour t'inscrire si tu souhaites rejoindre l'équipe une fois
   <h2>Comment venir ?</h2>
     <p> Adresse : <br/>
    Plan d'eau du Pas des Ondes, <br/> 26470 La Motte Chalancon</p>
-   <Img fluid={data.plan.childImageSharp.fluid} alt="plan d'accès" style={{'maxWidth':'410px'}}/>
+   <GatsbyImage image={data.plan.childImageSharp.gatsbyImageData} alt="plan d'accès" style={{'maxWidth':'410px'}}/>
 
    
 
@@ -53,21 +49,25 @@ Alors voici le lien pour t'inscrire si tu souhaites rejoindre l'équipe une fois
 
 export default InfosPratiques
 
+// TODO : utiliser les props de la page en parametre du composant Seo pour recuperer les infos de datocms
+export const Head = () => (
+  <Seo title="Infos pratiques - Festival Rock on the l'Oule 2023" 
+  description="Le Festival Rock on the l'Oule, c'est des concerts, des jeux en bois, des produits locaux et buvette, une démarche éco-responsable."
+/>
+)
+
 export const query = graphql`
   query {
     flyer: file(relativePath: { eq: "lesparenthesesdeloule.png" }) {
           childImageSharp {
-            fluid(maxWidth: 600, quality:90) {
-              ...GatsbyImageSharpFluid
-        
-            }
+            gatsbyImageData(width:600)
+          
           }  
     }
     plan: file(relativePath: { eq: "plan acces.png" }) {
       childImageSharp {
-            fluid(maxWidth: 410, quality:80) {
-              ...GatsbyImageSharpFluid
-            }
+        gatsbyImageData(width:410)
+          
           }
     }
   }

@@ -1,7 +1,6 @@
 import React, { useRef, useState } from 'react'
 
-import ReactDOM from 'react-dom'
-import { useSpring, useTransition, animated } from 'react-spring'
+import { useSpring,  animated } from 'react-spring'
 import './styles.scss' 
 
 /*
@@ -50,12 +49,12 @@ export default function CardExpand(content) {
       ref={ref} 
       //className={open ? "card-opened" : "card"} 
       className= "card" 
-     /* onClick={() => {  
-        set({ xys: [0,0,0] })
+      onClick={() => {  
+        set.start({ xys: [0,0,0] })
         setExpandOnClick(open => !open)
-        setExpand( {hw: [250,550]})
+        setExpand.start( {hw: [250,550]})
         }
-      }*/
+      }
       onMouseMove={({ clientX, clientY }) => {
           // Get mouse x position within card
         const x =
@@ -71,11 +70,11 @@ export default function CardExpand(content) {
         //scale up to 1.1
         const s = 1.1
 
-          set({ xys: calc(x, y, s) })}
+          set.start({ xys: calc(x, y, s) })}
       }       
       onMouseLeave={() => {
         // Set xy back to original
-        set({ xys: [0,0,0] });
+        set.start({ xys: [0,0,0] });
       }}
 
       // style={open ? {width:propsExpand.hw.interpolate(transItemExpand) } :  {}}
@@ -84,21 +83,21 @@ export default function CardExpand(content) {
       <animated.div 
         className="background"  
        //  style={ {transform: props.xys.interpolate(transBackground) }}
-         style={ {transform: props.xys.interpolate(transBackground) } } 
+         style={ {transform: props.xys.to(transBackground) } } 
       />
       <animated.div 
         className="affiche" 
-        style={{ transform: props.xys.interpolate(transAffiche) }} >
+        style={{ transform: props.xys.to(transAffiche) }} >
         {content.affiche}
       </animated.div>
       <animated.div  
         className="edition" 
-        style={open ? {} :{ transform: props.xys.interpolate(transEdition) }} >
+        style={open ? {} :{ transform: props.xys.to(transEdition) }} >
         <span>#</span>{content.edition}
       </animated.div>
       <animated.div 
         className="annee" 
-        style={open ? {} :{ transform: props.xys.interpolate(transAnnee) }} >
+        style={open ? {} :{ transform: props.xys.to(transAnnee) }} >
         {content.annee}
       </animated.div>
       <div className="extraContent"><h2>EXTRA CONTENT</h2></div>

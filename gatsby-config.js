@@ -1,13 +1,37 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
 module.exports = {
   siteMetadata: {
     siteUrl:'https://rockontheloule.org',
-    title: `Rock on the l'Oule`,
+    title: `Festival Rock on the l'Oule 2023`,
     description: `Festival Rock on the l'Oule`,
     author: `Association Rock on the l'Oule`,
+    image: `src/images/icon.png`,
+    siteUrl: `https://www.rockontheloule.org`,
   }, 
   plugins: [
-    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
+    `gatsby-plugin-image`,
+    {
+      resolve: `gatsby-source-datocms`,
+      options: {
+        // You can find your read-only API token under the Settings > API tokens
+        // section of your administrative area. Make sure to grant both CDA and CMA permissions.
+        apiToken: process.env.DATOCMS_READONLY_KEY,
+  
+        // The project environment to read from. Defaults to the primary environment:
+        environment: `main`,
+  
+        // If you are working on development/staging environment, you might want to
+        // preview the latest version of records instead of the published one:
+        previewMode: false,
+  
+        // Disable automatic reloading of content when some change occurs on DatoCMS:
+        disableLiveReload: false,
+  
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -63,7 +87,7 @@ module.exports = {
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
-     'gatsby-plugin-offline',
-     'gatsby-plugin-netlify',
+     //'gatsby-plugin-offline',
+     
   ],
 }
