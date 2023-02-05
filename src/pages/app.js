@@ -14,7 +14,7 @@ const App = (props) => {
                 <Login path="/login" />
                 <Default path="/" />
             </Router>
-            <p>defaut </p>
+            
         </>
     )
 }
