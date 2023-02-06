@@ -21,6 +21,7 @@ const IdentityProvider = (props) => {
         netlifyIdentity.close()
         setUser(null)
     })
+    console.log('user from identity context', user)
 
     return (
         <IdentityContext.Provider value={{netlifyIdentity, user}}>

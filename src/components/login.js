@@ -2,9 +2,13 @@ import React, {useContext} from "react"
 import { IdentityContext } from "../../identity-context"
 import Layout from './layout'
 import Container from './Container/Container'
+import { navigate } from "gatsby"
 
 const Login = () => {
     const {netlifyIdentity} = useContext(IdentityContext)
+    netlifyIdentity.on('login',(user) => {
+        navigate('/app/dashboard')
+    })
     return (
     <Layout>
     <Container text first>   
@@ -13,8 +17,9 @@ const Login = () => {
         <button onClick={ ()=>{
             netlifyIdentity.open()
             }}
-            >
+            >{' '}
                 Login
+                {' '}
                 </button>
         </Container>
     </Layout>
