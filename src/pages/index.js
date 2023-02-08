@@ -20,7 +20,7 @@ const IndexPage = ({data}) => {
           
             slidesData = {data.edition2022Gallery}
             heroText = {{text:'Rock on the l\'Oule #26'}} 
-            text1= {{text:"Mercredi 3 août 2023 - La Motte Chalancon (26)"}} 
+            text1= {{text:"Mercredi 3 août 2022 - La Motte Chalancon (26)"}} 
             text2= {{text:"TRANS KABAR - Banan N Jug - Imperial Kikiristan - Bold Circus - Smokey Joe & The Kid (DJ Set)"}} 
             text3= {{text:"On compte sur vous !"}} 
           />
