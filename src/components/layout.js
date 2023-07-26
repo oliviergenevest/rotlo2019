@@ -12,8 +12,8 @@ import "@fontsource/montserrat";
 import "@fontsource/montserrat/900.css";
 import 'typeface-raleway'
 import * as styles  from './layout.module.scss'
-/*import AudioPlayer from '../components/Player/player'
-import  ModalRotlo  from './modal';*/
+/*import AudioPlayer from '../components/Player/player'*/
+import  ModalRotlo  from './modal';
 
 
 
@@ -51,7 +51,7 @@ const Layout = ({ children }) => {
         <Navigation/>
       
         <main  >
-      {/*  <ModalRotlo/> */}
+        <ModalRotlo/> 
           {children} 
           <Container  text>
             <MailChimpSubscribe/>

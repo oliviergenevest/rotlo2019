@@ -4,7 +4,7 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     siteUrl:'https://rockontheloule.org',
-    title: `Festival Rock on the l'Oule 2023`,
+    title: `Festival Rock on the l'Oule`,
     description: `Festival Rock on the l'Oule`,
     author: `Association Rock on the l'Oule`,
     image: `src/images/icon.png`,
@@ -72,7 +72,7 @@ module.exports = {
         endpoint:'https://gmail.us20.list-manage.com/subscribe/post?u=7255d41db250cfac4673fc379&amp;id=d34dcc4d2e',
       }
     },
-    'gatsby-plugin-sitemap',
+    'gatsby-plugin-sitemap', // TODO : exclure la page "ca"
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

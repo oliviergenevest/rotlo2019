@@ -15,15 +15,15 @@
 }
 
 .modal {
-    width: 600px;
+    width: 800px;
     height: auto;
     max-height:80%;
     overflow-y:scroll;
     color: #000;
     background: #6929c4;
-    background: #f37260;
+    background: #e5e0df;
     padding: 40px;
-   
+     max-width:100%;
     z-index: 90;
     
     /*left: calc(50% - 300px);*/
@@ -52,7 +52,7 @@
   }
 
   .show-modal-button {
-    padding: 16px;
+    padding: 18px;
     background-color: #f37260;
     color: #000;
     font-size: 1em;
@@ -68,4 +68,10 @@
     width: 200px;
     z-index:1500;
   }
+
+
+.modal-content {
+  font-size: 16px;
+    font-weight:400;
+}
     
