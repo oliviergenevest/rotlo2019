@@ -39,7 +39,7 @@ C'était un immense plaisir de revoir tous ces sourires et de participer au bras
 
 
         <Container fluid  >
-          <div style={{'display':'flex','justifyContent':'center'}} >
+          <div style={{'display':'flex','justifyContent':'center', "display":"none"}} >
             <Btn to='/programmation'>Programmation 2022</Btn>
             <Btn to='/billetterie'>Billetterie</Btn>
             <Btn external to='https://framaforms.org/inscriptions-benevoles-rock-on-the-loule-2022-1657456112' target="_blank" rel="noreferrer noopener" >Devenir Bénévole</Btn>

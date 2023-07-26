@@ -21,9 +21,9 @@
     overflow-y:scroll;
     color: #000;
     background: #6929c4;
-    background: #e5e0df;
+    background: #ffe4e0;
     padding: 40px;
-     max-width:80%;
+     max-width:100%;
     z-index: 90;
     
     /*left: calc(50% - 300px);*/
