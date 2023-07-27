@@ -17,7 +17,9 @@ const Modal = ({ style, closeModal }) => (
         width={100} height={63}
         />
     </div>
-    <h3 className="modal-title" style={{"marginTop":"20px"}}>COMMUNIQUE DE PRESSE 24/07/23</h3>
+    <h3 className="modal-title" style={{"marginTop":"20px"}}> Rock On  The l'Oule 2023 : édition annulée</h3>
+  
+   <p className="modal-content">COMMUNIQUE DE PRESSE - 24 juillet 2023</p>
    
    <p className="modal-content">Beaucoup d'informations contradictoires ont circulé sur les activités de notre association et notamment la tenue du festival cet été. Il nous semblait donc important de clarifier la situation par ce communiqué. 
 </p><p className="modal-content">
