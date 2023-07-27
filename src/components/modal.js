@@ -1,15 +1,15 @@
 import React, { useState } from "react";
-import { useTransition } from "react-spring";
+import {/* useTransition,*/ useSpring } from "react-spring";
 import { animated } from "react-spring";
 import config from '../config/SiteConfig'
 import { StaticImage} from 'gatsby-plugin-image'
-
+import { FaFileAlt } from 'react-icons/fa'
 import "./modal.css";
 
 const Modal = ({ style, closeModal }) => (
 
-  <animated.div style={style} className="modal-overlay" onClick={closeModal}>
-  <div className="modal">
+  <div  className="modal-overlay" onClick={closeModal}>
+  <animated.div className="modal" style={style}>
     <div >
       <StaticImage 
         src="../images/logo-rotlo.png" 
@@ -36,20 +36,29 @@ En attendant bel été à tous, et continuons à soutenir le spectacle vivant et
 L'asso Rock on the l'Oule
 </p>
    
-    <button className="modal-close-button" onClick={closeModal}>
+    <button className="modal-close-button" aria-label='Fermer' onClick={closeModal}>
       Fermer
     </button>
-    </div>
-  </animated.div>
+    </animated.div>
+  </div>
 );
 
 const ModalRotlo = () => {
     const [modalVisible, setModalVisible] = useState(true);
-    const [transitions, api] = useTransition(modalVisible, ()=> ({
+   /* const [transitions, api] = useTransition(modalVisible, ()=> ({
         from: { opacity: 0, transform: "translateY(-40px)" },
         enter: { opacity: 1, transform: "translateY(0px)" },
         leave: { opacity: 0, transform: "translateY(-40px)" }
-    }));
+    }));*/
+
+
+    const animation = useSpring({
+      config: {
+        duration: 250
+      },
+      opacity: modalVisible ? 1 : 0,
+      transform: modalVisible ? `translateY(0px)` : `translateY(-40px)`
+    });
 
     return (
             <>
@@ -57,17 +66,26 @@ const ModalRotlo = () => {
             className="show-modal-button"
             onClick={() => setModalVisible(true)}
             >
-            Communiqué - juillet 2023
+           <FaFileAlt/> Communiqué - juillet 2023
             </button>
-            {transitions(( item, key, style ) =>
-                modalVisible &&
+            {/*transitions(( item, key, style ) =>
+                modalVisible ?
                 <Modal
                     style={style}
                     closeModal={() => setModalVisible(false)}
                     key={key}
-                />
+                /> : null
                 )
-            }
+    */}
+    {
+                modalVisible ?
+                <Modal
+                    style={animation}
+                    closeModal={() => setModalVisible(false)}
+                    
+                /> : null
+                
+    }
       </>
     )
 }

@@ -64,7 +64,7 @@ export default class Navigation extends Component {
             customBurgerIcon={ false }
             >
  
-              <Link to="/programmation" activeClassName={styles.active}  onClick={() => this.closeMenu()}>
+           {/*   <Link to="/programmation" activeClassName={styles.active}  onClick={() => this.closeMenu()}>
                   Programmation
               </Link>
               <Link to="/billetterie" activeClassName={styles.active}  onClick={() => this.closeMenu()}>
@@ -72,7 +72,7 @@ export default class Navigation extends Component {
               </Link>
               <Link to="/infos-pratiques" activeClassName={styles.active} onClick={() => this.closeMenu()}>
                   Infos pratiques
-              </Link> 
+    </Link> */}
     
               <Link to="/asso" activeClassName={styles.active} onClick={() => this.closeMenu()}>
                   L'association
@@ -111,7 +111,7 @@ export default class Navigation extends Component {
                 </Link>
               </span>    
             </div>
-            <BookingBtn/>
+           {/*  <BookingBtn/>*/}
             <div className={ styles.bmBurgerButton }>
               <HamburgerMenu 
                 isOpen={this.state.menuOpen}

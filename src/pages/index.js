@@ -39,11 +39,11 @@ C'était un immense plaisir de revoir tous ces sourires et de participer au bras
 
 
         <Container fluid  >
-          <div style={{'display':'flex','justifyContent':'center', "display":"none"}} >
+         {/* <div style={{'display':'flex','justifyContent':'center'}} >
             <Btn to='/programmation'>Programmation 2022</Btn>
             <Btn to='/billetterie'>Billetterie</Btn>
             <Btn external to='https://framaforms.org/inscriptions-benevoles-rock-on-the-loule-2022-1657456112' target="_blank" rel="noreferrer noopener" >Devenir Bénévole</Btn>
-        </div>   
+        </div>   */} 
         <Grid2 
             text={{text:"Deux plans d’eau posés au coeur des montagnes préalpines, à la frontière entre Diois et Baronnies. Un oasis dominé par les ruines du château médiéval de Cornillon et survolé par les hérons, vautours et autres spécimens de la faune locale."}}
               image={<GatsbyImage image={data.siteExceptionnel.childImageSharp.gatsbyImageData} alt="" />}
