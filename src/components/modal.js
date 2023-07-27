@@ -66,7 +66,7 @@ const ModalRotlo = () => {
             className="show-modal-button"
             onClick={() => setModalVisible(true)}
             >
-           <FaFileAlt/> Communiqué - juillet 2023
+           <FaFileAlt/> Rock On  The l'Oule 2023 : édition annulée
             </button>
             {/*transitions(( item, key, style ) =>
                 modalVisible ?
