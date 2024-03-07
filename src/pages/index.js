@@ -8,14 +8,14 @@ import {Seo} from '../components/seo'
 import Grid1 from '../components/Grid/Grid1'
 import Grid2 from '../components/Grid/Grid2'
 import GridImage from '../components/Grid/GridImage'
-
+import  ModalRotlo  from '../components/modal';
 import Btn from '../components/Btn'
 
 
 const IndexPage = ({data}) => {
    return (
       <Layout>
-         
+         <ModalRotlo/>
           
           <Grid1 
           
@@ -84,7 +84,9 @@ C'était un immense plaisir de revoir tous ces sourires et de participer au bras
 export default IndexPage
 
 export const Head = () => (
-  <Seo />
+  <Seo title="Association Rock on the l'Oule" 
+	description="Retrouvez toutes les activités de l'Association Rock on the l'Oule"
+  />
 )
 
 export const query = graphql`

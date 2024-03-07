@@ -1,0 +1,150 @@
+@import "../config/variables.scss";
+
+.title {
+    margin-top:1.6rem;
+}
+
+.date {
+    color: $brand-cta;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.projetNav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+	margin: 0 auto;
+    margin-top: 5rem;
+	height:auto;
+	/*color:#c1c1c1;*/
+    color:$brand-primary;
+
+    .imgProjetNavigation {
+        opacity:0.5;
+        transform: scale(0.9);
+        transition: 0.25s ease-in-out;
+        border-radius: .4em; 
+        display:block;
+
+        @media (max-width: 450px)
+         {
+            opacity:1;
+            transform:scale(1);
+            width: 100px!important;
+            height: 75px!important;
+         }
+      
+      
+    }
+    .previous {
+    	  
+    	/*background-color:$brand-primary;*/
+    }
+
+    .next {
+    	 margin-left: auto;
+    	/*background-color:$brand-primary;*/
+
+    	text-align:right;
+    }
+
+
+
+    .projetNav  a {
+         
+    }
+
+}
+
+.apart {
+    justify-content: space-between;
+}
+
+.projetNav  a.prev-one, a.next-one {
+    flex: 1;
+}
+.flex {
+  display: flex;
+}
+.projetNav a {
+    text-decoration: none;
+    color: inherit;
+}
+.projetNav a.prev-one span.articlename {
+    margin-left: 1rem;
+}
+.projetNav a.next-one span.articlename {
+    margin-right: 1rem;
+}
+.projetNav  #prevnext a span.thumb {
+    width: 125px;
+    height: 125px;
+}
+.projetNav #prevnext a span.thumb img {
+    border-radius: 50%;
+    overflow: hidden;
+    width: 125px;
+    min-width: 125px;
+    height: 100%;
+    border: 1px solid #ccc;
+}
+.projetNav a.prev-one span.articlename:before {
+    content: "\2190 ";
+}
+.projetNav a.next-one span.articlename:after {
+    content: " \2192";
+}
+.projetNav a:hover  {
+    color:#1a0905;
+    h3 {
+       color:#1a0905;
+    }
+    span {
+        color:#1a0905;
+        display:block;
+        font-family: 'Montserrat Alternates',sans-serif;
+        font-weight: 600;
+        text-rendering: optimizeLegibility;
+        font-size: 1rem;
+        line-height: 1.1;
+    }
+    }
+.projetNav a:hover > .imgProjetNavigation {
+
+        transform:   scale(1);
+        transition: 0.15s ease-in-out;
+      opacity:1;
+}
+
+.projetNav a h3, .projetNav a span  {
+    color:#505050;
+    margin-bottom:0.5rem;
+    display:block;
+    font-family: 'Montserrat Alternates',sans-serif;
+    font-weight: 600;
+    text-rendering: optimizeLegibility;
+    font-size: 1rem;
+    line-height: 1.1;
+}
+
+.linkWrapper {
+    width:100%;
+     text-align:center;
+    margin:0 auto;
+    margin-top:1rem;
+ 
+    display:block;
+    border-bottom:1px solid #f1f1f1;
+    padding:1em;
+       padding-bottom:3rem;
+}
+
+.link {
+    
+    font-size:1.5em;
+}
+
+.galerieImage {
+    padding-bottom: 3rem;
+}

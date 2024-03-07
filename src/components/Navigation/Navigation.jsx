@@ -74,6 +74,10 @@ export default class Navigation extends Component {
                   Infos pratiques
     </Link> */}
     
+              <Link to="/agenda" activeClassName={styles.active} onClick={() => this.closeMenu()}>
+                  Evénements
+              </Link>
+    
               <Link to="/asso" activeClassName={styles.active} onClick={() => this.closeMenu()}>
                   L'association
               </Link>

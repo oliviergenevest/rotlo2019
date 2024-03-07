@@ -7,7 +7,7 @@ import cx from 'classnames'
 import Video from '../video'
 
 
-const Grid2 = ({image, text, title, reverse = false, artiste=null}) => {
+const Grid2 = ({image, text, title, reverse = false, artiste=null, evenement=null}) => {
 
    	const classes = cx(styles.content, { [styles.reverse]: reverse })
     
@@ -17,9 +17,17 @@ const Grid2 = ({image, text, title, reverse = false, artiste=null}) => {
       	<div className= {styles.gridContainer} >
 			<div className={classes}>
 		       <div className= {styles.text} >
-		       		<h2>{title}</h2>
-		        	<p>{ text.text }</p>
-		        	
+		       		
+		        	{evenement && 
+		        		<div style={{zIndex:0}}>
+			        		<p className={styles.date}>{evenement.date}</p>
+							<h2><a href={evenement.slug} >{evenement.titre}</a></h2>
+							<div
+								dangerouslySetInnerHTML={{__html: evenement.teaser}}
+								/>
+
+		        		</div>
+		        	}
 		        	{artiste && 
 		        		<div style={{zIndex:0}}>
 			        		<p className={styles.tags}>{artiste.genre}</p>

@@ -50,10 +50,14 @@
 }
 
 .tags {
-
     color: $brand-cta;
     font-weight: 700;
+}
 
+.date {
+  color: $brand-cta;
+  font-weight: 500;
+  text-transform: capitalize;
 }
 
 /*on alterne droite gauche pour l'image*/

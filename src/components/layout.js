@@ -13,7 +13,9 @@ import "@fontsource/montserrat/900.css";
 import 'typeface-raleway'
 import * as styles  from './layout.module.scss'
 /*import AudioPlayer from '../components/Player/player'*/
-//import  ModalRotlo  from './modal';
+/*
+modal everywhere
+import  ModalRotlo  from './modal';*/
 
 
 
