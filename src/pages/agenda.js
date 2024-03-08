@@ -7,7 +7,7 @@ import Grid2 from '../components/Grid/Grid2'
 import {Seo} from '../components/seo'
 
 const AgendaPage = ({data}) => {
-  console.log("allDatoCmsEvenement : " + data.allDatoCmsEvenement.nodes)
+ // console.log("allDatoCmsEvenement : " + data.allDatoCmsEvenement.nodes)
   
   return (
   
