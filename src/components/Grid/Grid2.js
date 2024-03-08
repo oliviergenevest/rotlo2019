@@ -24,8 +24,10 @@ const Grid2 = ({image, text, title, reverse = false, artiste=null, evenement=nul
 							<h2><a href={evenement.slug} >{evenement.titre}</a></h2>
 							<div
 								dangerouslySetInnerHTML={{__html: evenement.teaser}}
-								/>
-
+							/>
+							<p>
+								<a href={evenement.slug} >En savoir plus</a> 
+							</p>
 		        		</div>
 		        	}
 		        	{artiste && 
