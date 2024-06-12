@@ -11,6 +11,7 @@ import styles from './Navigation.module.scss'
 import './Headroom.scss'
 import Logo from "../../images/logo-rotlo-inverse.png"
 
+
 export default class Navigation extends Component {
   constructor(props) {
     super(props);
@@ -65,12 +66,15 @@ export default class Navigation extends Component {
             customBurgerIcon={ false }
             >
  
-              <Link to="/programmation" activeClassName={styles.active}  onClick={() => this.closeMenu()}>
-                  Edition 2019
+           {/*    <Link to="/programmation" activeClassName={styles.active}  onClick={() => this.closeMenu()}>
+                  Programmation
+              </Link>
+              <Link to="/billetterie" activeClassName={styles.active}  onClick={() => this.closeMenu()}>
+                  Billetterie
               </Link>
               <Link to="/infos-pratiques" activeClassName={styles.active} onClick={() => this.closeMenu()}>
                   Infos pratiques
-              </Link> 
+    </Link> */}
               <Link to="/asso" activeClassName={styles.active} onClick={() => this.closeMenu()}>
                   L'association
               </Link>
@@ -85,6 +89,7 @@ export default class Navigation extends Component {
                 {/*<a href="https://www.youtube.com/" aria-label="Youtube" target="_blank" rel="noopener noreferrer">
                   <FaYoutube />
                 </a>*/}
+                
               
                 <a href={config.facebookPageUrl} aria-label="Facebook" target="_blank" rel="noopener noreferrer">
                   <FaFacebook />
@@ -115,7 +120,12 @@ export default class Navigation extends Component {
 
               </span>
             </nav>*/}
+           
+
+       {/*    <a href="https://www.helloasso.com/associations/association-rock-on-the-l-oule/evenements/festival-rock-on-the-l-oule" className={styles.btnCta} target="_blank" rel="noreferrer noopener">Billetterie</a>
+*/}  
              <div className={ styles.bmBurgerButton }>
+
              <HamburgerMenu 
                 isOpen={this.state.menuOpen}
                 menuClicked={this.handleClick.bind(this)}

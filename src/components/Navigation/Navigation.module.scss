@@ -5,8 +5,7 @@
   display: flex;
 
   a {
-    color: $body-color;
-
+    color: $white;
     &:hover {
       color: $brand-secondary;
     }
@@ -15,6 +14,29 @@
 
 
   
+.btnCta {
+  padding: .5rem 1rem;
+  background: white;
+  //color: #368059;
+  color: $brand-primary!important;
+  margin-right:2rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-shadow: none;
+  border-radius: 8px;
+  text-decoration: none;
+  letter-spacing: .5px;
+  transition: all .3s ease-in-out;
+&:hover {
+//	background: #368059;
+  background: $brand-primary;
+    color: white!important;
+  text-decoration: none;
+  &:after {
+    display:none;
+  }
+}
+}
  
 
 .navigation,
@@ -35,6 +57,7 @@
       margin-right:4rem;
   }
 }
+
 
 .navigation > span {
   margin-left: auto;
@@ -157,7 +180,7 @@
 
 /* Wrapper for item list */
  .bmItemList {
-  color: #b8b7ad;
+  color: $white;
   padding: 0.8em;
   display:flex;
   flex-direction:column;
@@ -175,10 +198,11 @@
   padding:.3em 0;
   
   &:hover{
-    color: white;
+    color:#b6fcb6;
   }
   &.active {
     color: $brand-cta;
+    color: #b6fcb6;
   }
 
   

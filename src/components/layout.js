@@ -12,7 +12,7 @@ import 'typeface-montserrat'
 import 'typeface-raleway'
 import styles from './layout.module.scss'
 /*import AudioPlayer from '../components/Player/player'*/
-
+/*import  ModalRotlo  from './modal';*/
 
 
 
@@ -22,7 +22,7 @@ const Layout = ({ children }) => (
       query {       
         logoDrome: file(relativePath: { eq: "logo_drome.jpg" }) {
           childImageSharp {
-                  fixed(width: 100, quality:80) {
+                  fixed(width: 80, quality:80) {
                     ...GatsbyImageSharpFixed
                   }
                 }
@@ -34,6 +34,20 @@ const Layout = ({ children }) => (
                   }
                 }
         }
+        logoEteCulturel: file(relativePath: { eq: "logo_ete_culturel.png" }) {
+          childImageSharp {
+                  fixed(width: 180, quality:80) {
+                    ...GatsbyImageSharpFixed
+                  }
+                }
+        }
+        logoDrac: file(relativePath: { eq: "logo_drac.png" }) {
+          childImageSharp {
+                  fixed(width: 80, quality:80) {
+                    ...GatsbyImageSharpFixed
+                  }
+                }
+        }
       }  
     `}
     render={
@@ -41,20 +55,26 @@ const Layout = ({ children }) => (
       data => (
       
       <div className={styles.page}>   
+        
         <Navigation/>
+      
         <main className={styles.content} >
+        {/*<ModalRotlo/> */}
           {children} 
           <Container  text>
             <MailChimpSubscribe/>
           </Container>
           <Container  sponsor>           
             <div className="logoContainer">
-               <Img fixed={data.logoDrome.childImageSharp.fixed} style={{maxWidth: '100px',marginBottom:'2rem'}}/>   
-              
-               <Img fixed={data.logoRegion.childImageSharp.fixed} style={{marginBottom:'2rem',marginLeft:'2rem'}}/>
+              <Img fixed={data.logoDrac.childImageSharp.fixed} style={{marginBottom:'2rem',marginLeft:'.5rem'}}/>
+              <Img fixed={data.logoEteCulturel.childImageSharp.fixed} style={{marginBottom:'2rem',marginLeft:'.5rem'}}/>
 
+              <Img fixed={data.logoRegion.childImageSharp.fixed} style={{marginBottom:'2rem',marginLeft:'.5rem'}}/>
+              <Img fixed={data.logoDrome.childImageSharp.fixed} style={{maxWidth: '100px',marginBottom:'2rem', marginLeft:'.5rem'}}/>   
             </div>
-            <p>Rock On The l’Oule est soutenu par le Conseil Départemental de la Drôme, la Région Auvergne Rhône-Alpes, et les communes de Cornillon sur l'Oule, la Motte Chalancon, Rémuzat, St May, Arnayon et Rottier. </p>
+            <p>Ce projet est soutenu dans le cadre du dispositif « Eté Culturel » du Ministère de la Culture, par la Région Auvergne Rhône-Alpes, le Conseil Départemental de la Drôme  et les communes de la Motte Chalancon, Cornillon sur l'Oule et Rottier. 
+</p>
+
           </Container>
          
 
@@ -65,7 +85,7 @@ const Layout = ({ children }) => (
               <span> <a href={config.facebookPageUrl} aria-label="Facebook" target="_blank" rel="noopener noreferrer">
                 <FaFacebook size={20} style={{ }}  />
                 </a></span>
-              <span>Association Rock On The L'Oule - 2020 - <Link to="/credits">Crédits</Link></span>
+              <span>Association Rock On The L'Oule - 2021 - <Link to="/credits">Crédits</Link></span>
           </Container>
         </footer>
      </div>

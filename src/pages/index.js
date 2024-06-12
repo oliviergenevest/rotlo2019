@@ -1,33 +1,47 @@
 import React from 'react'
-//import { Link } from 'gatsby'
+/*import { Link } from 'gatsby'*/
 import Img from 'gatsby-image'
 import Layout from '../components/layout'
 import Container from '../components/Container/Container'
 import { graphql } from 'gatsby'
 import SEO from '../components/seo'
 import Grid1 from '../components/Grid/Grid1'
-import Grid2 from '../components/Grid/Grid2'
+/*import Grid2 from '../components/Grid/Grid2'
 import GridImage from '../components/Grid/GridImage'
-/*import TimelineProg from '../components/timeline'*/
+import TimelineProg from '../components/timeline'*/
 import RandomImage from '../components/RandomImage'
+import BookingBtn from '../components/BookingBtn'
+/*import JavaVideoMp4 from '../images/java.mp4'*/
 
 const IndexPage = ({data}) => {
    return (
       <Layout>
           <SEO title="Accueil" 
           keywords={[`festival`, `rock on the l'oule`, `la motte chalancon`,`rock`,`musique`,`spectacle`,`concert`]} 
-          description="Mercredi 7 août 2019, c'est au Pas des Ondes de la Motte Chalancon que ça se passe ! Entre montagnes et plans d'eau, Rock on the l'Oule fêtera sa 25ème édition. Au programme : concerts, cirque, détente, jeux en bois, produits locaux et buvette, démarche éco-responsable. On compte sur vous !" 
+          description="Mardi 3 et mercredi 4 août 2021, c'est sur la place du Fort de la Motte Chalancon que ça se passe. Les Parenthèses de l’Oule vous emmèneront les 3 et 4 août 2021 à Cuba, à la Réunion, ici ou là. !" 
           image={data.seo.childImageSharp.resize}/>
-        {/*  <Grid1 
+          <Grid1 
             image = { <RandomImage gatsbyImageArray={data.backgroundImages}/> } 
+            slidesData = {data.backgroundImages}
             flyer = {<Img fluid={data.flyer.childImageSharp.fluid} />}
-            heroText = {{text:'Rock on the l\'Oule #25'}} 
-            text1= {{text:"Mercredi 7 août 2019 - 19h - La Motte Chalancon"}} 
-            text2= {{text:"ANTIBALAS - SAODAJ' - PINIOL - DJ VON KIDS - CIE L’ARBRE A VACHE"}} 
-            text3= {{text:"C'est au Pas des Ondes que ça se passe ! Entre montagnes et plans d'eau, Rock on the l'Oule fêtera sa 25ème édition. Au programme : concerts, cirque, détente, jeux en bois, produits locaux et buvette, démarche éco-responsable. On compte sur vous !"}} 
+            heroText = {{text:'A LA FOIS'}} 
+            intro = {{text:"L’association Rock on the l’Oule, en partenariat avec l’association de la Bibliothèque de la Motte et la Chorale propose un spectacle autour de l’univers de Jacques Brel :"}} 
+          
+            text1= {{text:"Samedi 21 mai 2022 - 20h"}} 
+            text2= {{text:"salle polyvalente de La Motte Chalancon (26)"}} 
+            text3= {{text:""}} 
           />
-        */}
-          {/*<TimelineProg/>*/}
+          {/*
+           <Grid1 
+            image = { <RandomImage gatsbyImageArray={data.backgroundImages}/> } 
+            slidesData = {data.backgroundImages}
+            flyer = {<Img fluid={data.flyer.childImageSharp.fluid} />}
+            heroText = {{text:'A LA FOIS'}} 
+            text1= {{text:"21 mai 2022 à la salle polyvalente de La Motte Chalancon (26)"}} 
+            text2= {{text:"Avec François Fourel & Laurent Berger"}} 
+            text3= {{text:"C'est sur la place du Fort que ça se passe ! Rock on the l'Oule fêtera sa 27ème édition. Au programme : concerts, expo, détente, jeux en bois, produits locaux et buvette, démarche éco-responsable. On compte sur vous !"}} 
+          />
+          <TimelineProg/>*/}
 {/*
 <Container text first> 
  <h1>Festival Rock on the l'Oule</h1>
@@ -41,28 +55,106 @@ const IndexPage = ({data}) => {
   <p>Portez-vous bien les amis, on pense fort à vous !</p>
  </Container>
   */}
-  <Container text first> 
- <h1>Festival Rock on the l'Oule</h1>
-  <p>Des étoiles plein les yeux des petits et grands venus assister à cette édition exceptionnelle de Rock on the l'Oule, mercredi 05 août 2020! </p> <p>
-On aurait aimé accueillir plus de monde, mais le contexte sanitaire en a décidé autrement. </p>
- <p>Un grand merci aux conteurs Leila Darwiche, Corentin Cayla, Sophie Biset et sa musicienne Lucie Galibois, ainsi qu'au saxophoniste Sylvain Rifflet pour cette belle soirée intimiste. 
-
+<Container text first> 
+<h2>Beaux et cons à la fois - Un certain Jacques Brel</h2>
+<p>Bien sûr, ça se passe au bistrot.
+A Vesoul, à Knokke Le Zoute ou aux Marquises.
+Ça parle, ça chante, ça boit et ça aime.
+Ils sont deux, beaux et cons à la fois, qui racontent
+les femmes, les potes, l’alcool et la mort au bout.
+Deux qui parlent d’ivrognes, du diable et de ces gens-là ;
+qui chantent Madeleine, Mathilde, Jojo, Fernand
+et Jef et Frida et Jacky…
+Deux qui boivent, parlent et chantent
+un certain Jacques Brel.</p>
+<p><i>" Mourir pour mourir<br/>
+Que ce soit d'ivresse<br/>
+Le coeur appuyé<br/>
+Sur les amis de toujours<br/>
+Mourir pour mourir<br/>
+Je veux mourir sous tendresse<br/>
+Car mourir d'amour<br/>
+Ce n'est mourir qu'à moitié "</i></p>
+<p>
+Un chanteur, Laurent Berger,
+et un comédien, François Fourel,
+mis en scène par Bernard Falconnet.</p>
+<p>21 MAI 2022 - Ouverture des portes : 20h</p>
+  <h3>Tarifs :</h3><p>Plein Tarif : 10€<br/>Chômeurs – Etudiants -
+Moins de 18 ans : 7€ <br/>Gratuit pour les moins de 12 ans</p>
+<p>SALLE POLYVALENTE DE LA MOTTE CHALANCON (26) - Réservez dès maintenant votre place ! 
 </p>
+<BookingBtn/>
+{/*
+ <h2>Les parenthèses de l'Oule #2</h2>
+ <p>Depuis de longs mois, on a cherché, tourné et retourné dans tous les sens comment s’adapter à la situation sanitaire tout en respectant l’essence du festival. Et bon ben, sur une édition traditionnelle respecter les protocoles sanitaires actuels c’est plutôt compliqué...visez un peu :
+</p>
+<p>
+<i>JAVA @ Rock on the l’Oule 2010</i>
+<video controls autoPlay playsInline  muted={true} loop style={{width:'100%'}}> 
+      <source src={JavaVideoMp4} type="video/mp4" />
+    </video>
+</p>
+<p>Et en même temps, deux ans sans se voir c’est looooong.</p>
+<p>Du coup on est pas peu fiers de t’avoir préparé une édition remaniée aux petits oignons, en attendant un
+retour aux concerts rock and roll où les corps se déchainent, ruisselant de sueur.</p>
+<p>On change de site, on change de nom, on change de format pour cette année transitoire, histoire de fêter
+l’été, les rencontres humaines et artistiques et le plaisir d’etre ensemble.</p>
+<p>
+Les Parenthèses de l’Oule t’emmenèront début août à Cuba, en Arménie, à la Réunion !!
+Une programmation éclectique sur 2 jours les mardi 03 et mercredi 04 août 2021. <Link to="/programmation">Programmation complète ici</Link>.</p>
+<p>
+On déménage dans le village de La Motte Chalancon, au jardin du Fort : Bel écrin en plein air
+surplombant les toits du village. Repas complets préparés sur place par notre chef David avec des produits
+locaux. Mais également snacking, buvette, jeux en bois et exposition d’oeuvres rétroéclairées. Viens ca va
+être bien.</p>
+<p>Attention places limitées !! Cette année on bloque à 200 places, autant dire qu’il faut pas trainer pour réserver ! <Link to="/billetterie">C’est par ici : Billetterie en ligne</Link></p>
+<p>
+On résume : cet été tu te régaleras de bons petits plats locaux sur la place du Fort du village de La Motte
+Chalancon, mardi 03 et mercredi 04 août 2021, avant de te rincer les oreilles avec une programmation de
+haute volée pendant que tes gosses prennent du bon temps sur les jeux en bois.</p>
+<p>Les <i>Parenthèses de l’Oule</i> n’attendent plus que toi, alors <Link to="/billetterie">inscris-toi</Link> on se charge du reste !</p>
 
-  <p>Rendez-vous l'an prochain! 
-Portez-vous bien!</p>
+<p>La team Rock on the l’Oule</p>*/}
+</Container>
+{/*
+  <p>L’association Rock On The l’Oule est très heureuse de pouvoir proposer à nouveau des
+événements suite à la crise sanitaire qui a largement affecté nos activités depuis plus d’un an.
+Néanmoins, nous avons profité de ce temps pour nous organiser, dernière nos écrans, en
+termes de budget, conseils d’administration, et autres réunions d’équipe pour remodeler notre
+implantation sur le territoire.</p>
+<p>
+En 2020, nous avons été contraints d’organiser une soirée « à minima », dans un jardin privé,
+avec une jauge limitée et en respectant les consignes sanitaires. Il y avait quelque chose de
+féerique ce mercredi 05 août 2020 dans cette soirée insolite et intergénérationnelle sous les
+étoiles, ci-dessous quelques clichés :
+</p>
 <GridImage images={data.edition2020Gallery}/>
- </Container>
+<p>Pour cet été, les mardi 3 et mercredi 4 Aout 2021, nous prévoyons 2 soirées de concerts au
+jardin du fort, au cœur du village de La Motte Chalancon. Ambiance festive et tout public,
+avec repas complet proposé sur la place du Fort, buvette sur place, jeux en bois pour petits et
+grands, et exposition de tableaux de la jeune artiste diplômée des Beaux-Arts de Valence,
+Leïla Festa.</p>
+<p>
+Côté concerts, voici les premiers noms confirmés pour cette édition :
+Ambiance latine avec le groupe de musique Cubaine : « Guaracha Sabrosa »
+Chanson Française et Arménienne avec le « Dan Gharibian Trio ».</p>
+<p>La programmation complète sera dévoilée début juillet, avec billetterie en ligne sur notre site
+(attention, jauge limitée !). Merci au Département de la Drôme, à la Région Auvergne Rhône
+Alpes et aux communes de la Motte Chalancon, de Cornillon et de Rottier pour leur soutien
+inconditionnel.</p>
+*/}
+ {/*
         <Container fluid > 
-          <Grid2 
+       <Grid2 
             text={{text:"Deux plans d’eau posés au coeur des montagnes préalpines, à la frontière entre Diois et Baronnies. Un oasis dominé par les ruines du château médiéval de Cornillon et survolé par les hérons, vautours et autres spécimens de la faune locale."}}
               image={<Img fluid={data.siteExceptionnel.childImageSharp.fluid} />}
               title="Un lieu magique : le site du Pas des Ondes."
-            />
+            /> 
 
           <Grid2 
             text={{text:"Dans une ambiance familiale rappelant les fêtes de village traditionnelles, Rock on the l’Oule propose une programmation artistique de premier choix faisant la part belle au métissage. Une rencontre entre les genres musicaux les plus variés et des artistes aux origines géographiques multiples. Mais aussi du cirque, des performances en tous genres, des jeux en bois, un salon de thé sous tentes berbères... De quoi rassembler toutes les générations de public et faire se rencontrer les cultures."}}
-              image={<Img fluid={data.brassageCulture.childImageSharp.fluid} />}
+              image={<Img fluid={data.brassageCulture.childImageSharp.fluid} style={{width:'100%'}}/>}
               title="Un joyeux brassage de cultures"
               reverse
             />
@@ -77,10 +169,11 @@ Portez-vous bien!</p>
              <Grid2 
                 text={{text:"Fait rare pour un festival qui dure depuis plus de vingt ans, son organisation est toujours le fait d’une équipe 100 % bénévole. Une bande de passionnés, attachée à la région, qui a su rassembler des énergies multiples et fidèles autour de ce projet au long cours. Aujourd’hui, ce sont près de 70 bénévoles et le soutien de nombreux habitants, associations et entreprises de la région qui permettent à cette aventure de se poursuivre."}}
                 image={<Img fluid={data.benevoles.childImageSharp.fluid} />}
-                title="Une aventure humaine et collective qui dure depuis... 25 ans."
+                title="Une aventure humaine et collective qui dure depuis... 26 ans."
                 reverse
             />
           </Container> 
+        */}  
             <Container grandBureau>
               <Img fixed={data.logoGrandBureau.childImageSharp.fixed} style={{maxWidth: '200px',marginBottom:'2rem'}}/>
               <p>Rock On The l’Oule fait parti du Grand Bureau. Grand Bureau est un réseau né de la fusion de la FEPPRA, du GRADA, du GRAL et de Tagada Tsoin Tsoin. Lancé officiellement fin janvier 2017, il coordonne une nouvelle dynamique de coopération entre les acteurs de la filière musiques actuelles. Grand Bureau est le réseau des acteurs musiques actuelles en Auvergne-Rhône-Alpes. Il regroupe à ce jour plus de 160 structures membres de l’ensemble de la filière des musiques actuelles, et leur donne un cadre de coopération.</p>
@@ -96,7 +189,7 @@ export default IndexPage
 export const query = graphql`
   query {
 
-    backgroundImages: allFile (filter:{relativeDirectory:{eq:"backgrounds"}, extension:{eq:"jpg"}}){
+    backgroundImages: allFile (sort: {order: ASC, fields: name},filter:{relativeDirectory:{eq:"backgrounds2022"}, extension:{eq:"jpg"}}){
     edges {
       node {
           childImageSharp {
@@ -116,15 +209,16 @@ export const query = graphql`
           }
     }
 
-    flyer: file(relativePath: { eq: "aff-rotlo-2019.jpg" }) {
+    flyer: file(relativePath: { eq: "lesparenthesesdeloule.png" }) {
           childImageSharp {
-            fluid(maxWidth: 400, quality:90) {
+            fluid(maxWidth: 600, quality:90) {
               ...GatsbyImageSharpFluid
+              ...GatsbyImageSharpFluidLimitPresentationSize
             }
           }  
     }
 
-    seo: file(relativePath: { eq: "aff-rotlo-2019.jpg" }) { 
+    seo: file(relativePath: { eq: "lesparenthesesdeloule.png" }) { 
         childImageSharp {
             resize(width: 1200) {
               src
@@ -165,7 +259,13 @@ export const query = graphql`
             }
           }
     }
-
+    java: file(relativePath: { eq: "java.jpg" }) {
+      childImageSharp {
+            fluid(maxWidth: 800, quality:80) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+    }
     benevoles: file(relativePath: { eq: "equipe1.jpg" }) {
       childImageSharp {
             fluid(maxWidth: 1600, quality:80) {

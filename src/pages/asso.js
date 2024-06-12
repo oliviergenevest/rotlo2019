@@ -35,6 +35,7 @@ const AssoPage = () => (
  
 
 <p>Ca bouge à la Motte Chalancon, pour plus d’informations sur ce petit village drômois aux parfums de Provence, allez faire un tour sur le site de la Motte Chalancon.</p>
+
     <h2>Edition précédentes</h2>
     <ul>
     <li>1995 1ère : Fly & the Tox</li>
@@ -62,6 +63,9 @@ No Shangsa, The Wicks</li>
 <li>2016 22ème: Danyel Waro, Lisa and the Lips, Dengue Dengue Dengue</li>
 <li>2017 23ème: Impérial Orpheon, Motivés! (annulé et remplacé par Fanfare Ciocărlia), Washington Dead Cats </li>
 <li>2018 24ème: Loic Lantoine & the very big experimental Toubifri Orchestra, Acid Arab, Sir Jean & the Roots Doctors, Afuma : les échassiers du Togo</li>
+<li>2019 25ème: Saodaj', Antibalas, Piniol, DJ Von Kids</li>
+<li>2020 Les Parenthèses de l'Oule #1 : Soirée Conteurs + Sylvain Rifflet</li>
+<li>2021 Les Parenthèses de l'Oule #2 : (ANNULE) Dan Gharibian Trio, Guaracha Sabrosa, René Lacaille Quartet, David Suissa Quartet, Les Jumelles de l'Astronaute, Expo tableaux lumineux Léïla Festa</li>
   </ul>
     
     <h2>Contacts</h2>
@@ -71,6 +75,11 @@ Le Village<br/>
 26 470 La Motte Chalancon</p>
     <p><a href="mailto:contact@rockontheloule.org">contact@rockontheloule.org</a></p>
 
+  <h2>Adhésion 2022</h2>
+  <a href="https://www.helloasso.com/associations/association-rock-on-the-l-oule/adhesions/adhesion-association-rock-on-the-l-oule" 
+  className="btnCta" 
+  target="_blank" 
+  rel="noreferrer noopener">Formulaire d'adhésion</a>
 </Container>
   </Layout>
 )

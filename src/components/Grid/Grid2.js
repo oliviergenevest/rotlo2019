@@ -23,10 +23,12 @@ const Grid2 = ({image, text, title, reverse = false, artiste=null}) => {
 		        	{artiste && 
 		        		<div style={{zIndex:0}}>
 			        		<p className={styles.tags}>{artiste.genre}</p>
-							<Video 
-								videoTitle = 'Antibalas'
+							
+							{artiste.video !== "" && <Video 
+								videoTitle = {artiste.name}
 								videoSrcURL = {artiste.video}
 							/>
+					}
 
 							<p><br/>En savoir plus : <br/>
 								<a href={artiste.websiteURL} target="_blank" rel="noopener noreferrer">Site internet</a> { } - { } 

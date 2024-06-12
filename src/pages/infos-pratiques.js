@@ -9,34 +9,37 @@ const InfosPratiques = () => (
     <SEO 
       title="Infos pratiques" 
       keywords={[`festival`, `rock on the l'oule`, `la motte chalancon`,`rock`,`musique`,`spectacle`,`concert`]}
-      description="Le Festival Rock on the l'Oule, c'est des concerts, des spectacles, des jeux en bois, des produits locaux et buvette, une démarche éco-responsable, un espace bivouac."
+      description="Le Festival Rock on the l'Oule, c'est des concerts, une exposition, des jeux en bois, des produits locaux et buvette, une démarche éco-responsable."
     />
 
  <Container text first>
     
     <h1>Infos pratiques</h1>
-    
+    <h2>Infos & renseignements</h2>
+    <p>07 64 79 23 59</p>
     <h2>Billetterie</h2>
-     <p>La billetterie se fait uniquement sur place à partir de 18h30</p>
-     <p>Tarif : 15 € - 12 € (tarif réduit)</p>
+     <p>La billetterie se fait uniquement en ligne. Attention places limitées !! Cette année on bloque à 200 places : <a href="https://www.helloasso.com/associations/association-rock-on-the-l-oule/evenements/festival-rock-on-the-l-oule" target="_blank" rel="noreferrer noopener">Réserver dès maintenant</a>
+     </p>
+     <p>Tarifs : 18 € - 12 € (tarif réduit)</p>
     <h2>Se loger</h2>
-    <p>Un espace est aménagé sur le site du Pas des Ondes, pour planter vos tentes. Le bivouac y est autorisé le soir du festival.</p>
-    <p>Vous trouverez également la liste complète des hébergements (campings, chambres d'hôtes, hôtels, hébergements insolites..) sur le site de l'Office de Tourisme de La Motte Chalancon : <a href="http://www.lamottechalancon-tourisme.com/ou-dormir/language/fr.html">Office de Tourisme de La Motte Chalancon</a></p>
+    <p>Attention, nous tenons à vous informer qu'il n'y aura pas d'espace bivouac cette année. </p>
+    <p>Vous trouverez la liste complète des hébergements (campings, chambres d'hôtes, hôtels, hébergements insolites..) sur le site de l'Office de Tourisme de La Motte Chalancon : <a href="http://www.lamottechalancon-tourisme.com/ou-dormir/language/fr.html" target="_blank" rel="noreferrer noopener">Office de Tourisme de La Motte Chalancon</a></p>
     
    <h2>Se nourrir</h2>
-    <p>Restauration et buvette sur le site du festival : bière locale, picodon, pain bio, jus de fruits artisanaux, saucisses, plat chaud... La buvette et le snack privilégient les circuits courts et les produits de qualité. Une occasion de découvrir ou redécouvrir la variété des richesses régionales.</p>
+   <p>Nouveauté : Nous proposons cette année un repas complet (entrée + plat + dessert + 1 verre de vin).
+      Réservation obligatoire via notre <a href="https://www.helloasso.com/associations/association-rock-on-the-l-oule/evenements/festival-rock-on-the-l-oule" target="_blank" rel="noreferrer noopener">billetterie en ligne</a>.</p>
+    <p>Restauration et buvette sur le site du festival : bière locale, pain bio, jus de fruits artisanaux, saucisses, plat chaud... La buvette et le snack privilégient les circuits courts et les produits de qualité. Une occasion de découvrir ou redécouvrir la variété des richesses régionales.</p>
 
      <h2>Comment venir ?</h2>
-    <p>Plan d'eau du Pas des Ondes<br/>
-    Adresse : D61, 26510 Cornillon-sur-l'Oule</p>
-    <p>Pensez également au covoiturage ! </p>
+    <p> Adresse : <br/>
+    Place du Fort<br/> 26470 La Motte Chalancon</p>
+    <p>Attention : Il n'y aura pas de place de parking sur la Place du Fort. Le stationnement dans le village étant limité, anticipez et pensez au covoiturage ! </p>
 
-    <h2>Infos</h2>
-    <p>04 75 27 24 67</p>
+   
 
-     <h2>Devenir bénévole</h2>
+  {/*    <h2>Devenir bénévole</h2>
     <iframe src="https://framaforms.org/rock-on-the-loule-25-inscription-benevoles-1556698674" width="100%" height="800" border="0" ></iframe>
-
+*/}
 
 </Container>
   </Layout>
