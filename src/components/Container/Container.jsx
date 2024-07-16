@@ -13,6 +13,7 @@ const Container = props => {
     { [styles.grandBureau]: props.grandBureau},
 
     { [styles.fluid]: props.fluid },
+    { [styles.banner]: props.banner },
     { [styles.bgBlack]: props.bgBlack }
     );
   return <div className={classes}>{children}</div>;

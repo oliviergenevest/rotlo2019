@@ -1,11 +1,11 @@
 @import "../../config/variables";
-
+/*
 .gridContainer {  	
     padding-top: 0.5rem;
     width:100%;
-  margin-top:3rem;
-  margin-bottom:3rem;
-  z-index:1000;
+    margin-top:3rem;
+    margin-bottom:3rem;
+    z-index:1000;
 
 }
 
@@ -16,9 +16,10 @@
     background: linear-gradient(to right, #291d1d, rgb(46, 46, 46));
   @include for-tablet-landscape-down {
       flex-direction:column-reverse;
-    /*  background-color:inherit;*/
+   
     }
 }
+*/
 
 .image {
 	overflow: hidden;	
@@ -54,23 +55,49 @@
     font-weight: 700;
 }
 
-.date {
-  color: $brand-cta;
-  font-weight: 500;
-  text-transform: capitalize;
-}
 
-/*on alterne droite gauche pour l'image*/
-.reverse {
-  flex-direction:row-reverse;
-   @include for-tablet-landscape-up {
-    .image { clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);}
+.item {
+ 
+  width:100%;
+  position: relative;
+  > div {
+        border-radius: .5em;
+    //position: absolute !important;
+   width:100%;
   }
-  
- @include for-tablet-landscape-down {
-      flex-direction:column-reverse;
-      /*background-color:inherit;*/
+  > div img {
+    transition: all 0.3s ease 0s !important;
+
+  }
+  > span {
+    z-index: 1;
+    color:  $brand-cta;
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: right;
+    font-weight: 700;
+    font-size: 24px;
+    padding: 1rem;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    text-shadow: 0px 2px 3px #00000020, 0px 2px 5px #000000;
+    @include for-tablet-landscape-down {
+      font-size:22px;
+      padding: 1rem;
+    }
+  }
+  &:hover {
+    &:after {display:none;}
+    > div {
+      //opacity:1;
+        transition: all 0.3s ease 0s !important;
+    }
+    > div img {
+      transform: scale(1.1);
     }
 
-    
+  }
 }
+
+
+

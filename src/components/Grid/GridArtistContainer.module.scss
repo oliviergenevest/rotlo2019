@@ -1,0 +1,15 @@
+@import "../../config/variables";
+
+
+.gridArtistContainer {
+  width:100%;
+  display: grid;
+  grid-gap:2rem;
+  grid-template-columns: 1fr;
+  margin-bottom:2rem;
+
+  @include for-tablet-landscape-down { 
+    grid-template-columns: 1fr ;
+
+  }
+}

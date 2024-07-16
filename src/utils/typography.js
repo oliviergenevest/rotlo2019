@@ -8,25 +8,28 @@ const typography = new Typography( {
  
   baseFontSize: "18px",
   baseLineHeight: 1.666,
-  headerFontFamily: ["Raleway","sans-serif"],
-  bodyFontFamily: ["Montserrat", "sans-serif"],
+  //headerFontFamily: ["Raleway","sans-serif"],
+  headerFontFamily: ["Montserrat Variable","sans-serif"],
+  bodyFontFamily: ["Montserrat Variable", "sans-serif"],
 overrideStyles: ({ adjustFontSizeTo, rhythm }, options, styles) => ({
   body:{color:'#d9dad8'},
   'html, body, #___gatsby,div[role="group"][tabindex]' :{ height: '100%'},
 
   h1: {
-    fontFamily: ['Raleway', 'sans-serif'].join(','),
+    fontFamily: ['Montserrat Variable', 'sans-serif'].join(','),
    textTransform:'uppercase',
-   letterSpacing:'10px',
+   letterSpacing:'3px',
    fontWeight:300,
   fontSize:rhythm(1),
   color:'white',
   },
   h2: {
     color:'white',
+    fontWeight:400,
   },
   '.title':
-  { color: 'inherit',
+  { 
+    color: 'inherit',
   
   },
   blockquote: {

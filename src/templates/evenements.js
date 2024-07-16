@@ -15,7 +15,7 @@ import { FaAngleLeft }  from 'react-icons/fa'
 const Evenements = props => {
 	const {  next, prev } = props.pageContext;
    const event = props.data.evenement;
-console.log(event)
+//console.log(event)
   
 
 

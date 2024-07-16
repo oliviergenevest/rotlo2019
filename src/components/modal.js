@@ -17,24 +17,11 @@ const Modal = ({ style, closeModal }) => (
         width={100} height={63}
         />
     </div>
-    <h3 className="modal-title" style={{"marginTop":"20px"}}> Soirée théatre - Samedi 6 avril 2024</h3>
+    <h3 className="modal-title" style={{"marginTop":"20px"}}> Edition 2024 annulée</h3>
   
    <p className="modal-content">
-   Samedi 06 Avril 2024<br/><br/>
-
-
-La compagnie "à court de jardin", l'association "Rock on the l'Oule" et l'association "J'aime lire" présentent :<br/><br/>
-
-Quand viendra la vague d'Alice Zeniter<br/><br/>
-
-Salle Stéphane Perrin à côté de la maternelle. La Motte Chalancon.<br/>
-20h<br/>
-PAF : 10 €<br/>
-Buffet participatif après la représentation<br/>
-
-   </p>
-   <p className="modal-content">
-    <a href='./agenda/soiree-theatre-quand-viendra-la-vague'>En savoir plus</a>
+   Pour des raisons indépendantes de notre bonne volonté, nous vous informons avec de grands regrets que l’édition 2024 du Rock on the l’Oule est annulée ! Merci à celles et ceux qui ont travaillé avec énergie et envie sur la préparation de cette édition…
+   
    </p>
   
    
@@ -68,7 +55,7 @@ const ModalRotlo = () => {
             className="show-modal-button"
             onClick={() => setModalVisible(true)}
             >
-           <FaFileAlt/> Soirée théâtre le 6 avril 2024
+           <FaFileAlt/> Edition 2024 annulée
             </button>
             {/*transitions(( item, key, style ) =>
                 modalVisible ?

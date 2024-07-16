@@ -17,7 +17,17 @@ const Grid2 = ({image, text, title, reverse = false, artiste=null, evenement=nul
       	<div className= {styles.gridContainer} >
 			<div className={classes}>
 		       <div className= {styles.text} >
-		       		
+			  
+			   {(!evenement && !artiste) && 
+		        		<div style={{zIndex:0}}>
+			        		
+							<h2>{title}</h2>
+							<div
+								dangerouslySetInnerHTML={{__html: text.text}}
+							/>
+							
+		        		</div>
+		        	}
 		        	{evenement && 
 		        		<div style={{zIndex:0}}>
 			        		<p className={styles.date}>{evenement.date}</p>
@@ -32,17 +42,21 @@ const Grid2 = ({image, text, title, reverse = false, artiste=null, evenement=nul
 		        	}
 		        	{artiste && 
 		        		<div style={{zIndex:0}}>
+							<h2>{title}</h2>
 			        		<p className={styles.tags}>{artiste.genre}</p>
-							
+							<div
+								dangerouslySetInnerHTML={{__html: artiste.description}}
+							/>
 							{artiste.video !== "" && <Video 
-								videoTitle = {artiste.name}
-								videoSrcURL = {artiste.video}
+								videoTitle = {artiste.video.title}
+								videoSrcURL = {artiste.video.url}
 							/>
 					}
 
 							<p><br/>En savoir plus : <br/>
-								<a href={artiste.websiteURL} target="_blank" rel="noopener noreferrer">Site internet</a> { } - { } 
-								<a href={artiste.facebookURL} target="_blank" rel="noopener noreferrer">Page Facebook</a>
+								<a href={artiste.websiteUrl} target="_blank" rel="noopener noreferrer">Site internet</a> { } - { } 
+								<a href={artiste.facebookUrl} target="_blank" rel="noopener noreferrer">Page Facebook</a> { } - { }
+								<a href={artiste.instagramUrl} target="_blank" rel="noopener noreferrer">Page Instagram</a>
 							</p>
 							
 		        		</div>

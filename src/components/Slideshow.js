@@ -8,11 +8,11 @@ import {GatsbyImage} from 'gatsby-plugin-image'
 SwiperCore.use([ EffectFade, Autoplay ])
 const Splash = ({slides}) => {
   const slidesSwiper = []
-  slides.edges.map((slide, i) =>
+  slides.map((slide, i) =>
 
     slidesSwiper.push(
       <SwiperSlide key={`slide_${i}`}>
-        <GatsbyImage image={slide.node.childImageSharp.gatsbyImageData} alt="" style={{ height: '100%' }} />
+        <GatsbyImage image={slide.gatsbyImageData} alt="" style={{ height: '100%' }} />
       </SwiperSlide>
     )
   )

@@ -1,15 +1,20 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
-import {GatsbyImage} from 'gatsby-plugin-image'
+import { GatsbyImage } from 'gatsby-plugin-image'
 import Layout from '../components/layout'
 import Container from '../components/Container/Container'
-import {Seo} from '../components/seo'
-import Grid2 from '../components/Grid/Grid2'
-/*import styles from './biography.module.scss'*/
+import { Seo } from '../components/seo'
+import GridArtisteItem from '../components/Grid/GridArtisteItem'
+import GridArtisteContainer from '../components/Grid/GridArtistContainer'
+
+import { StructuredText, renderNodeRule } from 'react-datocms'
+import { isParagraph } from 'datocms-structured-text-utils'
+
+
 const Programmation = () => {
 const data = useStaticQuery(query)
-
-const artistes = [
+console.log(data.page)
+/*const artistes = [
 	{ 
 		name:'Bold Circus',
 		heure:'19h30', 
@@ -61,53 +66,150 @@ const artistes = [
 		cover: <GatsbyImage image={data.smokeyjoeandthekid.childImageSharp.gatsbyImageData} alt= 'Smokey Joe & The Kid (DJ Set)'/>,
 		video:'https://www.youtube.com/embed/ujD3OezaeyY',
 	}
-	
-]
+
+]*/
 return (
   <Layout>
-  
- 	<Container text first>		    
-	    <h1>Programmation</h1>
-	     <h2>Mercredi 3 août 2022</h2>
-	     <p>C'est au plan d'eau du Pas des Ondes que ça se passe ! Au programme : concerts, détente, jeux en bois, produits locaux et buvette, démarche éco-responsable. On compte sur vous !</p>
+	<Container banner>
+		<GatsbyImage image={data.page.bannerImage.gatsbyImageData} alt={data.page.title} />
+		<h1>{data.page.title}</h1>
 	</Container>
-	{
-		artistes.map( (artiste, key) => (
-
-			<Grid2 
-			key={key}
-	        text={{text:artiste.description}}
-	        image={artiste.cover}
-	        title={' [ '+artiste.heure+' ] '+ artiste.name}
-			artiste={artiste}  
-			reverse={key%2}
-			
-	    	/>
+ 	<Container text first>		    
+	    
+	   
+  { 
+  console.log(data.page.content)}
+    <StructuredText
+      data={data.page.content}
+      renderInlineRecord={({ record }) => {
+        switch (record.__typename) {
+          case 'DatoCmsArtiste':
+            return	<GridArtisteItem
+		 artiste={record} 
+		 />
+          default:
+            return null;
+        }
+      }}
+	  
 	 
-    	))
-	}
+
+      renderLinkToRecord={({ record, children }) => {
+        switch (record.__typename) {
+          case 'DatoCmsArtiste':
+         return <a href={`/article/${record.name}`}>{children}</a>;
+          default:
+            return null;
+        }
+      }}
+
+      renderBlock={({ record }) => {
+		
+        switch (record.__typename) {
+          case 'DatoCmsProg':
+            return (
+				<GridArtisteContainer>
+					{record.artistes2024.map((artiste, key) => 
+					<GridArtisteItem
+					key={artiste.id} 
+						artiste={artiste} 
+						/>
+					)
+					}
+					
+				</GridArtisteContainer>
+			)
+			;
+		default:
+				return (
+				  <>
+					<p>Don't know how to render a block!</p>
+					<pre>{JSON.stringify(record, null, 2)}</pre>
+				  </>
+				)
+        }
+      }}
+    />
+
+</Container>
+	
 	<Container text >		    
-	    <p>Le mercredi 3 août 2022, prenez les routes sinueuses qui mènent à la Motte Chalancon, on s'occupe du reste !</p>
+	    <p>Les mercredi 7 août 2024 et jeudi 8 août 2024, prenez les routes sinueuses qui mènent à la Motte Chalancon (26), on s'occupe du reste !</p>
 	    <GatsbyImage image={data.flyer.childImageSharp.gatsbyImageData} style={{'maxWidth':'300px'}} alt="flyer"/>
 	</Container>
-	
-   
 
   </Layout>
-)
+  )
 }
 
 export default Programmation
 
 // TODO : utiliser les props de la page en parametre du composant Seo pour recuperer les infos de datocms
 export const Head = () => (
-	<Seo title="Programmation - Festival Rock on the l'Oule 2023" 
+	<Seo title="Programmation - Festival Rock on the l'Oule 2024" 
 	description="Le Festival Rock on the l'Oule, c'est des concerts, des jeux en bois, des produits locaux et buvette, une démarche éco-responsable."
   />
   )
   
+
+
+
+				
+
 export const query = graphql`
 	query progQuery{
+		page: datoCmsProgrammation {
+			title
+			bannerImage {
+				gatsbyImageData(placeholder: BLURRED, layout:FULL_WIDTH, imgixParams: {auto: "compress,enhance,format",fit: "crop", w: "800", h: "600"})
+			}
+			content {
+				value
+				blocks {
+					__typename
+          			id: originalId
+					... on DatoCmsProg {
+						id: originalId
+						artistes2024 {
+							id
+							name
+							description
+							
+							facebookUrl
+							websiteUrl
+							instagramUrl
+							video {
+								url
+								title
+							}
+							visuel {  
+								gatsbyImageData(imgixParams: {auto: "compress,enhance,format", h:"300", w:"918", fit: "crop", crop: "faces" })
+							}
+						}
+					}
+				}
+				links {
+				  __typename
+				  ... on DatoCmsArtiste {
+					id: originalId
+					name
+					description
+					facebookUrl
+					websiteUrl
+					instagramUrl
+					video {
+						url
+						title
+					}
+					visuel { 
+						gatsbyImageData (placeholder: BLURRED, imgixParams: {auto: "compress,enhance,format", h:"300", w:"1000"})
+					}
+				  }
+				}
+				
+			  }
+
+		}
 	    flyer: file(relativePath: { eq: "programmation/flyer2022.jpg" }) {
 	          childImageSharp {
 				gatsbyImageData(width:300)
@@ -124,13 +226,13 @@ export const query = graphql`
 
 	    transkabar:file(relativePath: { eq: "programmation/transkabar.jpg" }) {
 	          childImageSharp {
-				gatsbyImageData(width:1800)
+				gatsbyImageData(placeholder: BLURRED, layout:FULL_WIDTH)
 	           
-	          }
+	          } 
 	    }
 
 	    kikiristan:file(relativePath: { eq: "programmation/kikiristan.jpg" }) {
-	          childImageSharp {
+	          childImageSharp { 
 				gatsbyImageData(width:1800)
 	          
 	          }

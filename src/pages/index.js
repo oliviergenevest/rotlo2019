@@ -8,34 +8,55 @@ import {Seo} from '../components/seo'
 import Grid1 from '../components/Grid/Grid1'
 import Grid2 from '../components/Grid/Grid2'
 import GridImage from '../components/Grid/GridImage'
-import  ModalRotlo  from '../components/modal';
+//import  ModalRotlo  from '../components/modal';
 import Btn from '../components/Btn'
+import GridHomeItems from '../components/Grid/GridHomeItems'
+
 
 
 const IndexPage = ({data}) => {
+  
+  console.log(data.homepage)
    return (
       <Layout>
-         <ModalRotlo/>
+      { /* <ModalRotlo/> */}
           
           <Grid1 
           
-            slidesData = {data.edition2022Gallery}
-            heroText = {{text:'Rock on the l\'Oule #26'}} 
-            text1= {{text:"Mercredi 3 août 2022 - La Motte Chalancon (26)"}} 
-            text2= {{text:"TRANS KABAR - Banan N Jug - Imperial Kikiristan - Bold Circus - Smokey Joe & The Kid (DJ Set)"}} 
+            slidesData = {data.homepage.slideshow}
+            heroText = {{text:data.homepage.heroTitle}} 
+            text1= {{text:data.homepage.subtitle}} 
+            text2= {{text:data.homepage.prog}} 
             text3= {{text:"On compte sur vous !"}} 
           />
+{/*
+<Container text first> 
+<h2>Festival Rock on the l'Oule : 7 et 8 août 2024</h2>
+</Container>   
 
-   
+<Container fluid> 
+  <GridHomeItems items={data.homepage.items}/>
+</Container>   
+*/}
+<Container fluid> 
+  <br/>
+  <br/>
+  <GatsbyImage image={data.lisa.childImageSharp.gatsbyImageData} alt="Rock on the l'Oule" />
+</Container> 
 
 <Container text first> 
+<h2>Retour sur l'édition 2022</h2>
   <p>Rock On The l'Oule, festival né dans l'ancien monde, fêtait sa 26ème édition le 3 août dernier. Tel le phénix, il a su se relever des cendres post-covid. 
 C'était un immense plaisir de revoir tous ces sourires et de participer au brassage des générations.. quelle joie d'avoir partagé ce moment sous les étoiles du Pas des Ondes.  
 </p><p>Merci à tous les artistes, techniciens, prestataires, soutiens, bénévoles et festivaliers d'avoir rendu possible ce moment suspendu. 
 </p><p>Quelques souvenirs visuels en attendant la suite 😘😘</p>
-<GridImage images={data.edition2022retour}/>
 
- </Container>
+
+
+
+
+ <GridImage images={data.edition2022retour} fluid/>
+ </Container> 
 
 
         <Container fluid  >
@@ -47,7 +68,7 @@ C'était un immense plaisir de revoir tous ces sourires et de participer au bras
         <Grid2 
             text={{text:"Deux plans d’eau posés au coeur des montagnes préalpines, à la frontière entre Diois et Baronnies. Un oasis dominé par les ruines du château médiéval de Cornillon et survolé par les hérons, vautours et autres spécimens de la faune locale."}}
               image={<GatsbyImage image={data.siteExceptionnel.childImageSharp.gatsbyImageData} alt="" />}
-              title="Un lieu magique : le site du Pas des Ondes."
+              title="Un lieu magique : le Moulin des Pendants (Pas des Ondes)."
             /> 
 
           <Grid2 
@@ -67,7 +88,7 @@ C'était un immense plaisir de revoir tous ces sourires et de participer au bras
              <Grid2 
                 text={{text:"Fait rare pour un festival qui dure depuis plus de vingt ans, son organisation est toujours le fait d’une équipe 100 % bénévole. Une bande de passionnés, attachée à la région, qui a su rassembler des énergies multiples et fidèles autour de ce projet au long cours. Aujourd’hui, ce sont près de 70 bénévoles et le soutien de nombreux habitants, associations et entreprises de la région qui permettent à cette aventure de se poursuivre."}}
                 image={<GatsbyImage image={data.benevoles.childImageSharp.gatsbyImageData} alt=""/>}
-                title="Une aventure humaine et collective qui dure depuis... 26 ans."
+                title="Une aventure humaine et collective qui dure depuis... 27 ans."
                 reverse
             />
           </Container> 
@@ -91,6 +112,31 @@ export const Head = () => (
 
 export const query = graphql`
   query {
+
+    
+      
+      homepage:datoCmsHomepage {
+        slideshow { gatsbyImageData(width:2000) }
+        prog
+        subtitle 
+        heroTitle
+        items {
+          ... on DatoCmsGriditem {
+            model { apiKey }
+            name
+            slug
+            cover { 
+              gatsbyImageData
+            }
+          }
+        }
+      }
+    
+    lisa: file(relativePath: { eq: "visu lisa.png" }) {
+          childImageSharp {
+            gatsbyImageData(width:1950) 
+          }
+    }
 
     placeholderImage: file(relativePath: { eq: "site.jpg" }) {
           childImageSharp {

@@ -51,7 +51,7 @@ export const Head = () => (
 export const queryAgenda = graphql`
   query {
 
-    allDatoCmsEvenement(sort: {date: ASC}, filter:{actif: {eq:true}}) {
+    allDatoCmsEvenement(sort: {date: DESC}, filter:{actif: {eq:true}}) {
       nodes {
         titre
         teaser

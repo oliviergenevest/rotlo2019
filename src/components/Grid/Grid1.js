@@ -6,7 +6,7 @@ import ScrollDownAnimation from '../ScrollDownAnimation/ScrollDownAnimation'
 import Slideshow from '../Slideshow'
 
 import * as styles from './Grid1.module.scss'
-require('typeface-caveat-brush')
+//require('typeface-caveat-brush')
 
 
 
@@ -31,7 +31,8 @@ const Grid1 = ({text1, heroText, text3, text2, slidesData}) => (
 		      
 
 		        	<h2>{ text1.text }</h2>
-		        		<p><Link to='/programmation' title="Voir la programmation détaillée" className= {styles.linkProg}>{ text2.text }</Link></p>
+		        	{/*	<p><Link to='/programmation' title="Voir la programmation détaillée" className= {styles.linkProg}>{ text2.text }</Link></p> */}
+		        		<p>{ text2.text }</p>
 		            
 	        </div>
 	
