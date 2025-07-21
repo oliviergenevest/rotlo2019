@@ -134,8 +134,7 @@ return (
 </Container>
 	
 	<Container text >		    
-	    <p>Les mercredi 7 août 2024 et jeudi 8 août 2024, prenez les routes sinueuses qui mènent à la Motte Chalancon (26), on s'occupe du reste !</p>
-	    <GatsbyImage image={data.flyer.childImageSharp.gatsbyImageData} style={{'maxWidth':'300px'}} alt="flyer"/>
+	    <GatsbyImage image={data.flyer.childImageSharp.gatsbyImageData} style={{'maxWidth':'400px'}} alt="flyer"/>
 	</Container>
 
   </Layout>
@@ -146,8 +145,8 @@ export default Programmation
 
 // TODO : utiliser les props de la page en parametre du composant Seo pour recuperer les infos de datocms
 export const Head = () => (
-	<Seo title="Programmation - Festival Rock on the l'Oule 2024" 
-	description="Le Festival Rock on the l'Oule, c'est des concerts, des jeux en bois, des produits locaux et buvette, une démarche éco-responsable."
+	<Seo title="Programmation - Le Champ des Ondes 2025" 
+	description="Le Festival Le Champ des Ondes, c'est des concerts, des jeux en bois, des produits locaux et buvette, une démarche éco-responsable."
   />
   )
   
@@ -183,7 +182,7 @@ export const query = graphql`
 								title
 							}
 							visuel {  
-								gatsbyImageData(imgixParams: {auto: "compress,enhance,format", h:"300", w:"918", fit: "crop", crop: "faces" })
+								gatsbyImageData(imgixParams: {auto: "compress,enhance,format", h:"300", w:"918", fit: "crop" })
 							}
 						}
 					}
@@ -210,9 +209,9 @@ export const query = graphql`
 			  }
 
 		}
-	    flyer: file(relativePath: { eq: "programmation/flyer2022.jpg" }) {
+	    flyer: file(relativePath: { eq: "programmation/champdesondes.png" }) {
 	          childImageSharp {
-				gatsbyImageData(width:300)
+				gatsbyImageData(width:400)
 	           
 	          }
 	    }
@@ -252,7 +251,7 @@ export const query = graphql`
 	    }
 
 
-	    seo: file(relativePath: { eq: "programmation/flyer2022.jpg" }) { 
+	    seo: file(relativePath: { eq: "programmation/champdesondes.png" }) { 
 	        childImageSharp {
 				gatsbyImageData
 	            resize(width: 300) {

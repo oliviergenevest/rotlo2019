@@ -47,7 +47,7 @@ import BookingBtn from '../BookingBtn'
           customBurgerIcon={ false }
           >
 
-          {/*  <Link to="/programmation" activeClassName={styles.active}  onClick={() => setMenuOpen(!menuOpen)}>
+           <Link to="/programmation" activeClassName={styles.active}  onClick={() => setMenuOpen(!menuOpen)}>
                 Programmation
             </Link>
             <Link to="/billetterie" activeClassName={styles.active}  onClick={() => setMenuOpen(!menuOpen)}>
@@ -55,7 +55,7 @@ import BookingBtn from '../BookingBtn'
             </Link>
             <Link to="/infos-pratiques" activeClassName={styles.active} onClick={() => setMenuOpen(!menuOpen)}>
                 Infos pratiques
-  </Link> */}
+  </Link> 
   
             <Link to="/agenda" activeClassName={styles.active} onClick={() => setMenuOpen(!menuOpen) }>
                 Evénements

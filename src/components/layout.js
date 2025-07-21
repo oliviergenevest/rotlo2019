@@ -33,8 +33,8 @@ const Layout = ({ children }) => {
         
         <Navigation/>
       
-        <main  >
-        <ModalRotlo/> 
+        <main  > 
+       {/*  <ModalRotlo/> */}
           {children} 
           <Container  text>
             <MailChimpSubscribe/>

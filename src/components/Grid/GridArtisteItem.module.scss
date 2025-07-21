@@ -67,7 +67,7 @@
   }
   > div img {
     transition: all 0.3s ease 0s !important;
-
+ cursor:pointer;
   }
   > span {
     z-index: 1;
@@ -97,6 +97,11 @@
     }
 
   }
+}
+
+.socials {
+  display:flex;
+  gap:1rem;
 }
 
 

@@ -29,23 +29,27 @@ const IndexPage = ({data}) => {
             text2= {{text:data.homepage.prog}} 
             text3= {{text:"On compte sur vous !"}} 
           />
-{/*
-<Container text first> 
-<h2>Festival Rock on the l'Oule : 7 et 8 août 2024</h2>
-</Container>   
-
-<Container fluid> 
-  <GridHomeItems items={data.homepage.items}/>
-</Container>   
-*/}
-<Container fluid> 
-  <br/>
-  <br/>
-  <GatsbyImage image={data.lisa.childImageSharp.gatsbyImageData} alt="Rock on the l'Oule" />
-</Container> 
 
 <Container text first> 
-<h2>Retour sur l'édition 2022</h2>
+<h2>Festival Le Champs des Ondes : 6 Août 2025</h2>
+
+<p>Vous l'aviez sans doute remarqué, l'année dernière, il n'y a pas eu de Rock on the l'Oule, et ce indépendamment de notre volonté.</p>
+<p>
+Cette annulation de 2024 a été très difficile à digérer par l'équipe du festival nous avons donc décidé d'arrêter Rock on the l'Oule dans la formule que vous connaissez.
+</p>
+<p>
+Mais nous n'abandonnons pas, nous allons tout de même proposer quelque chose cet été.
+On garde la même date, le premier mercredi d'Août (ce sera le 6 août 2025), la même équipe, la même volonté de créer une aventure humaine autour de la culture, mais on change de formule.
+</p>
+<p>
+Ce sera plus intimiste, ça prendra la forme d'une soirée associative privée avec l'adhésion obligatoire. Nous proposerons du théâtre, du clown, du slam, de la musique. Tout ce qu'il faut pour passer une excellente soirée!
+</p>
+<br/>
+<br/>
+
+
+
+{/*<h2>Retour sur l'édition 2022</h2>
   <p>Rock On The l'Oule, festival né dans l'ancien monde, fêtait sa 26ème édition le 3 août dernier. Tel le phénix, il a su se relever des cendres post-covid. 
 C'était un immense plaisir de revoir tous ces sourires et de participer au brassage des générations.. quelle joie d'avoir partagé ce moment sous les étoiles du Pas des Ondes.  
 </p><p>Merci à tous les artistes, techniciens, prestataires, soutiens, bénévoles et festivaliers d'avoir rendu possible ce moment suspendu. 
@@ -56,7 +60,16 @@ C'était un immense plaisir de revoir tous ces sourires et de participer au bras
 
 
  <GridImage images={data.edition2022retour} fluid/>
+ */}
  </Container> 
+
+<Container fluid> 
+  <GridHomeItems items={data.homepage.items}/>
+</Container>   
+
+
+
+
 
 
         <Container fluid  >
@@ -68,11 +81,11 @@ C'était un immense plaisir de revoir tous ces sourires et de participer au bras
         <Grid2 
             text={{text:"Deux plans d’eau posés au coeur des montagnes préalpines, à la frontière entre Diois et Baronnies. Un oasis dominé par les ruines du château médiéval de Cornillon et survolé par les hérons, vautours et autres spécimens de la faune locale."}}
               image={<GatsbyImage image={data.siteExceptionnel.childImageSharp.gatsbyImageData} alt="" />}
-              title="Un lieu magique : le Moulin des Pendants (Pas des Ondes)."
+              title="Un lieu magique : le Pas des Ondes à Cornillon."
             /> 
 
           <Grid2 
-            text={{text:"Dans une ambiance familiale rappelant les fêtes de village traditionnelles, Rock on the l’Oule propose une programmation artistique de premier choix faisant la part belle au métissage. Une rencontre entre les genres musicaux les plus variés et des artistes aux origines géographiques multiples. Mais aussi du cirque, des performances en tous genres, des jeux en bois, un salon de thé sous tentes berbères... De quoi rassembler toutes les générations de public et faire se rencontrer les cultures."}}
+            text={{text:"Dans une ambiance familiale rappelant les fêtes de village traditionnelles, le Champ des Ondes propose une programmation artistique de premier choix faisant la part belle au métissage. Une rencontre entre les genres musicaux les plus variés et des artistes aux origines géographiques multiples. Mais aussi du cirque, des performances en tous genres, des jeux en bois, un salon de thé sous tentes berbères... De quoi rassembler toutes les générations de public et faire se rencontrer les cultures."}}
               image={<GatsbyImage image={data.brassageCulture.childImageSharp.gatsbyImageData} style={{width:'100%'}} alt=""/>}
               title="Un joyeux brassage de cultures"
               reverse
@@ -84,14 +97,22 @@ C'était un immense plaisir de revoir tous ces sourires et de participer au bras
                 title="Un festival durable et responsable."
                 
             />
-
+{/*
              <Grid2 
                 text={{text:"Fait rare pour un festival qui dure depuis plus de vingt ans, son organisation est toujours le fait d’une équipe 100 % bénévole. Une bande de passionnés, attachée à la région, qui a su rassembler des énergies multiples et fidèles autour de ce projet au long cours. Aujourd’hui, ce sont près de 70 bénévoles et le soutien de nombreux habitants, associations et entreprises de la région qui permettent à cette aventure de se poursuivre."}}
                 image={<GatsbyImage image={data.benevoles.childImageSharp.gatsbyImageData} alt=""/>}
                 title="Une aventure humaine et collective qui dure depuis... 27 ans."
                 reverse
             />
+            */}
           </Container> 
+          
+<Container fluid> 
+  <br/>
+  <br/>
+  <GatsbyImage image={data.lisa.childImageSharp.gatsbyImageData} alt="Rock on the l'Oule" />
+</Container> 
+
             <Container grandBureau>
               <GatsbyImage image={data.logoGrandBureau.childImageSharp.gatsbyImageData} style={{maxWidth: '200px',marginBottom:'2rem'}} alt=""/>
               <p>Rock On The l’Oule fait parti du Grand Bureau. Grand Bureau est un réseau né de la fusion de la FEPPRA, du GRADA, du GRAL et de Tagada Tsoin Tsoin. Lancé officiellement fin janvier 2017, il coordonne une nouvelle dynamique de coopération entre les acteurs de la filière musiques actuelles. Grand Bureau est le réseau des acteurs musiques actuelles en Auvergne-Rhône-Alpes. Il regroupe à ce jour plus de 160 structures membres de l’ensemble de la filière des musiques actuelles, et leur donne un cadre de coopération.</p>
