@@ -8,6 +8,13 @@ import Video from '../video'
 import styled from 'styled-components'
 import { useSpring,  animated } from 'react-spring'
 
+/*const Content =  styled.div`
+	padding:4rem;
+	@include for-phone-only { 
+		padding:1rem!important;
+	}
+
+`*/
 
 
 const GridArtiste = ({artiste=null}) => {
@@ -28,7 +35,7 @@ const GridArtiste = ({artiste=null}) => {
 		maxHeight: artisteOpen ? "300vh": "0",
 		height: artisteOpen ? "auto" :"auto",
 		zIndex: artisteOpen ? 200 : 0,
-		width: "100%",
+		//width: "100%",
 	});
 	
 	 
@@ -40,7 +47,7 @@ const GridArtiste = ({artiste=null}) => {
 					<span>{artiste.name} </span>
 				
 				<animated.div style={props}>
-				  <div style={{"padding":"4rem"}}>
+				  <div className={styles.content} >
 							<h1>{artiste.name}</h1>
 							
 			        		<p className={styles.tags}>{artiste.genre}</p>
@@ -67,8 +74,8 @@ const GridArtiste = ({artiste=null}) => {
 						
 		        		</div>
 						<button className="openButton btn" onClick={() => setArtisteOpen(!artisteOpen)}>
-					{artisteOpen ? "Fermer" : "Ouvrir"}
-				</button>
+							{artisteOpen ? "Fermer" : "Ouvrir"}
+						</button>
 				</animated.div> 
 				</div>
 		

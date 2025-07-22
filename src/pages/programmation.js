@@ -7,13 +7,10 @@ import { Seo } from '../components/seo'
 import GridArtisteItem from '../components/Grid/GridArtisteItem'
 import GridArtisteContainer from '../components/Grid/GridArtistContainer'
 
-import { StructuredText, renderNodeRule } from 'react-datocms'
-import { isParagraph } from 'datocms-structured-text-utils'
-
+import { StructuredText } from 'react-datocms'
 
 const Programmation = () => {
 const data = useStaticQuery(query)
-console.log(data.page)
 /*const artistes = [
 	{ 
 		name:'Bold Circus',
@@ -76,9 +73,7 @@ return (
 	</Container>
  	<Container text first>		    
 	    
-	   
-  { 
-  console.log(data.page.content)}
+
     <StructuredText
       data={data.page.content}
       renderInlineRecord={({ record }) => {
