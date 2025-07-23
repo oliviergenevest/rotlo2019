@@ -42,7 +42,7 @@ Mais nous n'abandonnons pas, nous allons tout de même proposer quelque chose ce
 On garde la même date, le premier mercredi d'Août (ce sera le 6 août 2025), la même équipe, la même volonté de créer une aventure humaine autour de la culture, mais on change de formule.
 </p>
 <p>
-Ce sera plus intimiste, ça prendra la forme d'une soirée associative privée avec l'adhésion obligatoire. Nous proposerons du théâtre, du clown, du slam, de la musique. Tout ce qu'il faut pour passer une excellente soirée!
+Ce sera plus intimiste (jauge limitée à 300 places, <a href="./billetterie" title="billetterie">réservez vite la votre !</a>), ça prendra la forme d'une soirée associative privée avec l'adhésion obligatoire. Nous proposerons du théâtre, du clown, du slam, de la musique. Tout ce qu'il faut pour passer une excellente soirée!
 </p>
 <br/>
 <br/>

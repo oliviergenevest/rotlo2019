@@ -105,7 +105,7 @@ function Table({ columns, data }) {
 
 const Ca = ({data}) => {
  
-  console.log(data.datoCmsPageCa2023.membresDuCa)
+//  console.log(data.datoCmsPageCa2023.membresDuCa)
   const columns = React.useMemo(
     () => [
       {
@@ -151,11 +151,13 @@ const Ca = ({data}) => {
     <Layout> 
     
       <Container text first >
-          <h1>CA 2023 - Rock on the l'Oule</h1>
+        {/*  <h1>CA 2023 - Rock on the l'Oule</h1>
           
           <Styles>
             <Table columns={columns} data={data.datoCmsPageCa2023.membresDuCa} />
-          </Styles>         
+          </Styles>
+          */}
+          
       </Container> 
     </Layout>
   )
