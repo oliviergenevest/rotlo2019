@@ -1,4 +1,4 @@
-@import "../config/variables.scss";
+@use '../config/variables'  as *;
 
 .title {
     margin-top:1.6rem;

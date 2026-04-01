@@ -1,5 +1,4 @@
-@import "../config/variables";
-
+@use '../config/variables'  as *;
 .btn {
   padding: .5rem 1rem;
   background: white;

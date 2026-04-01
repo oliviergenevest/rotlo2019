@@ -1,4 +1,5 @@
-@import "../config/variables";
+
+@use '../config/variables'  as *;
 
 /* Global styles - peut aussi se faire depuis typography.js (overrideStyles)*/
 

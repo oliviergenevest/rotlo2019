@@ -1,4 +1,4 @@
-@import "../../config/variables";
+@use '../../config/variables'  as *;
 
 $transition-headroom: all 0.35s ease-in-out;
 

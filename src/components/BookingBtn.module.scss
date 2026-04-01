@@ -1,4 +1,4 @@
-@import "../config/variables";
+@use "../config/variables" as *;
 
 .btnBooking {
   padding: .5rem 1rem;
@@ -11,7 +11,7 @@
   text-shadow: none;
   border-radius: 8px;
   text-decoration: none;
-  letter-spacing: .5px;
+  letter-spacing: .5px; 
   transition: all .3s ease-in-out;
 &:hover {
 

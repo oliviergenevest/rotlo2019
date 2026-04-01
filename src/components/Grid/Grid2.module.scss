@@ -1,5 +1,4 @@
-@import "../../config/variables";
-
+@use '../../config/variables'  as *;
 .gridContainer {  	
     padding-top: 0.5rem;
     width:100%;

@@ -1,4 +1,4 @@
-@import "../../config/variables";
+@use '../../config/variables'  as *;
 
 .container {
   margin: 0 auto;

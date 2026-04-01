@@ -11,7 +11,11 @@ module.exports = {
     siteUrl: `https://www.rockontheloule.org`,
   }, 
   plugins: [
-    `gatsby-plugin-sass`,
+      {resolve:`gatsby-plugin-sass`,
+           options: {
+            implementation: require("sass"),
+          },
+        },
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-datocms`,
